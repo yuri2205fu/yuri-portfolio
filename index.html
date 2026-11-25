@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YURI — CREATIVE DIRECTOR Portfolio</title>
+<meta name="description" content="Creative Director portfolio — LP, banners, ads, Instagram, site renewal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top" aria-label="Top"><span></span></a>
+  <nav>
+    <a href="#works">Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>CREATIVE<br>DIRECTOR</h1>
+      <p class="lead">売れる理由を、デザインに。<br>LP・バナー・広告・SNS・サイト改善まで、一気通貫でつくります。</p>
+      <a class="cta" href="#works">View works ↓</a>
+    </div>
+    <div class="blob" aria-hidden="true">
+      <svg viewBox="0 0 400 400"><path fill="#2f27d8" d="M300 60c50 40 70 110 40 170s-100 110-170 100S40 270 60 190 150 30 220 30c30 0 55 12 80 30z"/></svg>
+    </div>
+    <div class="strip" aria-hidden="true"><div class="strip-track" id="stripTrack"></div></div>
+    <ul class="meta">
+      <li><small>Based in</small>Tokyo, Japan</li>
+      <li><small>Focus</small>LP / Ads / SNS / Site</li>
+      <li><small>Status</small>Open to work</li>
+    </ul>
+  </section>
+
+  <section id="works" class="works">
+    <div class="section-head">
+      <h2>WORKS <sup id="count"></sup></h2>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>ABOUT</h2>
+    <div class="about-body">
+      <p>ここに自己紹介を書きます。これまでの担当領域（EC運営、LP制作、広告クリエイティブ、SNS運用など）と、大事にしている考え方を3〜5行で。</p>
+      <ul class="skills">
+        <li>Art Direction</li><li>LP / Web Design</li><li>Shopify</li><li>Banner / Ads</li><li>Instagram</li><li>Figma / Photoshop / Illustrator</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>LET'S<br>TALK.</h2>
+    <a class="mail" href="mailto:your-address@example.com">your-address@example.com</a>
+  </section>
+</main>
+
+<footer>© 2026 YURI. All rights reserved.</footer>
+
+<div class="modal" id="modal" hidden>
+  <button class="close" id="close" aria-label="Close">×</button>
+  <div class="modal-inner" id="modalInner"></div>
+</div>
+
+<script src="works.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
