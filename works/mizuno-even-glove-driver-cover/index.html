@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MIZUNO × EVEN GLOVE DRIVER COVER</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <style>
+/* =========================
+   Article Layout System
+========================= */
+.article-body {
+  --article-width: 920px;
+  --font-size-pc: 15px;
+  --font-size-sp: 12px;
+  --sp-padding: 22px;
+  --accent-color: #F2C54B;
+  --accent-color-dark: #B5842A; /* テキストで使う濃色版（コントラスト確保用） */
+  font-family: "Nunito Sans", sans-serif;
+  max-width: var(--article-width);
+  margin: 0 auto;
+  font-size: var(--font-size-pc);
+  line-height: 1.75;
+}
+.article-body p {
+  margin: 0 0 24px;
+}
+/* PC表示時の設定 */
+.article-image {
+  margin: 20px 0;
+  width: 100%; /* PCでは親幅に合わせる */
+  overflow: hidden; /* ホバーズームをこの枠内に収める */
+}
+.article-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+/* 画像ホバーズーム（PC限定・.no-zoomが付いた画像は対象外） */
+@media (min-width: 769px) {
+  .article-image:not(.no-zoom):hover img {
+    transform: scale(1.03);
+  }
+}
+/* SP表示時の設定（ここをFVと同じロジックにする） */
+@media (max-width: 768px) {
+  .article-body {
+    max-width: 100%;
+    padding: 0 var(--sp-padding);
+    font-size: var(--font-size-sp);
+  }
+  .article-image {
+    /* FVで成功している記述をそのまま適用 */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    /* 上下のマージンだけ維持 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+/* --- プロフィール名の改行調整 --- */
+.profile-title,
+.profile-name {
+  display: inline-block; /* 改行されずにブロック化 */
+}
+.profile-name {
+  margin-left: 0.5em; /* PC表示時の名前の前のスペース */
+}
+/* SP時は名前の前を詰めたり、必要なら調整 */
+@media (max-width: 768px) {
+  .profile-name {
+    margin-left: 0; /* スマホで改行された時に左端を揃える */
+  }
+}
+
+/* =========================
+   章見出し（THE STORY / DETAIL / CARE）
+========================= */
+.article-chapter-title {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  font-size: 17px; /* 見出し感を出すため13px→17pxに変更 */
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent-color-dark);
+  margin: 56px 0 12px; /* 下の余白を24px→12pxに詰めた */
+}
+.article-chapter-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0;
+  transition: width 0.5s ease 0.3s; /* 文字が出た後に少し遅れてラインが伸びる */
+}
+.article-chapter-title.is-active::after {
+  width: 28px;
+}
+.article-section-story .article-chapter-title:first-child {
+  margin-top: 0;
+}
+/* 見出い直後の画像だけ上の余白を詰める（見出しのmargin-bottomと画像のmargin-topは
+   隣接ブロックのマージン相殺で「大きい方＝20px」が採用されるため、ここで上書き） */
+.article-chapter-title + .article-image {
+  margin-top: 12px;
+  /* 画像ファイル自体に余白（透明部分や白場）が焼き込まれていて
+     まだ間延びして見える場合は、下の行を有効にしてマイナス値を微調整してください
+     margin-top: -8px; */
+}
+@media (max-width: 768px) {
+  .article-chapter-title {
+    font-size: 14px;
+    margin: 40px 0 10px;
+  }
+  .article-chapter-title + .article-image {
+    margin-top: 10px;
+  }
+}
+
+/* =========================
+   4パート構成
+========================= */
+.article-lede {
+  font-size: 1.15em;
+  text-align: center;
+  margin: 0 0 32px;
+}
+.article-closing {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  font-size: 1.05em;
+  margin: 56px 0 40px;
+}
+@media (max-width: 768px) {
+  .article-lede {
+    font-size: 1.05em;
+  }
+  .article-closing {
+    margin: 40px 0 28px;
+  }
+}
+
+/* =========================
+   商品情報カード＋CTA
+   ・商品名／価格は左揃え
+   ・カード下端とCTAボタンをすき間なく密着させ、1枚の帯として見せる
+   ・カードの縦の余白を詰めて、価格下の間延びを解消
+========================= */
+.article-product-info {
+  margin: 0;
+  padding: 28px 28px 20px;
+  background-color: #FAF7F0; /* 記事の白地とコントラストをつける、革の色味と喧嘩しないウォームな生成り色 */
+  border-top: 3px solid var(--accent-color);
+  text-align: left;
+}
+.product-info-name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin: 0 0 4px; /* 価格との間隔を8px→4pxに詰めた */
+}
+.product-info-price {
+  display: flex; /* 価格と(tax in)の高さのズレをbaseline計算に頼らず確実に揃える */
+  align-items: flex-end;
+  font-size: 16px; /* 商品名(20px)より少し小さく */
+  font-weight: 700;
+  color: var(--accent-color-dark);
+  margin: 0;
+}
+.product-info-price .price-main {
+  line-height: 1; /* article-bodyから継承される1.75の行送りを打ち消し、box下端＝文字下端にする */
+}
+.product-info-price .price-tax {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  margin-left: 6px;
+  line-height: 1; /* char-text内部の行送りの影響を受けないよう固定 */
+  display: inline-block;
+  transform: translateY(-2px); /* box下端は揃っていても、フォントサイズ差により
+    見た目の文字の位置は下にずれて見えるため、視覚的なベースラインに
+    合わせるための微調整（実機で -2px が最も自然に見えた値） */
+}
+@media (max-width: 768px) {
+  .article-product-info {
+    /* SPは画像と同じ思想でフルブリード化し、記事本文の余白ルールから独立させる */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 24px var(--sp-padding) 16px;
+  }
+  .product-info-name {
+    font-size: 16px;
+  }
+  .product-info-price {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   CTA Button
+   幅：PCは記事の画像幅に揃え、SPはフルブリード
+   商品情報カードの直下にすき間なく接続する
+========================= */
+.article-cta-wrapper {
+  margin: 0;
+}
+.article-cta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* PC：article-image・product-info-cardと同じ幅に揃える */
+  box-sizing: border-box;
+  height: 80px;
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+  border: 2px solid var(--accent-color) !important;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0 48px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+.article-cta-btn:hover {
+  background-color: var(--accent-color) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--accent-color) !important;
+}
+@media (max-width: 768px) {
+  .article-cta-wrapper {
+    /* フルブリード化するのはボタンの親側。.article-imageと同じ手法 */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .article-cta-btn {
+    width: 100%; /* ラッパーが画面幅いっぱいになった分、ボタンもそれに追従 */
+    height: 60px;
+    padding: 0 24px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   スクロール連動フェードアップアニメーション（画像・本文）
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   1文字ずつ横から出てくるテキストアニメーション
+   （章見出し／商品名／価格に適用）
+========================= */
+/* .char-reveal自体はh3/p/spanなど元々の表示形式のままにする
+   （display:inline-blockにすると要素が中身の幅だけに縮んでしまい、
+   text-align:centerが自分自身の位置には効かなくなるため、
+   中央寄せの見出しが左に寄って見えるバグの原因になっていた） */
+.char-reveal .char {
+  display: inline-block;
+  overflow: hidden;
+}
+.char-reveal .char-text {
+  display: inline-block;
+  transform: translateX(-101%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: calc(0.045s * var(--char-index, 0));
+}
+.char-reveal.is-active .char-text {
+  transform: translateX(0);
+}
+</style>
+<div class="article-body">
+
+  <!-- ============ 1. 導入（Intro） ============ -->
+  <div class="article-section article-section-intro">
+    <div class="article-image fade-up no-zoom">
+      <img src="assets/mizuno_glove_1200_800.png" alt="">
+    </div>
+    <p class="article-lede fade-up">
+約2年にわたる開発期間を経てついにリリース<br>
+      EVENがMIZUNOに別注した特別なドライバーカバーをご紹介。<br>
+    </p>
+  </div>
+
+  <!-- ============ 2. 物語パート（Story） ============ -->
+  <div class="article-section article-section-story">
+
+    <h3 class="article-chapter-title char-reveal">THE STORY</h3>
+
+    <div class="article-image fade-up">
+      <img src="assets/D4_2078.webp" alt="">
+    </div>
+    <p class="fade-up">
+企画会議で「端材を使って何かできないか」そんな会話から始まった商品開発。<br>
+こだわりにこだわり抜いた本作は兵庫・波賀にあるMIZUNOの職人工房で制作。
+    </p>
+    <div class="article-image fade-up">
+      <img src="assets/D4_2546.webp">
+    </div>
+    <p class="fade-up">
+      素材はプロ野球選手やメジャーリーガーのグラブを手がける、あの工房の革を使用し、<br>
+生産過程でできる端材を活かして商品化されたドライバーカバー。
+    </p>
+
+    <h3 class="article-chapter-title char-reveal">DETAIL</h3>
+
+    <div class="article-image fade-up">
+      <img src="assets/1200x800_32_f80eb36a-5d91-4cc2-8d29-4a11764f8fef.png" alt="">
+    </div>
+    <p class="fade-up">
+深いバーガンディカラーにグラブを彷彿とさせるディテールを取り込み、職人によるクラフトマンシップを細部に宿す味わい深い仕上がり、カッチリとしていて非常に丈夫。<br></p>
+    <div class="article-image fade-up">
+      <img src="assets/even0286.webp" alt="">
+    </div>
+    <p class="fade-up">
+      開口部には革紐をあしらった遊び心あるデザインやグラブのランバードマークを思わせる重厚な刺繍が存在を際立たせ、裏側には、熟練の職人技と確かな品質の証である「MADE IN JAPAN」の押し印入り。
+    </p>
+    <div class="article-image fade-up">
+      <img src="assets/even0288.webp" alt="">
+    </div>
+    <p class="fade-up">
+      タフな外面とは裏腹に、内側は柔らかなボア仕様。大切なクラブヘッドを衝撃から守りしっかり保護。上部に指を入れられる特殊構造で、ラウンド中もスムーズな着脱が可能。
+    </p>
+
+    <h3 class="article-chapter-title char-reveal">CARE</h3>
+
+    <div class="article-image fade-up">
+      <img src="assets/even0287.webp" alt="">
+    </div>
+    <p class="fade-up">
+カバーに加え、野球人に愛されるミズノのグラブ用クリームを、セットでお届け。
+      単にクラブを守る道具ではなく、クリームで手入れをしながら、自分だけの味わいに育てていくエイジングを楽しめる一品。
+    </p>
+    <div class="article-image fade-up">
+      <img src="assets/even0289.webp" alt="">
+    </div>
+    <p class="fade-up">
+ラウンド後や休日に、ヘッドカバーを優しく磨き上げる贅沢な時間を。使い込むほどに深まる色艶と、ギアへの愛着をぜひお楽しみください。
+    </p>
+  </div>
+
+  <!-- ============ 3. クロージング（Closing） ============ -->
+  <div class="article-section article-section-closing">
+    <div class="article-image fade-up">
+      <img src="assets/mizuno_glove_contents_model.png" alt="">
+    </div>
+    <p class="article-closing article-profile-name fade-up">
+      <span class="profile-title">ーー野球少年だったあの頃の感触とワクワク感を、もう一度キャディバッグの中に。</span>
+    </p>
+  </div>
+
+  <!-- ============ 4. 商品情報＋CTA（Commercial） ============ -->
+  <div class="article-section article-section-commercial">
+    <div class="article-product-info fade-up">
+      <p class="product-info-name char-reveal">［MIZUNO別注］GLOVE DRIVER COVER</p>
+      <p class="product-info-price">
+        <span class="char-reveal price-main">¥24,200</span><span class="price-tax">(tax in)</span>
+      </p>
+    </div>
+    <div class="article-cta-wrapper">
+      <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26n0416k" class="article-cta-btn">商品ページを見る</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ---- 1. char-reveal: テキストを1文字（半角の連続はまとめて1トークン）ずつ分割 ---- */
+  const tokenize = (text) => text.match(/[\x00-\x7F]+|[^\x00-\x7F]/g) || [];
+
+  document.querySelectorAll('.char-reveal').forEach((el) => {
+    const tokens = tokenize(el.textContent);
+    el.textContent = '';
+    tokens.forEach((token, i) => {
+      const charWrap = document.createElement('span');
+      charWrap.className = 'char';
+      const charText = document.createElement('span');
+      charText.className = 'char-text';
+      charText.style.setProperty('--char-index', i);
+      charText.textContent = token;
+      charWrap.appendChild(charText);
+      el.appendChild(charWrap);
+    });
+  });
+
+  /* ---- 2. fade-up: 画像・本文がスクロールで浮き上がる ---- */
+  const fadeUpObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+  document.querySelectorAll('.article-body .fade-up').forEach((el) => fadeUpObserver.observe(el));
+
+  /* ---- 3. char-reveal の発火（章見出し／商品名／価格） ---- */
+  const charRevealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+  document.querySelectorAll('.article-body .char-reveal').forEach((el) => charRevealObserver.observe(el));
+
+});
+</script>
+          
+</div>
+</body>
+</html>

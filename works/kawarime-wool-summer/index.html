@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ウールを組み合わせて、快適な夏に</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+  /* --- ベーススタイル --- */
+  .cb-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+  .cb-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* --- アニメーション用 共通CSS --- */
+  .fade-up { opacity: 0; }
+  .is-in-view .fade-up, .is-in-view.fade-up {
+    animation: fadeUpAnim 1.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+  }
+  @keyframes fadeUpAnim {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 追加: 左からフェードイン */
+  .fade-in-left { opacity: 0; }
+  .is-in-view .fade-in-left, .is-in-view.fade-in-left {
+    animation: fadeInLeftAnim 1.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+  }
+  @keyframes fadeInLeftAnim {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  /* 追加: 右からフェードイン */
+  .fade-in-right { opacity: 0; }
+  .is-in-view .fade-in-right, .is-in-view.fade-in-right {
+    animation: fadeInRightAnim 1.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+  }
+  @keyframes fadeInRightAnim {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  /* 遅延ユーティリティ */
+  .delay-1 { animation-delay: 0.2s !important; }
+  .delay-2 { animation-delay: 0.4s !important; }
+  .delay-3 { animation-delay: 0.6s !important; }
+
+  /* --- 波紋ホバーアニメーション --- */
+  @keyframes ripple-gray {
+    0% { box-shadow: 0 0 0 0 #C0C0C0; }
+    70% { box-shadow: 0 0 0 15px rgba(192,192,192,0); }
+    100% { box-shadow: 0 0 0 0 rgba(192,192,192,0); }
+  }
+  @keyframes ripple-orange {
+    0% { box-shadow: 0 0 0 0 #FFE0C5; }
+    70% { box-shadow: 0 0 0 15px rgba(255,224,197,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,224,197,0); }
+  }
+
+  /* --- PC用 ロゴセパレーター マージン調整 --- */
+  .cb-separator-logo { text-align: center; }
+  .cb-separator-logo.sep-1 { margin-top: -10px !important; margin-bottom: -20px !important; } 
+  .cb-separator-logo.sep-2 { margin-top: 20px !important; margin-bottom: 15px !important; } 
+  .cb-separator-logo.sep-3 { margin-top: 25px !important; margin-bottom: 20px !important; }
+
+  /* 【完コピ】かわり芽ロゴ 滑らかなバウンド＆プルプル */
+  .kawarime-logo { 
+    width: 250px !important; 
+    margin: 0 auto 5px !important; 
+    display: block !important; 
+    opacity: 0; 
+  }
+  .is-in-view .kawarime-logo, .kawarime-logo.is-in-view {
+    animation: slideInX 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  @keyframes slideInX {
+    0% { opacity: 0; transform: translateX(150px); }
+    20% { opacity: 1; }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  .kawarime-logo img { 
+    width: 100% !important; 
+    height: auto !important; 
+    display: block;
+    transform-origin: bottom center; 
+  }
+  .is-in-view .kawarime-logo img, .kawarime-logo.is-in-view img {
+    animation: bounceYAndShake 2s forwards;
+  }
+  @keyframes bounceYAndShake {
+    0% { transform: translateY(-120px) rotate(30deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    25% { transform: translateY(0) rotate(10deg); animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    45% { transform: translateY(-50px) rotate(20deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    60% { transform: translateY(0) rotate(0deg); animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    70% { transform: translateY(-20px) rotate(5deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    80% { transform: translateY(0) rotate(0deg); animation-timing-function: linear; }
+    85% { transform: translateY(0) rotate(-4deg); }
+    90% { transform: translateY(0) rotate(4deg); }
+    95% { transform: translateY(0) rotate(-2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+
+  /* --- 見出し下線 --- */
+  .cb-lead-title-tank { border-bottom: 2px solid #b7bacc; padding-bottom: 2px; }
+  .cb-lead-title-long { border-bottom: 2px solid #6d5b53; padding-bottom: 2px; }
+
+  /* --- リードセクション --- */
+  .cb-lead-custom { position: relative; margin-bottom: 40px; }
+  .cb-lead-header { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 10; }
+  .cb-lead-title { font-size: 25px; font-weight: bold; line-height: 1.8; width: 50%; }
+  .cb-lead-text-main { width: 45%; padding-top: 25px; }
+  .cb-lead-visuals { display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 0; position: relative; margin-top: -30px; z-index: 5; }
+  
+  /* 画像傾きとアニメーションの完全分離（ラッパー構造） */
+  .cb-lead-img-tank-wrap { width: 64%; position: relative; z-index: 6; }
+  .cb-lead-img-tank { width: 100%; transform: rotate(-8deg); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+  .cb-lead-img-long-wrap { width: 64%; margin-left: calc(-5% + 90px) !important; margin-top: 45px !important; align-self: flex-start; position: relative; z-index: 5; }
+  .cb-lead-img-long { width: 100%; transform: rotate(15deg); transform-origin: top left; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 0 !important; }
+  
+  .cb-lead-text-sub { align-self: flex-end; width: 55%; margin-top: 20px; font-size: 12px; line-height: 1.6; }
+
+  /* --- カラーバリエーション --- */
+  .cb-color-section { text-align: center; }
+  .cb-section-title { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
+  .cb-section-desc { margin-bottom: 50px; text-align: left; }
+  .cb-color-item { margin-bottom: 60px; }
+  .cb-color-item:last-child { margin-bottom: 0; } 
+
+  .cb-color-label { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; width: 200px; height: 80px; font-family: 'Helvetica', Arial, sans-serif; font-size: 18px; font-weight: bold; color: #fff; position: relative; z-index: 10; margin-bottom: -15px; }
+  .cb-color-label.offwhite { background-color: #e3dec6; color: #5c4d44; }
+  .cb-color-label.mocha { background-color: #6d5b53; }
+  .cb-color-label.lightgray { background-color: #b7bacc; }
+  
+  .cb-color-images { display: flex; justify-content: center; gap: 20px; z-index: 5; }
+  .cb-color-images a { width: calc(50% - 10px); display: block; }
+  .cb-color-images a img { width: 100%; transition: opacity 0.3s ease; }
+  .cb-color-images a:hover img { opacity: 0.7; }
+
+  /* --- 特徴セクション --- */
+  .cb-feature { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+  .cb-feature.reverse { flex-direction: row-reverse; }
+  .cb-feature-img, .cb-feature-text { flex: 1; min-width: 300px; }
+  
+  .cb-decor-text { display: inline-block; font-family: 'Helvetica', Arial, sans-serif; font-size: 11px; font-weight: bold; margin-bottom: 10px; margin-right: 15px; padding-bottom: 2px; letter-spacing: 0.05em; color: #333; }
+  .cb-decor-text.light-green { border-bottom: 3px solid #9cb071; }
+  .cb-decor-text.dark-green { border-bottom: 3px solid #4f8b53; }
+  
+  .cb-feature-title { font-size: 24px; font-weight: bold; margin: 10px 0 20px 0; line-height: 1.5; }
+
+  /* --- LOOK (リール動画) --- */
+  .cb-look-section { text-align: center; margin-bottom: 0; }
+  .cb-look-title { font-size: 24px; font-weight: bold; letter-spacing: 0.2em; margin-bottom: 30px; }
+  .cb-video-container { width: 100%; max-width: 400px; margin: 0 auto; }
+  .cb-video-container video { width: 100%; height: auto; display: block; border-radius: 8px; pointer-events: none; }
+
+  /* --- 商品リンク（CTA） --- */
+  .cb-products-section { text-align: center; }
+  .cb-products-title { font-size: 24px; font-weight: bold; margin-bottom: 40px; line-height: 1.5; }
+  .cb-product-list { display: flex; justify-content: center; gap: 30px; }
+  .cb-product-item { flex: 1; max-width: 300px; text-align: center; }
+  .cb-product-item img { margin-bottom: 15px; }
+  .cb-product-name { font-weight: bold; font-size: 14px; margin-bottom: 15px; height: 3em; }
+  
+  .cb-btn { display: inline-flex !important; align-items: center !important; justify-content: center !important; width: 160px !important; height: 40px !important; background-color: #C0C0C0 !important; color: #333 !important; text-decoration: none !important; font-size: 13px !important; font-weight: bold !important; border: none !important; transition: all 0.3s ease !important; box-sizing: border-box !important; position: relative; }
+  .cb-btn:hover { opacity: 0.8 !important; animation: ripple-gray 1.5s infinite !important; }
+
+  .cb-bottom-cta { text-align: center; margin-top: 40px; margin-bottom: 40px; }
+  .cb-btn-bottom { display: inline-flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; max-width: 630px !important; padding: 18px !important; background-color: #FFE0C5 !important; color: #333 !important; text-decoration: none !important; font-weight: bold !important; font-size: 15px !important; letter-spacing: 0.05em !important; border: none !important; border-radius: 2px !important; text-align: center !important; transition: opacity 0.3s !important; box-sizing: border-box !important; position: relative; }
+  .cb-btn-bottom:hover { opacity: 0.9 !important; animation: ripple-orange 1.5s infinite !important; }
+
+  /* --- レスポンシブ --- */
+  @media screen and (max-width: 768px) {
+    .cb-separator-logo.sep-1 { margin-top: -10px !important; margin-bottom: -5px !important; }
+    .cb-separator-logo.sep-2 { margin-top: 40px !important; margin-bottom: 5px !important; } 
+    .cb-separator-logo.sep-3 { margin-top: 40px !important; margin-bottom: -5px !important; } 
+    .kawarime-logo { width: 160px !important; margin-top: -30px !important; }
+
+    .cb-lead-header { flex-direction: column; }
+    .cb-lead-title { width: 100%; margin-bottom: 20px; text-align: center; font-size: 20px; }
+    .cb-pc-space { display: none; }
+    .cb-lead-text-main { width: 100%; padding-top: 0; }
+    
+    .cb-lead-visuals { flex-direction: column; margin-top: 20px; gap: 30px; align-items: center; }
+    .cb-lead-img-tank-wrap { width: 70%; margin: 0; }
+    .cb-lead-img-long-wrap { width: 70%; align-self: flex-end; margin-left: 0 !important; margin-top: -40px !important; }
+    .cb-lead-text-sub { width: 100%; margin-top: 50px !important; font-size: inherit; position: relative; z-index: 10; }
+    
+    /* フルブリード処理 */
+    .cb-color-images, .cb-video-container, .cb-product-item img {
+      width: 100vw !important; max-width: 100vw !important; position: relative !important; left: 50% !important; transform: translateX(-50%) !important; margin-left: 0 !important; margin-right: 0 !important;
+    }
+    
+    .cb-feature-img { width: 100% !important; max-width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; left: 0 !important; transform: none !important; }
+    .cb-feature-img img { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; border-radius: 0 !important; }
+    
+    .cb-color-images { gap: 0 !important; }
+    .cb-color-images a { width: 50% !important; }
+    
+    .cb-feature, .cb-feature.reverse, .cb-product-list { flex-direction: column; gap: 30px; }
+    .cb-feature-text { order: 2; }
+    .cb-feature-img { order: 1; }
+    .cb-product-item { max-width: 100%; }
+    .cb-product-name { height: auto; }
+  }
+</style>
+
+<div class="cb-wrapper">
+
+  <div class="cb-lead-custom">
+    <div class="cb-lead-header obs-target">
+      <div class="cb-lead-title fade-up">
+        さらりとした<br>
+        <span class="cb-lead-title-tank">ウールタンクトップ</span><br>
+        <span class="cb-pc-space">　　　　</span>＆<br>
+        <span class="cb-pc-space">　　　　　</span>胸にポケット<br>
+        <span class="cb-pc-space">　　 </span><span class="cb-lead-title-long">長袖ウールTシャツ</span>
+      </div>
+      <div class="cb-lead-text-main fade-up delay-1">
+        <p>本格的な夏の暑さが近づき、紫外線対策が気になるこれからの季節。 かわり芽からは、ウール100％のタンクトップと長袖Tシャツの重ね着を提案します。<br><br>ストレッチ性に優れた光沢感のある生地は、山歩き<br>やアウトドアにぴったり。春先から秋の終わりまで<br>3シーズンにわたって活躍してくれます。</p>
+      </div>
+    </div>
+    
+    <div class="cb-lead-visuals obs-target">
+      <div class="cb-lead-img-tank-wrap fade-up">
+        <img src="assets/wool_tanktop_fullcolor.png" alt="タンクトップ" class="cb-lead-img-tank">
+      </div>
+      
+      <div class="cb-lead-img-long-wrap fade-up delay-1">
+        <img src="assets/wool_tshirt_fullcolor.png" alt="長袖Tシャツ" class="cb-lead-img-long">
+      </div>
+      
+      <div class="cb-lead-text-sub fade-up delay-2">
+        <p>肌ざわりのよい生地にふんわりと包まれながら、ストレスフリーで夏の山歩きを楽しみたい方は、ぜひ一度試してみてはいかがでしょうか？</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cb-separator-logo sep-1 obs-target">
+    <div class="kawarime-logo">
+      <img src="assets/kawarime_logo.png" alt="かわり芽 ロゴ">
+    </div>
+  </div>
+
+  <div class="cb-color-section">
+    <div class="cb-section-title obs-target fade-up">3種類のカラーバリエーション</div>
+    <div class="obs-target"><p class="cb-section-desc fade-up delay-1">選べるカラーは、オフホワイト、モカ、ライトグレーの全3色。やさしいトーンだからこそ、日常のコーディネートにも取り入れやすい一着です。 自分のパーソナルカラーに合わせたり、気分の上がる一色を選んでみたり。別カラーと組み合わせたコーディネートもおすすめです。</p></div>
+    
+    <div class="cb-color-item obs-target">
+      <div class="cb-color-label offwhite fade-up">OFF WHITE</div>
+      <div class="cb-color-images">
+        <a href="https://shop.funq.jp/products/r25a0269k?variant=47030657384666" class="fade-in-left delay-1">
+          <img src="assets/ivory_tank_1600_1600.png" alt="OFF WHITE タンクトップ">
+        </a>
+        <a href="https://shop.funq.jp/products/r25a0268k?variant=47030657089754" class="fade-in-right delay-1">
+          <img src="assets/ivory_tshirt_1600_1600.png" alt="OFF WHITE 長袖">
+        </a>
+      </div>
+    </div>
+
+    <div class="cb-color-item obs-target">
+      <div class="cb-color-label mocha fade-up">MOCHA</div>
+      <div class="cb-color-images">
+        <a href="https://shop.funq.jp/products/r25a0269k?variant=47030657482970" class="fade-in-left delay-1">
+          <img src="assets/brown_tank_1600_1600.png" alt="MOCHA タンクトップ">
+        </a>
+        <a href="https://shop.funq.jp/products/r25a0268k?variant=47030657188058" class="fade-in-right delay-1">
+          <img src="assets/brown_tshirt_1600_1600.png" alt="MOCHA 長袖">
+        </a>
+      </div>
+    </div>
+
+    <div class="cb-color-item obs-target">
+      <div class="cb-color-label lightgray fade-up">LIGHT GRAY</div>
+      <div class="cb-color-images">
+        <a href="https://shop.funq.jp/products/r25a0269k?variant=47030657286362" class="fade-in-left delay-1">
+          <img src="assets/blue_tank_1600_1600.png" alt="LIGHT GRAY タンクトップ">
+        </a>
+        <a href="https://shop.funq.jp/products/r25a0268k?variant=47030656991450" class="fade-in-right delay-1">
+          <img src="assets/blue_tshirt_1600_1600.png" alt="LIGHT GRAY 長袖">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cb-separator-logo sep-2 obs-target">
+    <div class="kawarime-logo">
+      <img src="assets/kawarime_logo.png" alt="かわり芽 ロゴ">
+    </div>
+  </div>
+
+  <div class="cb-feature obs-target">
+    <div class="cb-feature-img fade-up"><img src="assets/feature_01.webp" alt="生地アップ"></div>
+    <div class="cb-feature-text fade-up delay-1">
+      <span class="cb-decor-text light-green">for Wool tank top</span>
+      <span class="cb-decor-text dark-green">for Wool long tee</span>
+      <div class="cb-feature-title">やさしい<br>　着ごこち</div>
+      <p>細番手のウール糸を使用しており、肌ざわりがなめらかなのが特徴。着心地が抜群で、毎日着ていたくなるような仕上がりになっています。</p>
+    </div>
+  </div>
+
+  <div class="cb-feature reverse obs-target">
+    <div class="cb-feature-img fade-up"><img src="assets/feature_02.png" alt="カップ部分アップ"></div>
+    <div class="cb-feature-text fade-up delay-1">
+      <span class="cb-decor-text light-green">for Wool tank top</span>
+      <div class="cb-feature-title">カップの<br>　取りはずしも</div>
+      <p>タンクトップに付属するカップは、簡単に取り外しが可能。日常使いやアウトドアシーンなど、用途に応じて使い分けができます。</p>
+    </div>
+  </div>
+
+  <div class="cb-feature obs-target">
+    <div class="cb-feature-img fade-up"><img src="assets/feature_03.webp" alt="生地アップ"></div>
+    <div class="cb-feature-text fade-up delay-1">
+      <span class="cb-decor-text dark-green">for Wool long tee</span>
+      <div class="cb-feature-title">かわり芽の<br>　ロゴマークも</div>
+      <p>ブランドのアイコンである双葉の刺繍をあしらい、ほどよいアクセントに。生地になじむカラーで仕上げた刺繍がさりげないかわいらしさを添えています。</p>
+    </div>
+  </div>
+
+  <div class="cb-look-section obs-target">
+    <div class="cb-look-title fade-up">＼ LOOK ／</div>
+    <div class="cb-video-container fade-up delay-1">
+      <video id="cb-look-video" src="assets/a05668d46cc04d3f8f281f46ea95f92d.mp4" playsinline="" muted="" loop=""></video>
+    </div>
+  </div>
+
+  <div class="cb-separator-logo sep-3 obs-target">
+    <div class="kawarime-logo">
+      <img src="assets/kawarime_logo.png" alt="かわり芽 ロゴ">
+    </div>
+  </div>
+
+  <div class="cb-products-section obs-target">
+    <div class="cb-products-title fade-up">2つを着合わせて<br>快適に山歩きを楽しもう！</div>
+    <div class="cb-product-list">
+      <div class="cb-product-item">
+        <img src="assets/ivory_tank_1600_1600.png" alt="タンクトップ" class="fade-in-left delay-1">
+        <div class="cb-product-name fade-up delay-2">さらりとした<br>ウールタンクトップ</div>
+        <a href="https://shop.funq.jp/products/r25a0269k" class="cb-btn fade-up delay-3">購入はコチラ</a>
+      </div>
+      <div class="cb-product-item">
+        <img src="assets/brown_tshirt_1600_1600.png" alt="長袖Tシャツ" class="fade-in-right delay-1">
+        <div class="cb-product-name fade-up delay-2">胸にポケット<br>長袖ウールTシャツ</div>
+        <a href="https://shop.funq.jp/products/r25a0268k" class="cb-btn fade-up delay-3">購入はコチラ</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cb-bottom-cta obs-target">
+    <a href="https://shop.funq.jp/collections/%E3%81%8B%E3%82%8F%E3%82%8A%E8%8A%BD" class="cb-btn-bottom fade-up">かわり芽の商品一覧はコチラ</a>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('cb-look-video');
+    if ('IntersectionObserver' in window && video) {
+      var videoObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) { video.play(); } else { video.pause(); }
+        });
+      }, { threshold: 0.15 });
+      videoObserver.observe(video);
+    }
+
+    var logoObserverOptions = {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0
+    };
+    var logoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in-view');
+          
+          var logo = entry.target.querySelector('.kawarime-logo');
+          if(logo) logo.classList.add('is-in-view');
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, logoObserverOptions);
+
+    document.querySelectorAll('.obs-target').forEach(function(el) {
+      logoObserver.observe(el);
+    });
+  });
+</script>
+          
+</div>
+</body>
+</html>

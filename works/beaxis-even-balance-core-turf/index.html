@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BEAXIS × EVEN exclusive "BALANCE CORE TURF"</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <style>
+/* =========================
+   1. 基本レイアウト
+   ========================= */
+.article-container {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative; /* ボタンを止める基準点になります */
+  /* 9枚目の下の余白（ボタンが止まる場所） */
+  padding-bottom: 120px !important; 
+}
+
+.full-bleed-image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.full-bleed-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 画像の重なり調整 */
+.layer-top { position: relative; z-index: 2; }
+.layer-bottom-overlap {
+  position: relative;
+  z-index: 1;
+  margin-top: -60px;
+}
+
+/* スマホ表示（フルブリード） */
+@media (max-width: 768px) {
+  .full-bleed-image {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  .layer-bottom-overlap { margin-top: -30px; }
+  .article-container { padding-bottom: 100px !important; }
+}
+
+/* =========================
+   2. 追尾CTAボタン
+   ========================= */
+.floating-cta {
+  /* 初期設定：画面下部に固定 */
+  position: fixed !important;
+  bottom: 30px !important;
+  left: 50% !important;
+  transform: translate(-50%, 20px) !important;
+  z-index: 999999 !important;
+  
+  /* デザイン設定 */
+  background-color: #F2C54B !important; /* ボタン色はここ */
+  color: #000 !important;
+  box-shadow: none !important; /* 影なし */
+  width: 680px !important;     /* 横幅調整はここ */
+  max-width: 85vw !important;  /* SPの幅制限 */
+  height: 56px !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+  
+  /* 中央寄せ */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  
+  /* アニメーション */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease !important;
+}
+
+/* 表示フラグ */
+.floating-cta.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate(-50%, 0) !important;
+}
+
+/* ★記事の末尾で止まった時のスタイル */
+.floating-cta.is-stopped {
+  position: absolute !important; /* 画面固定を解除 */
+  bottom: 30px !important;       /* 記事コンテナの最下部から30pxの位置に固定 */
+  top: auto !important;
+}
+</style>
+
+<div class="article-container" id="js-article-container">
+  <div class="full-bleed-image"><img src="assets/beaxis_header.png"></div>
+  <div class="full-bleed-image"><img src="assets/beaxis_1_FV.webp"></div>
+  <div class="full-bleed-image"><img src="assets/beaxis_2_3point.png"></div>
+  <div class="full-bleed-image layer-top"><img src="assets/beaxis_3_nitouryu.png"></div>
+  <div class="full-bleed-image layer-bottom-overlap"><img src="assets/beaxis_4_style.webp"></div>
+  <div class="full-bleed-image"><img src="assets/beaxis_5_sole_shoes_429f9f3a-0b39-42d4-bf28-64de54a22b7d.webp"></div>
+  <div class="full-bleed-image"><img src="assets/beaxis_6_oomari.png"></div>
+  <div class="full-bleed-image"><img src="assets/beaxis_7_training.webp"></div>
+  <div class="full-bleed-image"><img src="assets/beaxis_8_mgazine.webp"></div>
+  <div class="full-bleed-image">
+    <a href="https://shop.funq.jp/collections/even/products/e26i0333k">
+      <img src="assets/beaxis_9_limited.png">
+    </a>
+  </div>
+
+  <a href="https://shop.funq.jp/collections/even/products/e26i0333k" class="floating-cta" id="js-cta">購入はこちら</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById('js-article-container');
+  const cta = document.getElementById('js-cta');
+  if (!cta || !container) return;
+
+  function handleScroll() {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollPos / scrollHeight) * 100;
+
+    // 5%スクロールでCTA表示
+    if (scrollPercentage > 5) {
+      cta.classList.add('is-visible');
+    } else {
+      cta.classList.remove('is-visible');
+    }
+
+    // CTAボタン停止位置調整部分
+    const containerRect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // ボタンが記事の底（paddingエリア）に到達したか判定
+    // 画面下端からボタンの余白分(約80px)の位置と、コンテナの底を比較
+    if (containerRect.bottom <= windowHeight) {
+      cta.classList.add('is-stopped');
+    } else {
+      cta.classList.remove('is-stopped');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', handleScroll);
+  handleScroll(); // 初期読み込み時
+});
+</script>
+          
+</div>
+</body>
+</html>
