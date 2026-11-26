@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FLOG GOLF CLUB Reimagines the Caddy Bag</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <style>
+/* ==========================================================================
+    1. 既存のレイアウトシステム（ベース＆拡張）
+=========================================================================== */
+.article-body {
+  --article-width: 920px;
+  --font-size-pc: 15px;
+  --font-size-sp: 14px;
+  --sp-padding: 22px;
+  --accent-color: #1a1a1a;
+  --grid-gap: 24px;
+  --btn-color: #4a4635; 
+  font-family: "Nunito Sans", "Noto Sans JP", sans-serif;
+  max-width: var(--article-width);
+  margin: 0 auto;
+  font-size: var(--font-size-pc);
+  line-height: 1.8;
+  color: #333333;
+}
+.article-body p {
+  margin: 0 0 24px;
+}
+.article-body h3 {
+  margin: 48px 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* 既存の単一画像スタイル */
+.article-image {
+  margin: 32px 0;
+  width: 100%;
+}
+.article-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* 汎用クラス：SPのみ表示（改行制御用） */
+.sp-only {
+  display: none;
+}
+/* ==========================================================================
+    2. 画像グリッド＆レイアウトモジュール
+=========================================================================== */
+.img-ratio-4-5 {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+.article-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  margin: 32px 0 16px;
+}
+.article-image-grid .grid-item {
+  position: relative; 
+}
+/* 画像リンク用の共通ホバーエフェクトと、Shopify特有の枠線・下線を完全無効化 */
+.article-body a.img-link {
+  display: block;
+  transition: opacity 0.3s ease;
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  position: relative;
+  z-index: 1; 
+}
+.article-body a.img-link:hover {
+  opacity: 0.9;
+}
+.article-body a.img-link::after,
+.article-body a.img-link::before {
+  display: none !important;
+}
+/* KV直下のモデル名 */
+.grid-caption {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: -50px; 
+  padding-bottom: 50px; 
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  position: relative; 
+  z-index: 10; 
+  pointer-events: none; 
+}
+.product-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin: 80px 0 40px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+.product-feature-group {
+  margin-bottom: 60px;
+}
+.product-feature-row {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.product-feature-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.product-feature-media {
+  flex: 1;
+}
+.product-feature-info {
+  flex: 1;
+}
+.product-feature-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--accent-color);
+}
+/* ==========================================================================
+    3. ピュアCSS 4:5 スライダー ＆ ライトボックス（拡大）
+=========================================================================== */
+.slider-container {
+  margin: 40px 0 40px; 
+}
+.article-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+}
+.article-slider::-webkit-scrollbar {
+  height: 5px;
+}
+.article-slider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.article-slider::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+.article-slider-item {
+  flex: 0 0 calc(33.333% - 11px);
+  scroll-snap-align: start;
+}
+.lightbox-trigger {
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+.lightbox-trigger:hover {
+  opacity: 0.8;
+}
+.custom-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.custom-lightbox.show {
+  display: flex;
+  opacity: 1;
+}
+.custom-lightbox-img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.custom-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+}
+/* ==========================================================================
+    4. プロフィール用テキストボックス
+=========================================================================== */
+.profile-text-box {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 0 auto 40px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+.profile-text-box .profile-title {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.profile-text-box .profile-name {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--accent-color);
+}
+.profile-text-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* ==========================================================================
+    5. 添付画像踏襲型 カスタムCTAボタン
+=========================================================================== */
+.cta-button-container {
+  text-align: center;
+  margin: 24px 0 60px;
+  padding-right: 20px; 
+  clear: both; /* 回り込み防止 */
+}
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color);
+  text-decoration: none !important;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 16px 54px 16px 36px; 
+  line-height: normal; 
+  background: transparent;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+.cta-button::after {
+  content: '';
+  position: absolute;
+  right: -24px; 
+  top: 50%;
+  width: 48px; 
+  height: 1px;
+  background-color: var(--btn-color);
+  transition: transform 0.3s ease;
+}
+.cta-button:hover {
+  opacity: 0.7;
+}
+/* 【強力な修正】テキスト位置を -6px 強制的に移動させる */
+.cta-button span {
+  display: inline-block; 
+  transform: translateY(-6px) !important; 
+}
+/* ==========================================================================
+    6. 締めテキストのレイアウト制御（新規追加）
+=========================================================================== */
+.closing-text {
+  text-align: center !important; 
+  font-weight: 600; 
+  line-height: 2; 
+  position: relative; 
+  z-index: 10; 
+  word-break: keep-all;
+  margin-top: 24px; /* ベースのマージン */
+  /* 【強力な修正】元の位置から強制的に 7px 上へスライドさせる */
+  transform: translateY(-7px) !important; 
+}
+/* ==========================================================================
+    7. トラベルハードケースセクション
+=========================================================================== */
+.hardcase-section {
+  background-color: #f3f5f0; 
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  /* 【修正】オリーブ余白はご指定通り広く保つ */
+  padding: 60px 0 60px;
+  margin-top: 0; 
+  margin-bottom: 60px;
+  clear: both; /* 全体回り込み防止 */
+}
+.hardcase-inner {
+  max-width: var(--article-width);
+  margin: 0 auto;
+  padding: 0 var(--sp-padding);
+}
+.hardcase-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent-color);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  /* 【強力な修正】画像の表示上端から強制的に 10px 上へスライドさせる */
+  transform: translateY(-40px) !important;
+}
+.hardcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  margin-bottom: 24px; 
+}
+.hardcase-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hardcase-text-block {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.hardcase-text-block p {
+  margin-bottom: 16px;
+}
+/* ==========================================================================
+    8. 動画枠・音声トグルUI（回り込み完全防止版）
+=========================================================================== */
+/* 【強力な修正】いかなるテーマCSSにも負けない中央揃えレイアウト */
+.video-section-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  clear: both !important; /* 右寄せ・左寄せを全てリセット */
+  margin: 0 auto;
+}
+.product-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.product-video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* 【強力な修正】動画下テキストの中央寄せ絶対指定 */
+.video-annotation {
+  font-size: 12px !important;
+  color: #666 !important;
+  line-height: 1.4 !important;
+  text-align: center !important; /* 確実に中央へ */
+  width: 100% !important;
+  margin: 10px auto 20px auto !important; 
+}
+@media (min-width: 1024px) {
+  .product-video-wrapper {
+    max-width: 60%;
+    margin: 20px auto 10px auto; 
+  }
+  .video-annotation {
+    max-width: 60% !important; /* 動画の幅に合わせる */
+  }
+}
+.video-sound-toggle {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.45);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.video-sound-toggle img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.video-sound-toggle .switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+.video-sound-toggle .switch input {
+  display: none;
+}
+.video-sound-toggle .slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.video-sound-toggle .slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.video-sound-toggle input:checked + .slider {
+  background: #4caf50;
+}
+.video-sound-toggle input:checked + .slider::before {
+  transform: translateX(20px);
+}
+/* ==========================================================================
+    9. スマートフォン（SP）レスポンシブ設計
+=========================================================================== */
+@media (max-width: 768px) {
+  .sp-only {
+    display: block;
+  }
+  .article-body {
+    max-width: 100%;
+    padding: 0 var(--sp-padding);
+    font-size: var(--font-size-sp);
+  }
+  .article-image {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .article-image-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  
+  .grid-caption {
+    margin-bottom: 24px;
+  }
+  /* 締めの画像群：SP時の余白と重なりを最適化 */
+  .closing-image-grid {
+    margin-bottom: -60px;
+  }
+  .closing-image-grid .grid-item:nth-child(2) {
+    margin-top: -90px; 
+    padding-bottom: 90px; 
+  }
+  
+  /* 【修正】SP時の締めテキスト：ご指定通り -70px で食い込ませる */
+  .closing-text {
+    margin-top: -140px !important; 
+    transform: none !important; /* PC時のtransformをリセットして純粋にmarginで寄せる */
+  }
+  .product-section-title {
+    font-size: 18px;
+    margin: 60px 0 30px;
+    padding: 0 var(--sp-padding);
+  }
+  .product-feature-row,
+  .product-feature-row:nth-child(even) {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .product-feature-media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  
+  .slider-container {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .article-slider {
+    padding-left: var(--sp-padding);
+    padding-right: var(--sp-padding);
+    gap: 12px;
+  }
+  .article-slider-item {
+    flex: 0 0 72%;
+  }
+  .profile-text-box {
+    padding: 32px var(--sp-padding);
+    margin-top: 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0; 
+  }
+  .cta-button-container {
+    padding-right: 0; 
+  }
+  /* SP時：ハードケースセクション調整 */
+  .hardcase-section {
+    padding: 40px 0 40px;
+    margin-top: 0; 
+  }
+  .hardcase-title {
+    font-size: 17px;
+    padding: 0 var(--sp-padding);
+    margin-bottom: 32px;
+  }
+  .hardcase-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+}
+</style>
+<div class="article-body">
+  <div class="article-image">
+    <img src="assets/flaggolf_features_1200_800.png" alt="Remake Caddy Bag メイン画像">
+  </div>
+  <p>
+    スタイリスト尾後啓太氏が手掛ける、傑作。<br>
+    無骨さと遊び心の共演したハンドペイントが光る【一点モノ】のリメイクバッグ。<br>
+    古着をベースとした複数のパーツを組み合わせて再構築された唯一無二の2モデルがリリース。
+  </p>
+  <div class="article-image-grid">
+    <div class="grid-item">
+      <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26g0398k" class="img-link">
+        <img src="assets/even0563.webp" class="img-ratio-4-5" alt="イメージ左">
+      </a>
+      <span class="grid-caption">（camouflage)</span>
+    </div>
+    <div class="grid-item">
+      <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26g0397k" class="img-link">
+        <img src="assets/even0573.webp" class="img-ratio-4-5" alt="イメージ右">
+      </a>
+      <span class="grid-caption">（vintage flight jacket)</span>
+    </div>
+  </div>
+  <p>
+    カモフラ柄の古着をベースとした（camouflage)と希少なヴィンテージのフライトジャケットを解体して組み合わせた（vintage flight jacket)。<br>
+    どちらも「FLOG GOLF CLUB」独自の感性で表現されたクリエイティビティ溢れる逸品。<br>
+    尾後氏のリメイクバッグは入荷のたびに即完売する人気商品。
+    二つとして同じ物は存在しないオンリー1の一品、手にするのは…
+  </p>
+  <h2 class="product-section-title">REMAKE CADDY BAG（camouflage)</h2>
+  <div class="product-feature-group">
+    
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0569.webp" class="img-ratio-4-5" alt="プロダクト画像1">
+      </div>
+      <div class="product-feature-info">
+        <h4>無骨さと遊び心の共演。</h4>
+        <p>カモフラージュ柄の古着がベースのため、生地の質感、カモフラ柄の出方がそれぞれ異なる。リメイクならではの遊び心とミリタリーの無骨さを合わせ持ったデザイン。
+        <br>
+        耐久性に優れたミリタリーファブリックと、手作業による大胆なペイントワークがシンクロし、唯一無二の存在感を放つ。使い込むほどに増す経年変化も楽しめる。</p>
+      </div>
+    </div>
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0567.webp" class="img-ratio-4-5" alt="プロダクト画像2">
+      </div>
+      <div class="product-feature-info">
+        <h4>ハンドペイントが生む唯一無二の表情</h4>
+        <p>配置されたロゴやキャラクターは、すべて職人の手によるハンドペイント仕上げ。グラフィックが重なり合うデザインに、大人の遊び心を感じさせる。一点一点施すグラフィックは、同じ配置・同じ掠れ方が二つと存在せず、無骨なボディに宿る、モダンアートのような遊び心が魅力。</p>
+      </div>
+    </div>
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0566.webp" class="img-ratio-4-5" alt="プロダクト画像3">
+      </div>
+      <div class="product-feature-info">
+        <h4>実用性を追求した機能美</h4>
+        <p>見た目のインパクトだけでなく、ゴルフバッグとしての収納力や、担ぎやすさを徹底的に追求.複数の古着パーツから厳選されたポケットレイアウトは、使えば分かるプロダクトデザインとしての秀逸性を秘める。</p>
+      </div>
+    </div>
+  </div>
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+        <img src="assets/even0561.webp" class="lightbox-trigger" alt="スライダー1">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0562.webp" class="lightbox-trigger" alt="スライダー2">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0564.webp" class="lightbox-trigger" alt="スライダー3">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0565.webp" class="lightbox-trigger" alt="スライダー4">
+      </div>
+    </div>
+  </div>
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26g0398k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+  <h2 class="product-section-title">REMAKE CADDY BAG<br class="sp-only">（vintage flight jacket)</h2>
+  <div class="product-feature-group">
+    
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0580.webp" class="img-ratio-4-5" alt="プロダクト画像1">
+      </div>
+      <div class="product-feature-info">
+        <h4>形を変えて継がれる系譜</h4>
+        <p>いわゆるMA-1やL-2と呼ばれるようなフライトジャケットを解体、年代やモデルの枠を超え再構築された独自のバランスでパッチワーク。ナイロンの鈍い光沢感と重厚なステッチワークが、圧倒的なクラフトマンシップを感じさせる。形を変え一つのアイテムとしてその系譜を感じることができるマニア涎垂のアイテム。</p>
+      </div>
+    </div>
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0579.webp" class="img-ratio-4-5" alt="プロダクト画像2">
+      </div>
+      <div class="product-feature-info">
+        <h4>歴史を纏う、エイジングパーツ</h4>
+        <p>実際のアイテムに使われていたボタンやジップ等のパーツを適所に配置。新品のプロダクトには決して出せない、リアルなヴィンテージの深みと風格を内包。</p>
+      </div>
+    </div>
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0578.webp" class="img-ratio-4-5" alt="プロダクト画像3">
+      </div>
+      <div class="product-feature-info">
+        <h4>ストリートとゴルフの融合</h4>
+        <p>尾後氏も好きだと謳うカルチャーでもある、アメリカのワークやスケートスタイルを感じさせる.コース上での異彩を放つデザインでありながら、トラッドなゴルフマナーにも馴染む洗練度.尾後氏ならではの卓越した感性だからこそ出せる絶妙なバランス。</p>
+      </div>
+    </div>
+  </div>
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+        <img src="assets/even0571.webp" class="lightbox-trigger" alt="スライダー1">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0572.webp" class="lightbox-trigger" alt="スライダー2">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0574.webp" class="lightbox-trigger" alt="スライダー3">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0575.webp" class="lightbox-trigger" alt="スライダー4">
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/even0577.webp" class="lightbox-trigger" alt="スライダー5">
+      </div>
+    </div>
+  </div>
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26g0397k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+  <div class="article-image-grid closing-image-grid" style="margin-top: 80px;">
+    <div class="grid-item">
+      <img src="assets/even0561.webp" class="img-ratio-4-5" alt="締めイメージ左">
+    </div>
+    <div class="grid-item">
+      <img src="assets/even0571.webp" class="img-ratio-4-5" alt="締めイメージ右">
+    </div>
+  </div>
+  <p class="closing-text">
+    単にクラブを運ぶための道具にとどまらず、<br>持ち主のスタイルを雄弁に語るピース。<br>
+    「量産品では満足できない」そんな本物志向の<br>大人へ捧げる一品。<br>
+    この無骨ながらも愛らしいキャラクターたちが<br>共存する独特の世界観を<br>
+    ぜひあなたのゴルフライフに取り入れてみては。
+  </p>
+  <div class="cta-button-container" style="margin-top: 40px; margin-bottom: 80px;">
+    <a href="https://shop.funq.jp/search?q=REMAKE+CADDY+BAG&amp;type=product%2Carticle%2Cpage%2Ccollection&amp;options%5Bprefix%5D=last" class="cta-button"><span>VIEW ALL COLLECTIONS</span></a>
+  </div>
+  <div class="article-image" style="margin-top: 80px;">
+    <img src="assets/2026-04-24_161723.webp" alt="尾後啓太氏">
+  </div>
+  <div class="profile-text-box">
+    <span class="profile-title">スタイリスト</span>
+    <span class="profile-name">尾後 啓太 氏</span>
+    <p>大人気ブランドFLOG GOLF主宰でもある、その独自のセンスは業界のみならず注目を集めている。</p>
+  </div>
+  <div class="hardcase-section">
+    <div class="hardcase-inner">
+      
+      <h3 class="hardcase-title">大切なキャディバッグを守るトラベルハードケースセットも</h3>
+      
+      <div class="hardcase-grid">
+        <div class="grid-item">
+          <img src="assets/Gemini_Generated_Image_bcppsabcppsabcpp.webp" alt="トラベルハードケース イメージ左">
+        </div>
+        <div class="grid-item">
+          <img src="assets/Gemini_Generated_Image_wr62erwr62erwr62.webp" alt="トラベルハードケース イメージ右">
+        </div>
+      </div>
+      
+      <div class="video-section-container">
+        <div class="product-video-wrapper">
+          <video class="js-product-video" src="assets/f17aba006ea1431d95a71306a76888a4.mp4" playsinline="" muted="" loop="loop" autoplay="autoplay"></video>
+          <div class="video-sound-toggle">
+            <img class="js-video-sound-icon" src="assets/mute.webp" alt="mute">
+            <label class="switch">
+              <input type="checkbox" class="js-video-sound-switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <p class="video-annotation">※サンプルとなるためロゴの仕様が異なります。<br class="sp-only">製品では黒縁のロゴとなります。</p>
+      </div>
+      <div class="hardcase-text-block">
+        <p><span>スタイリスト尾後啓太氏が手掛ける、世界に一つだけのリメイクキャディバッグと、その大切なキャディバッグを守るGOCOXのトラベルハードケースがセットになったこだわりセット。</span></p>
+        <p>セットで購入するとFLOG GOLF CLUBのオリジナルステッカーシートが付いてくる！</p>
+        <div style="margin: 32px 0;">
+          <img src="assets/ogo_sticker.png" alt="オリジナルステッカーシート" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+        </div>
+      </div>
+      
+      <div class="cta-button-container" style="margin-bottom: 0;">
+        <a href="https://shop.funq.jp/search?q=GOCOX&amp;type=product%2Carticle%2Cpage%2Ccollection&amp;options%5Bprefix%5D=last" class="cta-button"><span>VIEW MORE</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="custom-lightbox" class="custom-lightbox">
+  <span class="custom-lightbox-close">×</span>
+  <img id="lightbox-img" class="custom-lightbox-img" src="">
+</div>
+<script>
+// 動画の音声トグル制御
+(function () {
+  const wrappers = document.querySelectorAll('.product-video-wrapper');
+  wrappers.forEach(function(wrapper) {
+    const video = wrapper.querySelector('.js-product-video');
+    const checkbox = wrapper.querySelector('.js-video-sound-switch');
+    const icon = wrapper.querySelector('.js-video-sound-icon');
+    if (!video || !checkbox || !icon || wrapper.dataset.initialized) return;
+    wrapper.dataset.initialized = "true";
+    video.muted = true;
+    checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+        video.muted = false;
+        video.play();
+        icon.src = 'assets/unmute.webp';
+        icon.alt = 'unmute';
+      } else {
+        video.muted = true;
+        icon.src = 'assets/mute.webp';
+        icon.alt = 'mute';
+      }
+    });
+  });
+})();
+// スライダー画像拡大（Lightbox）制御
+document.addEventListener('DOMContentLoaded', function() {
+  var modal = document.getElementById('custom-lightbox');
+  var modalImg = document.getElementById('lightbox-img');
+  var triggers = document.querySelectorAll('.lightbox-trigger');
+  var closeBtn = document.querySelector('.custom-lightbox-close');
+  if(modal && triggers.length > 0) {
+    triggers.forEach(function(img) {
+      img.addEventListener('click', function() {
+        modal.style.display = "flex";
+        setTimeout(function() { modal.classList.add('show'); }, 10);
+        modalImg.src = this.src;
+      });
+    });
+    closeBtn.addEventListener('click', function() {
+      modal.classList.remove('show');
+      setTimeout(function() { modal.style.display = "none"; }, 300);
+    });
+    modal.addEventListener('click', function(e) {
+      if (e.target !== modalImg) {
+        modal.classList.remove('show');
+        setTimeout(function() { modal.style.display = "none"; }, 300);
+      }
+    });
+  }
+});
+</script>
+          
+</div>
+</body>
+</html>
