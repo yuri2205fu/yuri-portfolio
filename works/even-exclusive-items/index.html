@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EVEN別注アイテムをまとめて紹介！</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              
+
+
+<meta charset="UTF-8">
+<title>LP プレビュー（EVEN別注コレクション 15商品）</title>
+<style>
+/* ==========================================================================
+    0. ページ背景：清涼感のある薄い水色（シンプルな単色・全体に敷く）
+=========================================================================== */
+.lp-bg-wrap {
+  background-color: #dcdcdc;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-bottom: clamp(60px, 8vw, 80px);
+}
+/* ==========================================================================
+    1. 既存のレイアウトシステム（ベース＆拡張）
+=========================================================================== */
+.article-body {
+  --article-width: 920px;
+  --font-size-pc: 15px;
+  --font-size-sp: 14px;
+  --sp-padding: 22px;
+  --accent-color: #1a1a1a;
+  --grid-gap: 24px;
+  --btn-color: #4a4635;
+  font-family: "Nunito Sans", "Noto Sans JP", sans-serif;
+  max-width: var(--article-width);
+  margin: 0 auto;
+  font-size: var(--font-size-pc);
+  line-height: 1.8;
+  color: #333333;
+}
+.article-body p { margin: 0 0 24px; }
+.article-body h3 { margin: 48px 0 16px; font-size: 18px; font-weight: 600; }
+.article-image { margin: 32px 0; width: 100%; }
+.article-image img { width: 100%; height: auto; display: block; }
+.sp-only { display: none; }
+
+/* KV（キービジュアル）：PC 1200x800 / SP 1080x1350 を picture で出し分け */
+.kv-image { margin: 0 0 32px; }
+.kv-image picture,
+.kv-image img { width: 100%; height: auto; display: block; }
+
+/* KVプレースホルダー（画像未支給の間の仮表示） */
+.kv-placeholder {
+  width: 100%;
+  aspect-ratio: 1200 / 800;
+  border: 1px dashed #9db8c4;
+  background: #f4fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b8794;
+  font-size: 14px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* KV直下の導入文セクション */
+.intro-section {
+  text-align: center;
+  margin: 0 0 60px;
+}
+.intro-section .intro-lead {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--accent-color);
+}
+.intro-section p:last-child { margin-bottom: 0; }
+.intro-section .placeholder-note {
+  font-size: 13px;
+  color: #8a8a8a;
+}
+
+.img-ratio-4-5 { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+
+.product-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin: 80px 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+.product-section-title.is-placeholder {
+  color: #9aa0a6;
+  border-bottom-color: #cfd6db;
+}
+.product-status-tag {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #e08a2e;
+  margin: 16px 0 0;
+}
+
+/* 商品セクション：メディア＋テキストの組み合わせは1商品につき1個 */
+.product-feature-group { margin-bottom: 60px; margin-top: 40px; }
+.product-feature-row {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 0;
+}
+.product-feature-row.is-reverse { flex-direction: row-reverse; }
+.product-feature-media { flex: 1; }
+.product-feature-info { flex: 1; }
+.product-feature-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--accent-color);
+}
+.product-feature-info p { margin: 0; }
+
+/* メディアのプレースホルダー（画像未支給の商品用） */
+.media-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px dashed #c7c7c7;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a9a9a;
+  font-size: 13px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.slider-container { margin: 40px 0 40px; }
+.article-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+}
+.article-slider::-webkit-scrollbar { height: 5px; }
+.article-slider::-webkit-scrollbar-track { background: #f1f1f1; }
+.article-slider::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 10px; }
+.article-slider-item {
+  position: relative;
+  flex: 0 0 calc(33.333% - 11px);
+  scroll-snap-align: start;
+}
+.lightbox-trigger { cursor: zoom-in; transition: opacity 0.2s; }
+.lightbox-trigger:hover { opacity: 0.8; }
+
+/* スライド画像：タップで拡大できることを示す虫眼鏡バッジ */
+.slider-zoom-badge {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.slider-zoom-badge svg { width: 16px; height: 16px; color: #ffffff; }
+
+.cta-button-container {
+  text-align: center;
+  margin: 24px 0 60px;
+  padding-right: 20px;
+  clear: both;
+}
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color);
+  text-decoration: none !important;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 16px 54px 16px 36px;
+  line-height: normal;
+  background-color: #ffffff;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+.cta-button::after {
+  content: '';
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  width: 48px;
+  height: 1px;
+  background-color: var(--btn-color);
+  transition: transform 0.3s ease;
+}
+.cta-button:hover { opacity: 0.7; }
+.cta-button span { display: inline-block; transform: translateY(-6px) !important; }
+.cta-button.is-disabled {
+  border-color: #c7c7c7;
+  color: #b0b0b0;
+  pointer-events: none;
+}
+.cta-button.is-disabled::after { background-color: #c7c7c7; }
+
+/* VIEW ALL ITEMS：左→右に黒が塗りつぶされるホバーアニメーション */
+.view-all-cta-container {
+  margin: 16px 0 60px;
+}
+.cta-button-block {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  color: #1a1a1a !important;
+  border: 1px solid #1a1a1a;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+.cta-button-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+.cta-button-block:hover {
+  color: #ffffff !important;
+}
+.cta-button-block:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.cta-button-block-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* フッター：新規会員登録クーポンカード */
+.fm-footer-wrapper {
+  margin: clamp(40px, 8vw, 80px) 0 0 !important;
+  max-width: 900px !important;
+}
+.fm-footer-coupon {
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', sans-serif !important;
+  border: 1px solid #ddd !important;
+  padding: 36px 32px !important;
+  text-align: center !important;
+  background: #fff !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.fm-footer-coupon-lead {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+  color: #333 !important;
+  margin-bottom: 28px !important;
+}
+.fm-footer-coupon-lead strong {
+  font-size: 16px !important;
+  display: block !important;
+  margin-bottom: 10px !important;
+  color: #111 !important;
+}
+.fm-footer-coupon-note {
+  display: block !important;
+  font-size: 12px !important;
+  color: #888 !important;
+  line-height: 1.8 !important;
+  margin-top: 8px !important;
+}
+.fm-footer-coupon-btn {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid #111 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  padding: 15px 52px !important;
+  background: #111 !important;
+  color: #fff !important;
+  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 13px !important;
+  letter-spacing: 0.2em !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+.fm-footer-coupon-btn:hover {
+  background: #fff !important;
+  color: #111 !important;
+}
+
+/* ==========================================================================
+    2. SP レスポンシブ
+=========================================================================== */
+@media (max-width: 768px) {
+  .sp-only { display: block; }
+  .article-body {
+    max-width: 100%;
+    padding: 0 var(--sp-padding);
+    font-size: var(--font-size-sp);
+  }
+  .article-image {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .product-section-title { font-size: 18px; margin: 60px 0 24px; padding: 0 var(--sp-padding) 12px; }
+  .product-feature-row,
+  .product-feature-row.is-reverse { flex-direction: column; gap: 16px; margin-bottom: 0; }
+  .product-feature-media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .slider-container {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .article-slider { padding-left: var(--sp-padding); padding-right: var(--sp-padding); gap: 12px; }
+  .article-slider-item { flex: 0 0 72%; }
+  .cta-button-container { padding-right: 0; }
+
+  .slider-zoom-badge { width: 26px; height: 26px; right: 8px; bottom: 8px; }
+  .slider-zoom-badge svg { width: 14px; height: 14px; }
+
+  .intro-section { margin: 0 0 44px; }
+  .intro-section .intro-lead { font-size: 16px; }
+
+  .lightbox-nav { width: 40px; height: 40px; font-size: 22px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .custom-lightbox-img { max-width: 92%; }
+
+  .view-all-cta-container {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 8px;
+    margin-bottom: 40px;
+  }
+}
+
+/* ==========================================================================
+    3. ライトボックス（拡大表示）＋ 前後ナビゲーション
+=========================================================================== */
+.custom-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.custom-lightbox.show { display: flex; opacity: 1; }
+.custom-lightbox-img {
+  max-width: 82%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  touch-action: pan-y;
+  -webkit-user-drag: none;
+  user-select: none;
+  cursor: grab;
+}
+.custom-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 3;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+.lightbox-nav:hover { background: rgba(255, 255, 255, 0.3); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+</style>
+
+
+
+<div class="lp-bg-wrap">
+<div class="article-body">
+
+  <!-- ==================== KV（キービジュアル） ==================== -->
+  <div class="article-image kv-image">
+    <picture>
+      <source media="(max-width: 768px)" srcset="assets/even_ecclusive_kvsp.png">
+      <img src="assets/even_ecclusive_kv.png" alt="EVEN別注コレクション KVイメージ"></picture>
+  </div>
+
+  <!-- ==================== 導入文セクション ==================== -->
+  <div class="intro-section">
+    <p class="intro-lead">ブランドの垣根を越えて生まれた、EVENだけの特別な一着。</p>
+    <p>人気ブランドとタッグを組み、EVENだからこそ実現できた別注アイテムをセレクト。ゴルフメディアならではの目線で生まれた、ここでしか手に入らない限定コレクション。ウェアからバッグ、キャップ、シューズまで、この秋のゴルフスタイルを引き上げるアイテムをご紹介。</p>
+  </div>
+
+  <!-- ==================== 商品セクション：Hurley別注 1 ==================== -->
+  <h2 class="product-section-title">［Hurley別注］日本オープン記念 PHANTOM ZIP UP BLOUSON</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even9928.webp" class="img-ratio-4-5" alt="［Hurley別注］日本オープン記念 PHANTOM ZIP UP BLOUSON メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>日本オープン、Hurley、EVENのトリプルコラボブルゾン</h4>
+        <p>スポーティなジップアップブルゾンを、落ち着いたカラーリングと上品なロゴでクラシックに仕上げ、ストレッチ・保温・吸水速乾の3拍子で快適さをキープ。肌寒い季節のラウンドを支える一枚。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even9430.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9431.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9428.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9429.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9918.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9447.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9453.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley1-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26d0466k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション：Hurley別注 2 ==================== -->
+  <h2 class="product-section-title">［Hurley別注］日本オープン記念 PHANTOM MOCK NECK PULLOVER</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/even9884_57f62f84-4c06-4da5-9fd5-8cc7ca133388.webp" class="img-ratio-4-5" alt="［Hurley別注］日本オープン記念 PHANTOM MOCK NECK PULLOVER メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>日本オープン、Hurley、EVENのトリプルコラボモックネック</h4>
+        <p>高い吸水速乾性が汗を素早く拡散してプレー中もドライな状態を保つ進化した軽量ダンボールニットを採用。ストレッチ・保温・吸水速乾の3拍子で快適さをキープ。肌寒い季節のラウンドを支える一枚。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even9423_607ab2a2-0e2e-4db2-a87a-9d40062034fc.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9424_49da8205-b64c-486e-a1e7-b4c8c6c5d4ef.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9425_172c2588-8842-4923-9e2a-19e83ebfdc37.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9426_f8486f18-c1cf-4ae8-9c55-4492d9a57ceb.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9439_177ae63f-558c-4bcb-a71f-4bc9d11c9279.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9442_fdf810c2-667b-410e-8632-b1094241707c.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9443_49e3b6e5-5065-4d16-b03f-620a86b97257.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9948_ec40cec2-5f4f-42ef-bda4-5ce9569e2285.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley2-8"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26a0469k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション：Hurley別注 3 ==================== -->
+  <h2 class="product-section-title">［Hurley別注］日本オープン記念 PHANTOM BUCKET HAT</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even9948_51a8762c-cda8-467a-ada2-9da43c67317b.webp" class="img-ratio-4-5" alt="［Hurley別注］日本オープン記念 PHANTOM BUCKET HAT メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>日本オープン、Hurley、EVENのトリプルコラボバケットハット</h4>
+        <p>雨の日でもスコアを諦めたくないゴルファーへおくるバケットハット。襟足からの雨を防ぐツバ後方が長めの設計を採用し、撥水機能が持続（100洗3級クリア）する洗濯耐久性も持つ。さらにワイヤーを内蔵することで形状を自在にキープでき、視界を確保しながら雨を防ぐ実用的な構造が特徴。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even9432_888bd73a-423a-464d-9c73-2e4ffff9a93e.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9434_255660b1-ae8c-41a7-bc34-0108bd3af57f.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9435_e125bc60-28bf-4289-b1b7-28188a0e7a99.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9437_7e0f6b5d-5293-4419-bb23-64cb9d367cd7.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9438_458739b4-9eef-433a-ac1d-09119ed1a907.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9884_89f31361-751d-4e68-9e1a-f211d0e17e67.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9918_23b9941c-4dcd-4cc6-a244-8d17d96be2d7.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9928_85fa257e-dbf4-4928-9b42-019ce3fa1be0.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-8"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9948_51a8762c-cda8-467a-ada2-9da43c67317b.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーHurley3-9"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/even%E6%96%B0%E7%9D%80/products/e26k0468k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 1 ==================== -->
+  <h2 class="product-section-title">［V12別注］EXP JKT (EVEN)-撥水ジャケット</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/326A0377.webp" class="img-ratio-4-5" alt="［V12別注］EXP JKT (EVEN)-撥水ジャケット メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>V12とEVENが特別に別注した撥水ジャケット</h4>
+        <p>V12で人気のウィンドブレーカーをベースに、メインラインにはない特別なカラーリングに仕上げ、軽量かつ伸縮性が高く、撥水性に優れた機能的な生地を使用しているため、突然の雨にも対応できる1着に仕上げた。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+        <img src="assets/bnb5076.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー1-1">
+        <span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/bnb5078.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー1-2">
+        <span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/15_38_00..png" class="lightbox-trigger img-ratio-4-5" alt="スライダー1-3">
+        <span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/bnb5081.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー1-4">
+        <span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+      </div>
+      <div class="article-slider-item">
+        <img src="assets/326A0322.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー1-5">
+        <span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e25d0266k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 2 ==================== -->
+  <h2 class="product-section-title">［Admiral GOLF別注］キャンバスミニカートバッグ（撥水加工）</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/even4045.webp" class="img-ratio-4-5" alt="［Admiral GOLF別注］キャンバスミニカートバッグ（撥水加工） メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>驚きの軽さとタフな撥水性をプラスした限定モデル</h4>
+        <p>英国発の世界的スポーツブランド「Admiral GOLF（アドミラル ゴルフ）」に、別注をかけた特別なミニトートバッグ。「軽量・撥水・洗練」をキーワードに、ゴルフのラウンド（カートバッグ）からタウンユースまで、シーンを選ばず活躍する万能な一品に仕上っている。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even0721_92782911-425c-4d73-84af-1f79f55c4254.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー2-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0722_18c22dc0-03d8-4acf-9fca-78a7f435cd51.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー2-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0723_307b953a-efed-46c2-85ad-a5d3caa979d6.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー2-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0726_70f0e4f8-4e7c-469d-ad30-2d62b895ea69.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー2-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even4057.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー2-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e26h0394k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 3 ==================== -->
+  <h2 class="product-section-title">［MIZUNO別注］GLOVE DRIVER COVER</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0148.webp" class="img-ratio-4-5" alt="［MIZUNO別注］GLOVE DRIVER COVER メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>グローブの端材を使った、特別なドライバー用ヘッドカバー。</h4>
+        <p>プロ野球選手やメジャーリーガーのグラブを手がける、工房の革を使用。グローブを作る過程で発生する端材を用いて、ヘッドカバーへと生まれ変わった特別な別注モデル。mizunoだからこその堅牢な品質なレザーはエイジングも楽しめる一品に。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even0284.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0285.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0286.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0287.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0288.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0289.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0114.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー3-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e26n0416k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 4 ==================== -->
+  <h2 class="product-section-title">［Kappa別注］GAME POLO SHIRT</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/326A3660.webp" class="img-ratio-4-5" alt="［Kappa別注］GAME POLO SHIRT メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>『Kappa（カッパ）』によるスポーティーな存在感とロイヤルブルーが美しい別注ポロシャツ</h4>
+        <p>クラシックとモダンを融合させた、幾何学調の総柄をさりげなく表現し、上品さと個性を兼ね備えたデザインに仕上げていた1着。リファレンスについて熱く語ったストーリーは商品ページの動画より。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even0272.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0274_66f708ad-f8e2-42de-839e-b501d9b63868.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0275_b8708942-862f-446e-a91d-5d27a0b34b58.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0276_42abf6d5-a252-48c7-83fc-db555014bc94.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A3691_LOOK-_NG.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A3745.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A4216.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー4-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e26a0381k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 5 ==================== -->
+  <h2 class="product-section-title">［BEAXIS別注］バランスコアターフ</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even0645.webp" class="img-ratio-4-5" alt="［BEAXIS別注］バランスコアターフ メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>「歩くだけ」の体幹トレーニングで話題のシューズにEVEN別注カラーが登場</h4>
+        <p>特許技術を取得した「独自インソール」が特徴のシューズを別注カラーのグレーで制作。加えて、ダイヤル式→レースアップ式に変更したことでクラシックかつ普段使いしやすいディテールに。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/BEAXISexclusive_1080_1350_2.png" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even6299.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even6300.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even6301.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even6302.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even6304.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0870.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー5-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e26i0333k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 6 ==================== -->
+  <h2 class="product-section-title">［FLOG GOLF別注］REMAKE CADDY BAG（vintage flight jacket)</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/even0571.webp" class="img-ratio-4-5" alt="［FLOG GOLF別注］REMAKE CADDY BAG メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>ヴィンテージの魂を再構築。スタイリスト尾後啓太氏が手掛ける、世界に一つの傑作。</h4>
+        <p>ヴィンテージのフライトジャケットを解体し、複数のパーツを組み合わせて再構築したリメイクキャディバッグは、均一ではない色ムラや生地ごとの個体差が「味」として成立した1品。異素材を巧みに組み合わせることで、リメイクならではの奥行きと存在感を引き出している。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even0573.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0572.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0574.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0575.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0578.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0579.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0580.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー6-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e26g0397k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 7 ==================== -->
+  <h2 class="product-section-title">［MARK ＆ LONA別注］FER クロスオーバーサコッシュ</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/even9987.webp" class="img-ratio-4-5" alt="［MARK ＆ LONA別注］FER クロスオーバーサコッシュ メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>FERの象徴であるワールドロゴを大胆にプリントした、EVEN × MARK &amp; LONA FER限定モデル</h4>
+        <p>自転車レースなどでも使用されるショルダーバッグ“サコッシュ”をモチーフに、ゴルフやアウトドアシーンにも適したコンパクトながらも実用性に優れたサイズ感が特徴。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even0236.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー7-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0237.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー7-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0243.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー7-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9994.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー7-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e25h0160k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 8 ==================== -->
+  <h2 class="product-section-title">［rough and swell別注］EVEN200号 コラボカートバッグ</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/even10032.webp" class="img-ratio-4-5" alt="［rough and swell別注］EVEN200号 コラボカートバッグ メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>EVEN200号を記念したキャンパス地の別注バッグ</h4>
+        <p>ハンドルのストライプが良いアクセント。ゴルフ以外の日常使いにもちょうどいい大きさ。お買い物やランチバッグとしても活躍しそうなサイズ感。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even0250.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー8-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0252.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー8-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0245.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー8-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0247.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー8-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0253.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー8-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even10055.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー8-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e25h0159k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 9 ==================== -->
+  <h2 class="product-section-title">［BRIEFING GOLF別注］アジャスタブルキャップ</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/DNP-03139054_0327_5d0ecb45-e897-4546-a017-9ade172524be.jpg" class="img-ratio-4-5" alt="［BRIEFING GOLF別注］アジャスタブルキャップ メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>EVEN創刊200号を記念モデルのロゴキャップ</h4>
+        <p>ダブルネームの特別仕様ピスネームを挟み込み、バックのサイズアジャスター部分にはロゴテープを配したデザイン。クセなくシンプルで使いやすいデザインが特徴。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/DNP-even3227_k_0327.jpg" class="lightbox-trigger img-ratio-4-5" alt="スライダー9-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/IMG_0948.jpg" class="lightbox-trigger img-ratio-4-5" alt="スライダー9-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/DNP-03139064_0327_83fe080a-29c2-4071-bdce-473ef8d5d1c3.jpg" class="lightbox-trigger img-ratio-4-5" alt="スライダー9-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e25k0147k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 10 ==================== -->
+  <h2 class="product-section-title">［LACOSTE別注］ L.12.12 ポロシャツ</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/even9868.webp" class="img-ratio-4-5" alt="［LACOSTE別注］ L.12.12 ポロシャツ メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>ラコステポロシャツの原型を別注モデルに</h4>
+        <p>『L.12.12』全てのラコステポロシャツの＜原型＞であるこのモデルを胸元のワニのデザインや、右袖の刺繍をEVEN仕様にカスタマイズ。後ろ身頃の右裾には「STYLE EVEN」のロゴマークを特別に刺繍を施しEVEN別注モデルで登場。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/15_38_001.png" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0264.jpg" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0261.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0262.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even0263.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9891.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even9895.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー10-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e25a0144k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション 11 ==================== -->
+  <h2 class="product-section-title">［BRIEFING別注］シューズコンテナー</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row">
+      <div class="product-feature-media">
+        <img src="assets/17_20_20.png" class="img-ratio-4-5" alt="［BRIEFING別注］シューズコンテナー メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>ゴルフ狂が集うEVENならではの別注シューズボックス。</h4>
+        <p>車のトランクでシューズを整頓して積んでおきたいという要望から生まれたシューズ2足が収納できるサイズ感のシューズボックス。内装にはマジックテープで取り外し可能な間仕切りを中央に設置しているので、シューズ以外の収納も可能。同じ商品を複数積んでも倒れないようにスナップボタンで連結可能という汎用性も特徴。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/even2346.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even2347.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/ChatGPTImage2026_9_15_17_25_52.png" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/ChatGPTImage2026_9_15_17_28_28.png" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even2349.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even2350.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/even2364.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダー11-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-even%E3%81%9D%E3%81%AE%E4%BB%96/products/e24h0003k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <!-- ==================== 商品セクション：STYLE EVEN キャディバッグカバー ==================== -->
+  <h2 class="product-section-title">［STYLE EVEN］キャディバッグカバー</h2>
+
+  <div class="product-feature-group">
+    <div class="product-feature-row is-reverse">
+      <div class="product-feature-media">
+        <img src="assets/326A2422.webp" class="img-ratio-4-5" alt="［STYLE EVEN］キャディバッグカバー メイン画像">
+      </div>
+      <div class="product-feature-info">
+        <h4>ストレスフリーなEVENオリジナルキャディバッグカバー</h4>
+        <p>宅配便でキャディバッグを送る際に面倒なカバーの準備。巾着サイズでコンパクトなのにぐーんと伸びる素材だから、力もいらず被せるだけの装着可能。実際の使用感は商品ページの動画より。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="article-slider">
+      <div class="article-slider-item">
+<img src="assets/1080x1350__8.png" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-1"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A2464.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-2"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A2483.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-3"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A2436.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-4"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A2442.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-5"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A2456.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-6"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+      <div class="article-slider-item">
+<img src="assets/326A3235.webp" class="lightbox-trigger img-ratio-4-5" alt="スライダーSTYLEEVEN-7"><span class="slider-zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><line x1="15" y1="15" x2="20" y2="20"></line></svg></span>
+</div>
+    </div>
+  </div>
+
+  <div class="cta-button-container">
+    <a href="https://shop.funq.jp/collections/even/products/e25z0251k" class="cta-button"><span>VIEW MORE</span></a>
+  </div>
+
+  <div class="view-all-cta-container">
+    <a href="https://shop.funq.jp/collections/even%E5%88%A5%E6%B3%A8" class="cta-button-block"><span class="cta-button-block-text">VIEW ALL ITEMS</span></a>
+  </div>
+
+  <!-- ==================== フッター：新規会員登録クーポン ====================
+       元コードのブロックをそのまま流用（サイト共通パーツと判断）。
+       文言・リンク先はこのままでよいかご確認ください。
+  ================================================================= -->
+  <div class="fm-footer-wrapper">
+    <div class="fm-footer-coupon">
+      <div class="fm-footer-coupon-lead">
+        <strong>新規会員登録のお客様へ、すぐに使える ¥1,000 クーポンプレゼント</strong>
+        <span class="fm-footer-coupon-note">
+          ※会員登録時に、登録されたメールアドレスにクーポンが届きます。<br>
+          ※メールマガジンの希望に、チェックを入れた方限定です。
+        </span>
+      </div>
+      <a href="https://shop.funq.jp/pages/even" class="fm-footer-coupon-btn">買い物を続ける</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- 拡大表示（ライトボックス）モーダル：前後ナビ矢印つき -->
+<div id="custom-lightbox" class="custom-lightbox">
+  <span class="custom-lightbox-close">×</span>
+  <span class="lightbox-nav lightbox-prev" aria-label="前の画像">‹</span>
+  <img id="lightbox-img" class="custom-lightbox-img" src="" alt="">
+  <span class="lightbox-nav lightbox-next" aria-label="次の画像">›</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('custom-lightbox');
+  var modalImg = document.getElementById('lightbox-img');
+  var closeBtn = document.querySelector('.custom-lightbox-close');
+  var prevBtn = document.querySelector('.lightbox-prev');
+  var nextBtn = document.querySelector('.lightbox-next');
+  if (!modal) return;
+
+  var currentGroup = [];
+  var currentIndex = 0;
+
+  function showImage(index) {
+    if (!currentGroup.length) return;
+    currentIndex = (index + currentGroup.length) % currentGroup.length;
+    modalImg.src = currentGroup[currentIndex].src;
+    modalImg.alt = currentGroup[currentIndex].alt || '';
+  }
+
+  function openLightbox(group, index) {
+    currentGroup = group;
+    showImage(index);
+    modal.style.display = 'flex';
+    setTimeout(function () { modal.classList.add('show'); }, 10);
+  }
+
+  function closeLightbox() {
+    modal.classList.remove('show');
+    setTimeout(function () { modal.style.display = 'none'; }, 300);
+  }
+
+  document.querySelectorAll('.article-slider').forEach(function (slider) {
+    var group = Array.prototype.slice.call(slider.querySelectorAll('.lightbox-trigger'));
+    group.forEach(function (img, idx) {
+      img.addEventListener('click', function () {
+        openLightbox(group, idx);
+      });
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeLightbox();
+  });
+  prevBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+  nextBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!modal.classList.contains('show')) return;
+    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  var startX = null;
+  var SWIPE_THRESHOLD = 50;
+  modalImg.addEventListener('pointerdown', function (e) {
+    startX = e.clientX;
+  });
+  modalImg.addEventListener('pointerup', function (e) {
+    if (startX === null) return;
+    var diff = e.clientX - startX;
+    if (diff > SWIPE_THRESHOLD) {
+      showImage(currentIndex - 1);
+    } else if (diff < -SWIPE_THRESHOLD) {
+      showImage(currentIndex + 1);
+    }
+    startX = null;
+  });
+});
+</script>
+
+
+<style>  </style>
+<!-- Failed to render app block "9288950279542643071": app block path "shopify://apps/amp/blocks/floating-bar/c164977d-b1d1-458a-b385-fae48208fa69" does not exist --><!-- Failed to render app block "1686040828632053219": app block path "shopify://apps/bindec-customerfields/blocks/app-block/7accefa5-4cc1-44c4-af10-57b990859ca4" does not exist -->
+          
+</div>
+</body>
+</html>
