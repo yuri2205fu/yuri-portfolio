@@ -2,7 +2,7 @@
 // category: LP / BANNER / ADS / INSTAGRAM / SITE
 // img を空にする（または画像が無い）と、仮カードが表示されます
 const WORKS = [
-  { title: "冬の福袋 LP", category: "LP", year: "2026", img: "images/work01.jpg", desc: "キャンペーンLPのデザイン・実装" },
+  { title: "EVEN 冬の福BOX 2026 LP", category: "LP", year: "2026", img: "images/work01.jpg", desc: "福袋キャンペーンLPのデザイン・実装（オープニング演出・福引き・Shopify埋め込み対応）", url: "works/even-fukubox-2026/" },
   { title: "新作ローンチ LP", category: "LP", year: "2026", img: "images/work02.jpg", desc: "" },
   { title: "ブランドサイト リニューアル", category: "SITE", year: "2026", img: "images/work03.jpg", desc: "Before / After", before: "images/work03_before.jpg" },
   { title: "セール告知バナー", category: "BANNER", year: "2026", img: "images/work04.jpg", desc: "" },
