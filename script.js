@@ -31,6 +31,7 @@ function openModal(w,i){
   if(w.before){const bf=card({...w,img:w.before,category:"BEFORE"},i);inner.appendChild(bf)}
   inner.appendChild(card(w,i));
   inner.insertAdjacentHTML("beforeend",`<h3>${w.title}</h3><p>${w.category} / ${w.year}${w.desc?"<br>"+w.desc:""}</p>`);
+if(w.url)inner.insertAdjacentHTML("beforeend",`<p><a href="${w.url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;padding:10px 18px;background:#111;color:#fff;text-decoration:none">ページを見る ↗</a></p>`);
   modal.hidden=false;document.body.style.overflow="hidden";
 }
 function closeModal(){modal.hidden=true;document.body.style.overflow=""}
