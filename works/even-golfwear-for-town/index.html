@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ラウンドだけじゃない 街でも使えるゴルフウェア</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <!--
+  =============================================================
+  Shopifyブログ記事 本体パーツ（薄いグリーン背景 / KVフルブリード / スクロールアニメーション / クーポン付き）
+  -------------------------------------------------------------
+-->
+<style>
+  /* Google FontsのCDN読み込み */
+  @import url('https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+
+  .kfa{
+    --kfa-bg: #f0f3e8;      
+    --kfa-fg: #111;
+    --kfa-accent: #000;
+    --kfa-content-width: 1040px; 
+    --kfa-font-body: "Yu Gothic Pr6N","YuGothic","Yu Gothic","Zen Kaku Gothic New","Noto Sans JP",sans-serif;
+    --kfa-font-en: "Futura","Century Gothic","Zen Kaku Gothic New",sans-serif;
+    --kfa-font-script: "Yomogi", cursive;
+    --kfa-ease: cubic-bezier(.23,1,.32,1);
+    color: var(--kfa-fg);
+    font-family: var(--kfa-font-body);
+    line-height: 1.9;
+    letter-spacing: .04em;
+    position: relative;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    background: var(--kfa-bg) !important;
+    overflow-x: hidden;
+  }
+  .kfa *{ box-sizing: border-box; }
+  .kfa img{ max-width:100%; display:block; }
+
+  /* ---------- フルブリード共通クラス ---------- */
+  .kfa .full-bleed{
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ---------- スクロールアニメーション共通 ---------- */
+  .kfa .anim{
+    opacity: 0;
+    transition: transform 1.4s var(--kfa-ease) .05s, opacity 1s ease .05s;
+    will-change: transform, opacity;
+  }
+  .kfa .anim.-up{ transform: translateY(48px); }
+  .kfa .anim.-zoom{ transform: scale(1.16); transition: transform 1.8s var(--kfa-ease) .05s, opacity 1.1s ease .05s !important; }
+  .kfa .anim.is-inview{ opacity: 1; transform: none; }
+  .kfa .anim.-d1{ transition-delay: .15s !important; }
+  .kfa .anim.-d2{ transition-delay: .3s !important; }
+  .kfa .anim.-d3{ transition-delay: .45s !important; }
+  .kfa .anim.-d4{ transition-delay: .6s !important; }
+  @media (prefers-reduced-motion: reduce){
+    .kfa .anim{ transition: none !important; opacity: 1 !important; transform: none !important; }
+  }
+
+  /* ---------- KV（キービジュアル） ---------- */
+  .kfa-kv{
+    position: relative;
+    aspect-ratio: 1200 / 800; /* PC用アスペクト比 */
+    width: 100vw !important;
+    overflow: hidden; 
+  }
+  .kfa-kv__img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .kfa-kv__img.-sp {
+    display: none !important; /* PCではSP画像を隠す */
+  }
+  
+  .kfa-kv__title{
+    display: none !important; /* 指定により非表示 */
+    position: absolute;
+    left: 7%;
+    bottom: 12%;
+    max-width: min(86%, 720px);
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,.25);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .3em;
+  }
+  .kfa-kv__pre{
+    font-family: var(--kfa-font-body);
+    font-size: clamp(11px, 1vw, 15px);
+    letter-spacing: .2em;
+    font-weight: 500;
+  }
+  .kfa-kv__main{
+    font-family: var(--kfa-font-script); 
+    font-size: clamp(34px, 6vw, 88px);
+    line-height: 1.1;
+    overflow-wrap: break-word;
+  }
+  .kfa-kv__vol{
+    font-family: var(--kfa-font-en);
+    font-size: clamp(14px, 1.6vw, 22px);
+    letter-spacing: .2em;
+    padding-top: .2em;
+    border-top: 1px solid rgba(255,255,255,.8);
+  }
+
+  /* ---------- 右端固定の縦書きテキスト ---------- */
+  .kfa-fixed{
+    position: fixed;
+    right: clamp(10px, 2vw, 28px);
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-family: var(--kfa-font-en);
+    font-size: clamp(10px, .8vw, 12px);
+    letter-spacing: .15em;
+    opacity: 0;
+    transition: opacity .4s ease;
+    pointer-events: none;
+    z-index: 50;
+    margin: 0;
+  }
+  .kfa-fixed.is-visible{ opacity: 1; }
+
+  /* ---------- リード文 ---------- */
+  .kfa-lead{
+    max-width: 720px;
+    margin: clamp(40px,7vw,90px) auto clamp(60px,9vw,120px);
+    padding: 0 24px;
+    text-align: center;
+  }
+  .kfa-lead p{
+    margin: 0;
+    font-size: clamp(13px, 1vw, 15px);
+    letter-spacing: .08em;
+  }
+  .kfa-br-sp { display: none; }
+
+  /* ---------- ルック（スタイリング）セクション共通 ---------- */
+  .kfa-look{
+    max-width: var(--kfa-content-width);
+    margin: 0 auto;
+    padding: 0 24px clamp(60px,8vw,110px);
+    position: relative;
+  }
+
+  /* ---- 全ルック共通：2カラムジグザグ配置 ---- */
+  .kfa-look__cols {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    display: grid;
+    grid-template-columns: 43% 1fr;
+    align-items: start;
+  }
+  .kfa-look.-alt .kfa-look__cols {
+    grid-template-columns: 1fr 43%;
+  }
+
+  /* 写真カラムをFlexbox化し、左右対称の起点を作る */
+  .kfa-look__col-photo {
+    display: flex;
+    flex-direction: column;
+  }
+  .kfa-look:not(.-alt) .kfa-look__col-photo {
+    align-items: flex-start; /* 左寄せ基準 */
+  }
+  .kfa-look.-alt .kfa-look__col-photo {
+    align-items: flex-end; /* 右寄せ基準 */
+  }
+
+  .kfa-look__photo1{
+    position: relative;
+    overflow: hidden; 
+    width: 100%; 
+  }
+  .kfa-look__photo1 img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5; 
+    object-fit: cover;
+    display: block;
+  }
+
+  .kfa-look__head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: center;
+    padding: clamp(24px,4vw,64px) clamp(20px,4vw,56px);
+  }
+  .kfa-look__num{
+    font-family: var(--kfa-font-en);
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 400;
+    margin: 0 0 .3em;
+    line-height: 1;
+  }
+  .kfa-look__text{
+    margin: 0;
+    max-width: 380px;
+    font-size: clamp(13px, .9vw, 15px);
+    letter-spacing: .06em;
+    line-height: 1.9;
+  }
+
+  .kfa-look__photo2,
+  .kfa-look__photo3{
+    position: relative;
+    overflow: hidden; 
+  }
+  .kfa-look__photo2 img,
+  .kfa-look__photo3 img{
+    width: 100%;
+    aspect-ratio: 4 / 5; 
+    object-fit: cover;
+    display: block;
+  }
+
+
+  /* ---- PC時の左右対称配置（マージン微調整） ---- */
+  @media (min-width: 769px) {
+    /* デフォルトの調整 (左基準) */
+    .kfa-look:not(.-alt) .kfa-look__photo3 {
+      margin: clamp(40px, 6vw, 80px) 0 0 170px !important; 
+      width: 85% !important; 
+      max-width: none;
+    }
+    .kfa-look:not(.-alt) .kfa-look__photo2 {
+      margin-top: clamp(40px, 6vw, 80px) !important;
+      margin-left: max(0px, calc(50% - 190px)) !important; 
+      margin-right: auto !important;
+      width: 100%;
+      max-width: 572px; 
+    }
+
+    /* 反転の調整 (右基準) */
+    .kfa-look.-alt .kfa-look__photo3 {
+      margin: clamp(40px, 6vw, 80px) 170px 0 0 !important; 
+      width: 85% !important; 
+      max-width: none;
+    }
+    .kfa-look.-alt .kfa-look__photo2 {
+      margin-top: clamp(40px, 6vw, 80px) !important;
+      margin-right: max(0px, calc(50% - 190px)) !important; 
+      margin-left: auto !important;
+      width: 100%;
+      max-width: 572px; 
+    }
+  }
+
+
+  /* ---------- アイテムリスト ---------- */
+  .kfa-credit{
+    width: 100% !important; 
+    list-style: none !important;
+    margin: clamp(28px,5vw,48px) 0 0 !important;
+    padding: 0 !important;
+    max-width: 380px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: grid !important;
+    gap: 12px !important; 
+  }
+  
+  .kfa-credit__item{
+    display: grid !important;
+    grid-template-columns: auto auto 1fr auto !important;
+    align-items: center !important; 
+    gap: .5em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    line-height: 1 !important; 
+    font-family: var(--kfa-font-en);
+    font-size: clamp(11px, .9vw, 13px);
+    letter-spacing: .02em;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .kfa-credit__item::before,
+  .kfa-credit__item::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  .kfa-credit__name,
+  .kfa-credit__price {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .kfa-credit__name{
+    grid-column: 1;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .kfa-credit__price{
+    grid-column: 2;
+  }
+  .kfa-credit__price::before{ content: "¥"; }
+  .kfa-credit__price::after{ content: " tax in"; font-size: .8em; margin-left: .3em; opacity: .7; }
+  
+  .kfa-credit__line {
+    grid-column: 3;
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    align-self: center !important; 
+    background-image: repeating-linear-gradient(to right, rgba(0,0,0,.25) 0, rgba(0,0,0,.25) 1px, transparent 1px, transparent 3px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateY(1px) !important;
+  }
+  
+  .kfa-credit__buy{
+    grid-column: 4; 
+    display: inline-flex !important; 
+    align-items: center !important; 
+    justify-content: center !important;
+    background: #000 !important; 
+    color: #fff !important; 
+    border: 1px solid #000 !important;
+    padding: 0 1em !important; 
+    height: 24px !important; 
+    font-size: .85em; 
+    line-height: 1 !important; 
+    text-decoration: none !important; 
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .kfa-credit__buy:hover{ background: #fff !important; color: #000 !important; border-color: #000 !important; }
+
+  /* ---------- フッター クーポン案内＆TOPボタン ---------- */
+  .fm-footer-wrapper {
+    margin: clamp(40px, 8vw, 80px) 24px clamp(60px, 10vw, 120px) !important;
+    max-width: 900px !important;
+  }
+  @media (min-width: 948px) {
+    .fm-footer-wrapper {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  .fm-footer-coupon {
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', sans-serif !important;
+    border: 1px solid #ddd !important;
+    padding: 36px 32px !important;
+    text-align: center !important;
+    background: #fff !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .fm-footer-coupon-lead {
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+    color: #333 !important;
+    margin-bottom: 28px !important;
+  }
+  .fm-footer-coupon-lead strong {
+    font-size: 16px !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+    color: #111 !important;
+  }
+  .fm-footer-coupon-note {
+    display: block !important;
+    font-size: 12px !important;
+    color: #888 !important;
+    line-height: 1.8 !important;
+    margin-top: 8px !important;
+  }
+  .fm-footer-coupon-btn {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    border: 1px solid #111 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding: 15px 52px !important;
+    background: #111 !important;
+    color: #fff !important;
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.2em !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+  }
+  .fm-footer-coupon-btn:hover {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  /* TOPへ戻るボタン：左から右へ塗りつぶすホバーアニメーション */
+  .fm-footer-totop-btn {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    border: 1px solid #111 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+    padding: 15px 0 !important;
+    background: transparent !important;
+    color: #111 !important;
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.2em !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    position: relative !important;
+    overflow: hidden !important; /* 塗りつぶしの枠はみ出し防止 */
+    transition: color 0.4s ease !important; /* テキスト色のトランジション */
+  }
+
+  /* ホバー時のテキスト色 */
+  .fm-footer-totop-btn:hover {
+    color: #fff !important;
+  }
+
+  /* ボタン内テキストのレイヤー（塗りつぶし背景の上に配置） */
+  .fm-footer-totop-text {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* 塗りつぶし用疑似要素 */
+  .fm-footer-totop-btn::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #111 !important;
+    transform: scaleX(0) !important;
+    transform-origin: right !important; /* 通常時は右側へ収束 */
+    transition: transform 0.4s ease !important;
+    z-index: 1 !important;
+  }
+
+  /* ホバー時：左起点で全体まで拡大 */
+  .fm-footer-totop-btn:hover::before {
+    transform: scaleX(1) !important;
+    transform-origin: left !important;
+  }
+
+  /* ---------- SP表示時の制御 ---------- */
+  @media (max-width: 768px) {
+    .kfa-br-sp { display: block; }
+
+    /* KVのアスペクト比と画像の出し分け */
+    .kfa-kv {
+      aspect-ratio: 4 / 5; /* 1080/1350 */
+    }
+    .kfa-kv__img.-pc {
+      display: none !important; /* PC画像を隠す */
+    }
+    .kfa-kv__img.-sp {
+      display: block !important; /* SP画像を表示 */
+    }
+
+    .kfa-look__cols {
+      width: auto !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .kfa-look__col-photo, .kfa-look__col-text {
+      display: contents; 
+    }
+
+    .kfa-look__head   { order: 1; }
+    .kfa-look__photo1 { order: 2; }
+    .kfa-credit       { order: 3; }
+    .kfa-look__photo2 { order: 4; }
+    .kfa-look__photo3 { order: 5; }
+
+    .kfa-look__photo1 {
+      width: 100vw !important;
+      max-width: 100vw !important;
+      margin-left: calc(50% - 50vw) !important;
+      margin-right: calc(50% - 50vw) !important;
+      transform: none !important; 
+    }
+    .kfa-look__photo1 img{ height: auto; } 
+    
+    .kfa-credit {
+      margin-top: clamp(32px, 6vw, 48px) !important;
+      margin-bottom: clamp(16px, 3vw, 32px) !important;
+    }
+
+    /* --- デフォルト: Photo2 右寄せ / Photo3 左寄せで被せる --- */
+    .kfa-look:not(.-alt) .kfa-look__photo2 {
+      width: 88vw !important; 
+      max-width: none !important;
+      margin-left: auto !important;
+      margin-right: calc(50% - 50vw) !important; 
+      margin-top: clamp(32px, 8vw, 48px) !important;
+    }
+    .kfa-look:not(.-alt) .kfa-look__photo3 {
+      width: 65vw !important; 
+      max-width: none !important;
+      margin-left: calc(50% - 50vw) !important; 
+      margin-right: auto !important;
+      margin-top: -22vw !important; 
+      position: relative !important;
+      z-index: 2 !important; 
+    }
+
+    /* --- 反転: Photo2 左寄せ / Photo3 右寄せで被せる --- */
+    .kfa-look.-alt .kfa-look__photo2 {
+      width: 88vw !important;
+      max-width: none !important;
+      margin-left: calc(50% - 50vw) !important; 
+      margin-right: auto !important;
+      margin-top: clamp(32px, 8vw, 48px) !important;
+    }
+    .kfa-look.-alt .kfa-look__photo3 {
+      width: 65vw !important;
+      max-width: none !important;
+      margin-left: auto !important;
+      margin-right: calc(50% - 50vw) !important; 
+      margin-top: -22vw !important; 
+      position: relative !important;
+      z-index: 2 !important; 
+    }
+  }
+</style>
+
+<div class="kfa">
+
+  <!-- ============ KV ============ -->
+  <section class="kfa-kv full-bleed">
+    <!-- PC用画像 (1200x800) -->
+    <img class="kfa-kv__img -pc anim -zoom" src="assets/keen_styling_1200_800.jpg" alt="KVイメージ">
+    <!-- SP用画像 (1080x1350) -->
+    <img class="kfa-kv__img -sp anim -zoom" src="assets/keen_styling_1080_1350.webp" alt="KVイメージ">
+    
+    <h1 class="kfa-kv__title">
+      <span class="kfa-kv__pre anim -up -d1">ブランド名の</span>
+      <span class="kfa-kv__main anim -up -d2">これさえあれば。</span>
+      <span class="kfa-kv__vol anim -up -d3">Vol.3</span>
+    </h1>
+  </section>
+
+  <p class="kfa-fixed" id="kfaFixed">Summer Styling Idea by FUNQTEN</p>
+
+  <div class="kfa-lead anim -up">
+    <p>
+      ラウンドのためだけじゃない、街でも主役になる服を。<br>
+      撥水、接触冷感、UVカット――機能素材だから叶う、<br class="kfa-br-sp">一日中快適な着心地。<br>
+      コースからオフの日まで着回せる一着を、<br>
+      この夏のおすすめスタイリングとしてご紹介します。
+    </p>
+  </div>
+
+  <!-- ============ Look 01 (デフォルト / 左:写真 / 右:テキスト) ============ -->
+  <section class="kfa-look" data-look="01">
+    <div class="kfa-look__cols">
+      <div class="kfa-look__col-photo">
+        <div class="kfa-look__photo1">
+          <img class="anim -zoom" src="assets/abe_style1_1.webp" alt="">
+        </div>
+        <div class="kfa-look__photo3">
+          <img class="anim -up -d1" src="assets/abe_style1_3.webp" alt="">
+        </div>
+      </div>
+      <div class="kfa-look__col-text">
+        <div class="kfa-look__head">
+          <h2 class="kfa-look__num anim -up">01</h2>
+          <p class="kfa-look__text anim -up -d1">
+            突然の夕立も気にせず羽織れる、撥水ブルゾンが主役の一枚。合わせた接触冷感ショーツで、蒸し暑い日もどこか涼しい着こなしに。
+          </p>
+        </div>
+        <div class="kfa-look__photo2">
+          <img class="anim -up -d1" src="assets/abe_style1_2.webp" alt="">
+        </div>
+        <ul class="kfa-credit anim -up">
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">BLOUSON</span>
+            <span class="kfa-credit__price">35,200</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s26d0208k?variant=46834680398042">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">PATNS</span>
+            <span class="kfa-credit__price">24,200</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-salvage-public-kolepa/products/s26f0224k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">SHOES</span>
+            <span class="kfa-credit__price">15,400</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-keen/products/o26i0388k">BUY</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Look 02 (反転 / 左:テキスト / 右:写真) ============ -->
+  <section class="kfa-look -alt" data-look="02">
+    <div class="kfa-look__cols">
+      <div class="kfa-look__col-text">
+        <div class="kfa-look__head">
+          <h2 class="kfa-look__num anim -up">02</h2>
+          <p class="kfa-look__text anim -up -d1">
+            UVカットのモックネックとキャップで、強い日差しの日もひと安心。水に濡れた路面でもグリップの効くサンダル、吸水速乾性のあるメッシュライナーを張った水陸両用ショーツの組み合わせで夏のレジャーシーンも完璧。
+          </p>
+        </div>
+        <div class="kfa-look__photo2">
+          <img class="anim -up -d1" src="assets/mizukami_style1_2.webp" alt="">
+        </div>
+        <ul class="kfa-credit anim -up">
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">CAP</span>
+            <span class="kfa-credit__price">6,600</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-salvage-public-kolepa/products/s26k0197k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">TOPS</span>
+            <span class="kfa-credit__price">24,200</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-salvage-public-kolepa/products/s26a0215k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">PANTS</span>
+            <span class="kfa-credit__price">24,200</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s26f0224k?variant=46834682986714">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">SHOES</span>
+            <span class="kfa-credit__price">17,600</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-keen/products/o26i0389k">BUY</a>
+          </li>
+        </ul>
+      </div>
+      <div class="kfa-look__col-photo">
+        <div class="kfa-look__photo1">
+          <img class="anim -zoom" src="assets/mizukami_style1_1.webp" alt="">
+        </div>
+        <div class="kfa-look__photo3">
+          <img class="anim -up -d1" src="assets/mizukami_style1_3.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Look 03 (デフォルト / 左:写真 / 右:テキスト) ============ -->
+  <section class="kfa-look" data-look="03">
+    <div class="kfa-look__cols">
+      <div class="kfa-look__col-photo">
+        <div class="kfa-look__photo1">
+          <img class="anim -zoom" src="assets/fujimoto_style1_1.webp" alt="">
+        </div>
+        <div class="kfa-look__photo3">
+          <img class="anim -up -d1" src="assets/fujimoto_style1_3.webp" alt="">
+        </div>
+      </div>
+      <div class="kfa-look__col-text">
+        <div class="kfa-look__head">
+          <h2 class="kfa-look__num anim -up">03</h2>
+          <p class="kfa-look__text anim -up -d1">
+            ヴィンテージ感のあるパーカーに、涼しいサッカー素材のショーツを合わせてリラックス感のある一日に。オフの日のハワイ気分をそのまま纏って。
+          </p>
+        </div>
+        <div class="kfa-look__photo2">
+          <img class="anim -up -d1" src="assets/fujimoto_style1_2.webp" alt="">
+        </div>
+        <ul class="kfa-credit anim -up">
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">CAP</span>
+            <span class="kfa-credit__price">7,480</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s25k0094k?variant=46578565251290">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">TOPS</span>
+            <span class="kfa-credit__price">24,200</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s26a0206k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">PANTS</span>
+            <span class="kfa-credit__price">9,900</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/e26f0316k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">SHOES</span>
+            <span class="kfa-credit__price">15,400</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/o26i0390k?variant=47770545651930">BUY</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Look 04 (反転 / 左:テキスト / 右:写真) ============ -->
+  <section class="kfa-look -alt" data-look="04">
+    <div class="kfa-look__cols">
+      <div class="kfa-look__col-text">
+        <div class="kfa-look__head">
+          <h2 class="kfa-look__num anim -up">04</h2>
+          <p class="kfa-look__text anim -up -d1">
+            バックプリントが目を引くモックネックに、さらりと軽いナイロンパンツを合わせたアクティブな組み合わせ。水辺も気にせず歩けるサンダルで行動範囲も広がります。
+          </p>
+        </div>
+        <div class="kfa-look__photo2">
+          <img class="anim -up -d1" src="assets/mizukami_style2_2.webp" alt="">
+        </div>
+        <ul class="kfa-credit anim -up">
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">TOPS</span>
+            <span class="kfa-credit__price">16,500</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s26a0225k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">PANTS</span>
+            <span class="kfa-credit__price">26,400</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-salvage-public-kolepa/products/s26f0209k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">SHOES</span>
+            <span class="kfa-credit__price">15,400</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-keen/products/o26i0384k">BUY</a>
+          </li>
+        </ul>
+      </div>
+      <div class="kfa-look__col-photo">
+        <div class="kfa-look__photo1">
+          <img class="anim -zoom" src="assets/mizukami_style2_1.webp" alt="">
+        </div>
+        <div class="kfa-look__photo3">
+          <img class="anim -up -d1" src="assets/mizukami_style2_3.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Look 05 (デフォルト / 左:写真 / 右:テキスト) ============ -->
+  <section class="kfa-look" data-look="05">
+    <div class="kfa-look__cols">
+      <div class="kfa-look__col-photo">
+        <div class="kfa-look__photo1">
+          <img class="anim -zoom" src="assets/fujimoto_style2_1.webp" alt="">
+        </div>
+        <div class="kfa-look__photo3">
+          <img class="anim -up -d1" src="assets/fujimoto_style2_3.webp" alt="">
+        </div>
+      </div>
+      <div class="kfa-look__col-text">
+        <div class="kfa-look__head">
+          <h2 class="kfa-look__num anim -up">05</h2>
+          <p class="kfa-look__text anim -up -d1">
+            ロゴハットからシューズまで機能素材でまとめた、迷わず選べる鉄板コーデ。水陸両用シューズなら、プレーの後の寄り道も身軽に楽しめます。
+          </p>
+        </div>
+        <div class="kfa-look__photo2">
+          <img class="anim -up -d1" src="assets/fujimoto_style2_2.webp" alt="">
+        </div>
+        <ul class="kfa-credit anim -up">
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">HAT</span>
+            <span class="kfa-credit__price">7,150</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-bogey-lounge/products/e26k0320k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">TOPS</span>
+            <span class="kfa-credit__price">17,600</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s26a0218k?variant=46834677383386">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">PANTS</span>
+            <span class="kfa-credit__price">24,200</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-salvage-public-kolepa/products/s26f0224k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">SHOES</span>
+            <span class="kfa-credit__price">15,400</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/o26i0386k?variant=47770510754010">BUY</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Look 06 (反転 / 左:テキスト / 右:写真) ============ -->
+  <section class="kfa-look -alt" data-look="06">
+    <div class="kfa-look__cols">
+      <div class="kfa-look__col-text">
+        <div class="kfa-look__head">
+          <h2 class="kfa-look__num anim -up">06</h2>
+          <p class="kfa-look__text anim -up -d1">
+            バックプリントが個性的なモックネックに、コーデュロイのショーツをミックスした季節の抜け感コーデ。新感覚のオープンエアシューズで、足元まで夏らしく。
+          </p>
+        </div>
+        <div class="kfa-look__photo2">
+          <img class="anim -up -d1" src="assets/abe_style2_2.webp" alt="">
+        </div>
+        <ul class="kfa-credit anim -up">
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">TOPS</span>
+            <span class="kfa-credit__price">16,500</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/s26a0226k?variant=46834679578842">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">PANTS</span>
+            <span class="kfa-credit__price">19,800</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/collections/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89-salvage-public-kolepa/products/s26f0203k">BUY</a>
+          </li>
+          <li class="kfa-credit__item">
+            <span class="kfa-credit__name">SHOES</span>
+            <span class="kfa-credit__price">15,400</span>
+            <span class="kfa-credit__line"></span>
+            <a class="kfa-credit__buy" href="https://shop.funq.jp/products/o26i0390k?variant=47770545651930">BUY</a>
+          </li>
+        </ul>
+      </div>
+      <div class="kfa-look__col-photo">
+        <div class="kfa-look__photo1">
+          <img class="anim -zoom" src="assets/abe_style2_1.webp" alt="">
+        </div>
+        <div class="kfa-look__photo3">
+          <img class="anim -up -d1" src="assets/abe_style2_3.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ フッターエリア ============ -->
+  <div class="fm-footer-wrapper anim -up">
+    <div class="fm-footer-coupon">
+      <div class="fm-footer-coupon-lead">
+        <strong>新規会員登録のお客様へ、すぐに使える ¥1,000 クーポンプレゼント</strong>
+        <span class="fm-footer-coupon-note">
+          ※会員登録時に、登録されたメールアドレスにクーポンが届きます。<br>
+          ※メールマガジンの希望に、チェックを入れた方限定です。
+        </span>
+      </div>
+      <a href="https://shop.funq.jp/pages/even" class="fm-footer-coupon-btn">買い物を続ける</a>
+    </div>
+    
+    <a href="#" class="fm-footer-totop-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+      <span class="fm-footer-totop-text">TOPへ戻る</span>
+    </a>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var root = document.currentScript ? document.currentScript.previousElementSibling : null;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var animEls = document.querySelectorAll('.kfa .anim');
+  if(reduceMotion || !('IntersectionObserver' in window)){
+    animEls.forEach(function(el){ el.classList.add('is-inview'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-inview');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+    animEls.forEach(function(el){ io.observe(el); });
+  }
+
+  // KVの両方の画像に対してアニメーションを開始
+  window.addEventListener('load', function(){
+    document.querySelectorAll('.kfa-kv .anim').forEach(function(el){
+      el.classList.add('is-inview');
+    });
+  });
+
+  var kv = document.querySelector('.kfa-kv');
+  var fixedText = document.getElementById('kfaFixed');
+  if(kv && fixedText && 'IntersectionObserver' in window){
+    var kvIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        fixedText.classList.toggle('is-visible', !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    kvIO.observe(kv);
+  }
+})();
+</script>
+          
+</div>
+</body>
+</html>
