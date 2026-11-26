@@ -1,0 +1,1440 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EVEN 冬の福BOX 2026｜特設LP（C案）</title>
+<meta name="description" content="EVEN 冬の福BOX 2026 特設ランディングページ（C案 夜明けの重箱）">
+<style>html,body{margin:0;padding:0;background:#120B0A}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&amp;family=Noto+Serif+JP:wght@400;500&amp;family=Zen+Kaku+Gothic+New:wght@500;700&amp;display=swap">
+<style>
+/* ===== C案「夜明けの重箱」 すべて .evfk-c 配下 ===== */
+.evfk-c{
+  --evfk-shikkoku:#110D0B; --evfk-tamenuri:#2A1311; --evfk-kin:#C8A04A; --evfk-kin-light:#ECD6A0;
+  --evfk-akebono:#E9A27C; --evfk-shu:#B8241B; --evfk-ai:#1B2238; --evfk-hakkin:#F6EEDD;
+  --evfk-cta-bottom:0px;
+  --evfk-f-old:"Zen Old Mincho","Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --evfk-f-serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --evfk-f-goth:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --evfk-gold:linear-gradient(115deg,#9C7A32 0%,#ECD6A0 28%,#C8A04A 48%,#F3E4BC 66%,#A9853A 100%);
+  --evfk-sun:56px; --evfk-sun-top:11vh; --evfk-sun-right:18px;
+  position:relative; display:block;
+  /* JS が実幅（スクロールバー除く）を --evfk-vw に入れたときだけ全幅化。JS無効時は 100%（横スクロールを出さない） */
+  width:var(--evfk-vw,100%);
+  margin-left:calc(50% - var(--evfk-vw,100%) / 2);
+  margin-right:calc(50% - var(--evfk-vw,100%) / 2);
+  padding:0; overflow-x:clip; isolation:isolate;
+  background:var(--evfk-shikkoku); color:var(--evfk-hakkin);
+  font-family:var(--evfk-f-serif); font-size:15px; line-height:2; font-weight:400;
+  text-align:left; letter-spacing:.02em; text-transform:none; line-break:strict; word-break:normal;
+  -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;
+}
+.evfk-c *,.evfk-c *::before,.evfk-c *::after{box-sizing:border-box}
+.evfk-c :is(h1,h2,h3,p,dl,dt,dd,ul,ol,li,figure,summary,details,section,article){margin:0;padding:0;text-transform:none;font-size:inherit;letter-spacing:inherit;font-weight:inherit;line-height:inherit;color:inherit;border:0;background:none;text-align:inherit}
+/* テーマの .rte ul / .rte img / .rte a（詳細度 0,1,1）に後勝ちで勝つため :is() で同点以上に */
+.evfk-c :is(ul,ol,li){list-style:none}
+.evfk-c :is(ul,ol){padding:0}
+.evfk-c :is(img){display:block;max-width:100%;height:auto;border:0;border-radius:0;box-shadow:none;padding:0;background:none}
+.evfk-c :is(picture){display:block}
+.evfk-c :is(a){color:inherit;text-decoration:none}
+.evfk-c :is(button){all:unset;box-sizing:border-box;cursor:pointer}
+.evfk-c :is(svg){display:block;overflow:visible}
+.evfk-c .evfk-c__img,.evfk-c .evfk-c__fv-img{border:0;border-radius:0;box-shadow:none;max-width:100%;margin:0}
+.evfk-c .evfk-c__nw{white-space:nowrap}
+/* body直下へ移したオーバーレイ・固定CTAの受け皿（ルートの全幅化・背景は持たせない） */
+.evfk-c.evfk-c--portal{position:static;display:block;width:auto;height:0;margin:0;padding:0;overflow:visible;background:none;isolation:auto}
+.evfk-c .evfk-c__vh{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.evfk-c .evfk-c__defs{position:absolute;width:0;height:0;overflow:hidden}
+.evfk-c :where(a,button,summary):focus-visible{outline:2px solid var(--evfk-kin-light);outline-offset:3px}
+
+/* ---------- 空（夜明け）---------- */
+.evfk-c .evfk-c__skywrap{position:absolute;inset:0;z-index:0;pointer-events:none}
+.evfk-c .evfk-c__sky{position:sticky;top:0;height:100vh;overflow:hidden;contain:strict}
+/* 祖先の overflow:hidden 等で sticky が効かないテーマ用：JS がスクロール量だけ下げて画面に留める */
+.evfk-c.evfk-c--skyjs .evfk-c__sky{position:absolute;top:0;left:0;right:0;will-change:transform}
+.evfk-c .evfk-c__layer{position:absolute;inset:0;opacity:0;will-change:opacity}
+.evfk-c .evfk-c__layer--night{opacity:1;background:
+  radial-gradient(90% 55% at 85% -5%,rgba(42,19,17,.9) 0%,rgba(42,19,17,0) 70%),
+  var(--evfk-shikkoku)}
+.evfk-c .evfk-c__layer--night{will-change:auto}
+.evfk-c .evfk-c__layer--night svg{position:absolute;inset:0;width:100%;height:100%}
+.evfk-c .evfk-c__layer--ai{background:linear-gradient(180deg,#0E1120 0%,var(--evfk-ai) 55%,#1F2440 100%)}
+.evfk-c .evfk-c__layer--ake{background:
+  radial-gradient(120% 55% at 70% 108%,rgba(233,162,124,.95) 0%,rgba(233,162,124,0) 70%),
+  linear-gradient(180deg,var(--evfk-ai) 0%,var(--evfk-tamenuri) 46%,#8B4F3F 78%,var(--evfk-akebono) 100%)}
+.evfk-c .evfk-c__layer--hak{background:
+  radial-gradient(70% 45% at 88% 4%,rgba(233,162,124,.45) 0%,rgba(233,162,124,0) 70%),
+  linear-gradient(180deg,var(--evfk-hakkin) 0%,var(--evfk-hakkin) 55%,#F2DCC6 100%)}
+
+/* 雲：トラック（3枚並べ、1枚分＝-33.333%で継ぎ目なし） */
+.evfk-c .evfk-c__clouds{position:absolute;left:0;right:0;pointer-events:none}
+.evfk-c .evfk-c__cset{position:relative}
+.evfk-c .evfk-c__cset--w{position:absolute;left:0;top:0;opacity:0;display:none}
+.evfk-c .evfk-c__track{display:flex;width:max-content;will-change:transform;animation:evfk-c-drift-l 160s linear infinite}
+.evfk-c .evfk-c__tile{flex:none;width:var(--evfk-tw,1100px);aspect-ratio:1600/240;height:auto}
+.evfk-c .evfk-c__clouds--back{top:16%;opacity:.22;--evfk-tw:900px}
+.evfk-c .evfk-c__clouds--mid{top:50%;opacity:.24;--evfk-tw:1200px}
+.evfk-c .evfk-c__clouds--mid .evfk-c__track{animation-name:evfk-c-drift-r;animation-duration:110s}
+.evfk-c .evfk-c__clouds--front{bottom:-2%;opacity:.28;--evfk-tw:1300px}
+.evfk-c .evfk-c__clouds--front .evfk-c__track{animation-duration:70s}
+@keyframes evfk-c-drift-l{from{transform:translate3d(0,0,0)}to{transform:translate3d(-33.3333%,0,0)}}
+@keyframes evfk-c-drift-r{from{transform:translate3d(-33.3333%,0,0)}to{transform:translate3d(0,0,0)}}
+.evfk-c.is-paused .evfk-c__track,.evfk-c .evfk-c__fvcloud.is-paused .evfk-c__track{animation-play-state:paused}
+
+/* 太陽（空の中、右上） */
+.evfk-c .evfk-c__sun{position:absolute;top:var(--evfk-sun-top);right:var(--evfk-sun-right);width:var(--evfk-sun);height:var(--evfk-sun)}
+/* 太陽は最初から右上の定位置・不透明度1。FV（不透明）より後ろにあるので、FVが上へ流れた分だけ下端から見えてくる */
+.evfk-c .evfk-c__sun-move{position:absolute;inset:0;transform:translate3d(0,calc(var(--evfk-sun) * .45),0) scale(.8);will-change:transform}
+.evfk-c .evfk-c__sun-halo{position:absolute;inset:-90%;border-radius:50%;background:radial-gradient(circle,rgba(233,162,124,.55) 0%,rgba(233,162,124,.18) 35%,rgba(233,162,124,0) 68%);opacity:.6}
+.evfk-c .evfk-c__sun-rays{position:absolute;inset:-120%;border-radius:50%;opacity:.25;
+  background:repeating-conic-gradient(from 0deg,rgba(236,214,160,.5) 0deg 2.2deg,rgba(236,214,160,0) 2.2deg 15deg);
+  -webkit-mask-image:radial-gradient(circle,#000 18%,rgba(0,0,0,0) 62%);mask-image:radial-gradient(circle,#000 18%,rgba(0,0,0,0) 62%);
+  animation:evfk-c-spin 90s linear infinite}
+.evfk-c .evfk-c__sun-disc{position:absolute;inset:0;border-radius:50%;
+  background:radial-gradient(circle at 50% 42%,#F6EEDD 0%,#ECD6A0 24%,var(--evfk-akebono) 58%,var(--evfk-shu) 100%);
+  box-shadow:0 0 18px rgba(233,162,124,.55),0 0 2px rgba(246,238,221,.6) inset}
+.evfk-c .evfk-c__sun-disc--day{opacity:0;background:radial-gradient(circle at 50% 40%,#FFFDF6 0%,var(--evfk-hakkin) 26%,var(--evfk-kin-light) 62%,var(--evfk-kin) 100%);box-shadow:0 0 30px rgba(236,214,160,.8)}
+.evfk-c .evfk-c__sun-bank{position:absolute;left:-210%;width:330%;top:calc(var(--evfk-sun) * 1.02);height:auto;opacity:.95}
+@keyframes evfk-c-spin{to{transform:rotate(360deg)}}
+
+/* ---------- 本文レイヤー ---------- */
+.evfk-c .evfk-c__main{position:relative;z-index:2}
+.evfk-c .evfk-c__wrap{max-width:1152px;margin:0 auto;padding:0 16px}
+
+/* FV */
+/* FV：A・B と同じく画面幅いっぱい（額縁・左右余白なし） */
+.evfk-c .evfk-c__fv{position:relative;padding:0 0 56px}
+.evfk-c .evfk-c__fvimg{position:relative;width:100%;background:var(--evfk-shikkoku)}
+.evfk-c .evfk-c__fv-img{width:100%;max-width:none;height:auto}
+.evfk-c .evfk-c__corner{position:absolute;width:30px;height:30px;color:var(--evfk-kin);pointer-events:none;z-index:1}
+.evfk-c .evfk-c__corner--tl{top:-6px;left:-6px}
+.evfk-c .evfk-c__corner--tr{top:-6px;right:-6px;transform:scaleX(-1)}
+.evfk-c .evfk-c__corner--bl{bottom:-6px;left:-6px;transform:scaleY(-1)}
+.evfk-c .evfk-c__corner--br{bottom:-6px;right:-6px;transform:scale(-1,-1)}
+.evfk-c .evfk-c__fvcloud{position:absolute;left:0;right:0;bottom:-34px;height:110px;overflow:hidden;opacity:.26;pointer-events:none;--evfk-tw:1300px}
+.evfk-c .evfk-c__fvcloud .evfk-c__track{animation-duration:70s}
+
+/* 導入 */
+.evfk-c .evfk-c__intro{position:relative;padding:64px 0 88px}
+.evfk-c .evfk-c__intro-in{max-width:720px;margin:0 auto;padding:0 24px}
+.evfk-c .evfk-c__lead{font-family:var(--evfk-f-old);font-weight:700;font-size:22px;line-height:1.7;letter-spacing:.08em;color:var(--evfk-kin-light);text-align:center}
+.evfk-c .evfk-c__lead-line{display:block;overflow:hidden;padding:0 .1em}
+.evfk-c .evfk-c__lead-in{display:block}
+.evfk-c .evfk-c__intro-rule{width:1px;height:40px;margin:28px auto;background:linear-gradient(var(--evfk-kin),rgba(200,160,74,0))}
+.evfk-c .evfk-c__intro-body{font-size:15px;line-height:2;color:var(--evfk-hakkin);text-shadow:0 0 10px rgba(17,13,11,.85),0 0 2px rgba(17,13,11,.9)}
+.evfk-c .evfk-c__intro-body p+p{margin-top:1em}
+.evfk-c .evfk-c__period{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:4px 14px;margin-top:36px;padding:14px 12px;
+  border-top:1px solid rgba(200,160,74,.6);border-bottom:1px solid rgba(200,160,74,.6);font-family:var(--evfk-f-goth);font-weight:500;font-size:13px;line-height:1.6;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__period-v{font-family:var(--evfk-f-old);font-weight:700;font-size:18px;letter-spacing:.06em;color:var(--evfk-hakkin)}
+
+/* コース一覧 */
+.evfk-c .evfk-c__courses{position:relative;padding:0 0 96px;scroll-margin-top:16px}
+.evfk-c .evfk-c__courses-title{display:flex;flex-direction:column;align-items:center;gap:6px;margin:0 0 36px;font-family:var(--evfk-f-old);font-weight:900;font-size:24px;line-height:1.4;letter-spacing:.12em;color:var(--evfk-kin-light);text-align:center}
+.evfk-c .evfk-c__courses-sub{font-family:var(--evfk-f-goth);font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--evfk-kin)}
+.evfk-c .evfk-c__courses-title svg{width:120px;height:14px;margin-top:4px}
+
+/* 重 */
+.evfk-c .evfk-c__ju{position:relative;padding:0 12px 28px;border-left:1px solid rgba(200,160,74,.42);border-right:1px solid rgba(200,160,74,.42);
+  background:linear-gradient(180deg,rgba(17,13,11,.42),rgba(17,13,11,.18))}
+.evfk-c .evfk-c__ju:last-child{border-bottom:1px solid rgba(200,160,74,.42)}
+.evfk-c .evfk-c__juhead{position:relative;margin:0 -12px 24px;height:68px;display:flex;align-items:center;padding:0 16px;
+  background:#21100E linear-gradient(170deg,#3A1A17 0%,var(--evfk-tamenuri) 40%,#1A0B09 100%);
+  border-top:1px solid var(--evfk-kin);box-shadow:0 -4px 0 -3px rgba(200,160,74,.55) inset,0 1px 0 rgba(200,160,74,.55)}
+.evfk-c .evfk-c__juhead::before{content:"";position:absolute;left:0;right:0;top:3px;height:1px;background:rgba(200,160,74,.4)}
+.evfk-c .evfk-c__juhead-art{position:absolute;right:0;top:0;height:100%;width:62%;opacity:.42;pointer-events:none}
+.evfk-c .evfk-c__jutitle{position:relative;display:flex;align-items:center;gap:12px;font-family:var(--evfk-f-old);color:var(--evfk-kin-light);line-height:1.4}
+.evfk-c .evfk-c__juno{font-weight:900;font-size:24px;letter-spacing:.12em}
+.evfk-c .evfk-c__jusep{width:1px;height:22px;background:var(--evfk-kin)}
+.evfk-c .evfk-c__jusub{font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--evfk-hakkin)}
+.evfk-c .evfk-c__lid{display:none}
+.evfk-c.evfk-c--anim .evfk-c__lid{display:block;position:absolute;inset:-5px -1px -5px -1px;z-index:3;pointer-events:none;
+  background:linear-gradient(175deg,#3E1C18 0%,#251010 45%,#120807 100%);border:1px solid var(--evfk-kin);
+  box-shadow:0 1px 0 rgba(236,214,160,.25) inset;transition:transform .3s cubic-bezier(.3,.7,.3,1),opacity .3s linear}
+.evfk-c .evfk-c__lid svg{position:absolute;inset:0;width:100%;height:100%}
+.evfk-c .evfk-c__lid-knot{position:absolute;left:50%;top:50%;width:46px;height:12px;margin:-6px 0 0 -23px;border-radius:6px;background:var(--evfk-gold);opacity:.9}
+.evfk-c .evfk-c__ju--1 .evfk-c__lid{transition-duration:.6s,.6s}
+.evfk-c .evfk-c__ju.is-open .evfk-c__lid{transform:translate3d(0,-24px,0);opacity:0}
+
+.evfk-c .evfk-c__grid{display:grid;gap:20px}
+
+/* カード共通 */
+.evfk-c .evfk-c__card{position:relative;color:var(--evfk-hakkin);
+  background:radial-gradient(120% 60% at 15% 0%,rgba(236,214,160,.07) 0%,rgba(236,214,160,0) 55%),linear-gradient(165deg,#361715 0%,var(--evfk-tamenuri) 38%,#190A08 100%)}
+.evfk-c .evfk-c__tilt{position:relative;height:100%;transform-style:preserve-3d;display:flex;flex-direction:column}
+.evfk-c .evfk-c__media{position:relative;overflow:hidden;background:#190A08}
+.evfk-c .evfk-c__img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.evfk-c .evfk-c__body{position:relative;flex:1 1 auto;padding:20px 18px 22px;display:flex;flex-direction:column}
+.evfk-c .evfk-c__price{margin-top:auto!important;padding-top:16px}
+.evfk-c .evfk-c__tag{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;margin-bottom:10px;padding:3px 12px 3px 10px;
+  border:1px solid var(--evfk-kin);font-family:var(--evfk-f-goth);font-weight:700;font-size:13px;line-height:1.5;letter-spacing:.1em;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__tag::before{content:"";width:5px;height:5px;border-radius:50%;border:1px solid var(--evfk-kin)}
+.evfk-c .evfk-c__tag--none{display:none}
+.evfk-c .evfk-c__tag-off{display:none}
+.evfk-c .evfk-c__name{font-family:var(--evfk-f-old);font-weight:700;font-size:19px;line-height:1.4;letter-spacing:.06em;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__spec{margin-top:14px;border-top:1px solid rgba(200,160,74,.35)}
+.evfk-c .evfk-c__row{display:grid;grid-template-columns:5.6em 1fr;gap:10px;padding:9px 0;border-bottom:1px dotted rgba(200,160,74,.35)}
+.evfk-c .evfk-c__dt{font-family:var(--evfk-f-goth);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.06em;color:var(--evfk-kin);padding-top:1px}
+.evfk-c .evfk-c__dd{font-size:15px;line-height:1.7;color:var(--evfk-hakkin)}
+.evfk-c .evfk-c__dd-item{display:block}
+.evfk-c .evfk-c__dd-item+.evfk-c__dd-item{margin-top:2px}
+.evfk-c .evfk-c__row--total .evfk-c__dd{font-family:var(--evfk-f-old);font-weight:700;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__price{font-family:var(--evfk-f-old);font-weight:900;font-size:22px;line-height:1.3;letter-spacing:.04em;color:var(--evfk-hakkin);font-variant-numeric:tabular-nums;white-space:normal}
+.evfk-c .evfk-c__num,.evfk-c .evfk-c__yen{white-space:nowrap;display:inline-block}
+.evfk-c .evfk-c__yen{font-size:.5em;font-weight:700;letter-spacing:.06em;margin-left:.2em;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__btn{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;margin-top:16px;padding:10px 16px;
+  background:var(--evfk-shu);color:var(--evfk-hakkin);font-family:var(--evfk-f-goth);font-weight:700;font-size:15px;line-height:1.3;letter-spacing:.1em;text-align:center;
+  transition:transform .12s ease-out}
+.evfk-c .evfk-c__btn::before{content:"";position:absolute;inset:3px;border:1px solid rgba(236,214,160,.38);pointer-events:none}
+.evfk-c .evfk-c__btn-arrow{width:14px;height:8px;flex:none}
+.evfk-c .evfk-c__btn:active{transform:scale(.98)}
+.evfk-c .evfk-c__btn-off{display:none}
+/* 完売：data-evfk-status="soldout" だけで切り替わる */
+.evfk-c [data-evfk-status="soldout"] .evfk-c__btn{pointer-events:none;background:#3B2A26;color:rgba(246,238,221,.72)}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__btn::before{border-color:rgba(246,238,221,.18)}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__btn-on,.evfk-c [data-evfk-status="soldout"] .evfk-c__btn-arrow{display:none}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__btn-off{display:inline}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__tag{display:inline-flex;background:var(--evfk-shu);border-color:var(--evfk-shu);color:var(--evfk-hakkin)}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__tag::before{border-color:var(--evfk-hakkin)}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__tag-on{display:none}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__tag-off{display:inline}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__media{opacity:.55}
+
+/* 一の重：金二重額縁＋蒔絵四隅 */
+.evfk-c .evfk-c__card--ichi{border:1px solid var(--evfk-kin);padding:6px}
+.evfk-c .evfk-c__card--ichi::before{content:"";position:absolute;inset:3px;border:1px solid rgba(200,160,74,.5);pointer-events:none;z-index:1}
+.evfk-c .evfk-c__card--ichi .evfk-c__corner{width:34px;height:34px;color:var(--evfk-kin)}
+.evfk-c .evfk-c__card--ichi .evfk-c__corner--tl{top:-1px;left:-1px}
+.evfk-c .evfk-c__card--ichi .evfk-c__corner--tr{top:-1px;right:-1px}
+.evfk-c .evfk-c__card--ichi .evfk-c__corner--bl{bottom:-1px;left:-1px}
+.evfk-c .evfk-c__card--ichi .evfk-c__corner--br{bottom:-1px;right:-1px}
+.evfk-c .evfk-c__card--ichi .evfk-c__name{font-family:var(--evfk-f-old);font-weight:900;font-size:24px;line-height:1.35}
+.evfk-c .evfk-c__card--ichi .evfk-c__price{font-size:28px}
+.evfk-c .evfk-c__sheen{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2;opacity:0;transition:opacity .3s linear}
+.evfk-c .evfk-c__sheen::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:linear-gradient(115deg,rgba(236,214,160,0) 38%,rgba(236,214,160,.16) 48%,rgba(255,250,235,.22) 50%,rgba(236,214,160,0) 60%);
+  transform:translate3d(var(--evfk-sx,0),var(--evfk-sy,0),0)}
+.evfk-c .evfk-c__veil{display:none}
+
+/* 二の重：金一重線 */
+.evfk-c .evfk-c__card--ni{border:1px solid rgba(200,160,74,.75)}
+.evfk-c .evfk-c__card--ni::after,.evfk-c .evfk-c__card--low::after{content:"";position:absolute;inset:-1px;border:1px solid var(--evfk-kin-light);opacity:0;transition:opacity .25s linear;pointer-events:none}
+.evfk-c .evfk-c__card--low::after{inset:0}
+
+/* 三の重・別誂え：枠なし横組み */
+.evfk-c .evfk-c__card--low .evfk-c__tilt{display:grid;grid-template-columns:40% minmax(0,1fr);grid-template-rows:1fr auto;grid-template-areas:"m b" "x x"}
+.evfk-c .evfk-c__card--low .evfk-c__media{grid-area:m}
+.evfk-c .evfk-c__card--low .evfk-c__body{grid-area:b;padding:12px 12px 4px 14px}
+.evfk-c .evfk-c__card--low .evfk-c__foot{grid-area:x;padding:0 12px 14px}
+.evfk-c .evfk-c__card--low .evfk-c__spec{margin-top:8px}
+.evfk-c .evfk-c__card--low .evfk-c__row{grid-template-columns:1fr;gap:0;padding:6px 0}
+.evfk-c .evfk-c__card--low .evfk-c__dd{font-size:14px}
+.evfk-c .evfk-c__card--low .evfk-c__price{padding-top:10px;font-size:20px}
+.evfk-c .evfk-c__card--low .evfk-c__btn{margin-top:12px}
+.evfk-c .evfk-c__card--low .evfk-c__name{font-size:18px}
+.evfk-c .evfk-c__card--low .evfk-c__name--gel{font-size:clamp(13px,4.1vw,18px);letter-spacing:0}
+.evfk-c .evfk-c__card--low .evfk-c__tag{margin-bottom:6px}
+
+/* プレースホルダー（重箱） */
+.evfk-c .evfk-c__ph{position:relative;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:8% 7% 7%;
+  background:radial-gradient(80% 50% at 50% 42%,rgba(233,162,124,.16) 0%,rgba(233,162,124,0) 70%),linear-gradient(170deg,#381815 0%,var(--evfk-tamenuri) 45%,#140807 100%);text-align:center;overflow:hidden}
+.evfk-c .evfk-c__ph-bg{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.evfk-c .evfk-c__ph-top{position:relative;font-family:var(--evfk-f-old);font-weight:700;font-size:13px;letter-spacing:.3em;line-height:1.5;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__ph-top b{display:block;font-weight:900;font-size:2.1em;letter-spacing:.14em;margin-top:.2em}
+.evfk-c .evfk-c__ph-art{position:relative;width:70%;aspect-ratio:240/250;margin:4% 0}
+.evfk-c .evfk-c__ph--2 .evfk-c__ph-art{aspect-ratio:240/192;width:66%}
+.evfk-c .evfk-c__ph-art svg{width:100%;height:100%}
+.evfk-c .evfk-c__seal{position:absolute;left:50%;top:var(--evfk-seal-y,33%);transform:translate(-50%,-50%) rotate(-3deg);width:23%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.08em;
+  padding:6%;background:var(--evfk-shu);border:2px solid rgba(246,238,221,.85);outline:1px solid var(--evfk-shu);font-family:var(--evfk-f-old);font-weight:900;color:var(--evfk-hakkin);line-height:1.1;font-size:clamp(11px,3.4vw,20px);letter-spacing:.04em;
+  box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.evfk-c .evfk-c__seal span{display:block}
+.evfk-c .evfk-c__ph-note{position:relative;font-family:var(--evfk-f-goth);font-weight:500;font-size:12px;line-height:1.7;letter-spacing:.06em;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__ph-note small{display:block;font-size:11px;color:rgba(236,214,160,.75)}
+
+/* 注意事項 */
+.evfk-c .evfk-c__notice{position:relative;padding:24px 0 120px}
+.evfk-c .evfk-c__details{max-width:720px;margin:0 auto;background:var(--evfk-hakkin);color:var(--evfk-shikkoku);border-top:2px solid var(--evfk-kin);border-bottom:1px solid var(--evfk-kin)}
+.evfk-c .evfk-c__summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:14px 18px;cursor:pointer}
+.evfk-c .evfk-c__summary::-webkit-details-marker{display:none}
+.evfk-c .evfk-c__notice-title{font-family:var(--evfk-f-old);font-weight:900;font-size:19px;letter-spacing:.12em;line-height:1.4;color:var(--evfk-shikkoku)}
+.evfk-c .evfk-c__plus{position:relative;width:16px;height:16px;flex:none}
+.evfk-c .evfk-c__plus::before,.evfk-c .evfk-c__plus::after{content:"";position:absolute;left:0;top:7px;width:16px;height:1.5px;background:#7A5A22}
+.evfk-c .evfk-c__plus::after{transform:rotate(90deg);transition:transform .25s ease}
+.evfk-c .evfk-c__details[open] .evfk-c__plus::after{transform:rotate(0deg)}
+.evfk-c .evfk-c__notes{padding:4px 18px 22px}
+.evfk-c .evfk-c__note{position:relative;padding:9px 0 9px 18px;border-top:1px dotted rgba(120,90,34,.45);font-family:var(--evfk-f-goth);font-weight:500;font-size:13px;line-height:1.75;color:#2B201B}
+.evfk-c .evfk-c__note::before{content:"";position:absolute;left:2px;top:1.15em;width:6px;height:6px;border-radius:50%;background:var(--evfk-shu)}
+
+/* 固定CTA */
+.evfk-c .evfk-c__cta{display:none}
+.evfk-c.evfk-c--js .evfk-c__cta{display:flex;position:fixed;z-index:900;left:0;right:0;bottom:var(--evfk-cta-bottom);align-items:center;gap:12px;
+  min-height:64px;padding:8px 12px calc(8px + env(safe-area-inset-bottom)) 16px;
+  background:linear-gradient(180deg,#2E1412,#1A0A08);border-top:1px solid var(--evfk-kin);
+  opacity:0;transform:translate3d(0,110%,0);pointer-events:none;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s linear}
+.evfk-c.evfk-c--js .evfk-c__cta.is-show{opacity:1;transform:none;pointer-events:auto}
+.evfk-c .evfk-c__cta-period{flex:1;min-width:0;font-family:var(--evfk-f-goth);font-weight:500;font-size:11px;line-height:1.45;letter-spacing:.06em;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__cta-period b{display:block;font-family:var(--evfk-f-old);font-weight:700;font-size:15px;color:var(--evfk-hakkin);letter-spacing:.04em}
+.evfk-c .evfk-c__cta-btn{flex:none;display:flex;align-items:center;justify-content:center;min-height:46px;min-width:44px;padding:0 22px;background:var(--evfk-shu);color:var(--evfk-hakkin);
+  font-family:var(--evfk-f-goth);font-weight:700;font-size:15px;letter-spacing:.1em;position:relative;transition:transform .12s ease-out}
+.evfk-c .evfk-c__cta-btn::before{content:"";position:absolute;inset:3px;border:1px solid rgba(236,214,160,.38)}
+.evfk-c .evfk-c__cta-btn:active{transform:scale(.98)}
+
+/* ---------- オープニング ---------- */
+.evfk-c .evfk-c__op[hidden]{display:none!important}
+.evfk-c .evfk-c__op{position:fixed;inset:0;z-index:2147483600;--evfk-opfs:min(76px,20vh);--evfk-opsun:min(150px,30vh);--evfk-hz:60%}
+.evfk-c .evfk-c__op-stage{position:absolute;inset:0;overflow:hidden}
+.evfk-c .evfk-c__op-bg{position:absolute;inset:0;background:var(--evfk-shikkoku)}
+.evfk-c .evfk-c__op-bg svg{position:absolute;inset:0;width:100%;height:100%}
+.evfk-c .evfk-c__op-glow{position:absolute;left:-20%;right:-20%;top:calc(var(--evfk-hz) - 45vh);height:90vh;opacity:0;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(233,162,124,.55) 0%,rgba(184,36,27,.18) 45%,rgba(184,36,27,0) 70%)}
+/* 曙の光：太陽の位置から不透明な曙色の円が画面全体へ広がる（半透明を重ねないので灰色に濁らない） */
+.evfk-c .evfk-c__op-flood{position:absolute;left:50%;top:calc(var(--evfk-hz) - var(--evfk-opsun) / 2);width:var(--evfk-opsun);height:var(--evfk-opsun);
+  margin:calc(var(--evfk-opsun) / -2) 0 0 calc(var(--evfk-opsun) / -2);border-radius:50%;opacity:0;transform:scale(1);
+  background:radial-gradient(circle,var(--evfk-hakkin) 0%,var(--evfk-kin-light) 30%,var(--evfk-akebono) 62%,var(--evfk-akebono) 90%,rgba(233,162,124,0) 100%)}
+/* 白金：下端だけ柔らかいグラデーション。抜くときは opacity ではなく上へ引き上げる（黒地に半透明の白を重ねる＝灰色、を作らない） */
+.evfk-c .evfk-c__op-white{position:absolute;left:0;right:0;top:0;height:125%;opacity:0;
+  background:linear-gradient(180deg,var(--evfk-hakkin) 0%,var(--evfk-hakkin) 80%,rgba(246,238,221,0) 100%)}
+.evfk-c .evfk-c__op-sunclip{position:absolute;left:0;right:0;bottom:calc(100% - var(--evfk-hz));height:calc(var(--evfk-opsun) * 3);overflow:hidden}
+.evfk-c .evfk-c__op-sunclip.is-free{overflow:visible}
+.evfk-c .evfk-c__op-sunfly{position:absolute;left:50%;bottom:0;width:var(--evfk-opsun);height:var(--evfk-opsun);margin-left:calc(var(--evfk-opsun) / -2)}
+.evfk-c .evfk-c__op-sunrise{position:absolute;inset:0;opacity:0;transform:translate3d(0,140%,0)}
+.evfk-c .evfk-c__op-sunhalo{opacity:0;position:absolute;inset:-75%;border-radius:50%;background:radial-gradient(circle,rgba(246,238,221,.55) 0%,rgba(233,162,124,.35) 30%,rgba(233,162,124,0) 66%)}
+.evfk-c .evfk-c__op-sunrays{position:absolute;inset:-110%;border-radius:50%;opacity:0;
+  background:repeating-conic-gradient(from 0deg,rgba(236,214,160,.55) 0deg 1.6deg,rgba(236,214,160,0) 1.6deg 12deg);
+  -webkit-mask-image:radial-gradient(circle,#000 20%,rgba(0,0,0,0) 64%);mask-image:radial-gradient(circle,#000 20%,rgba(0,0,0,0) 64%);
+  animation:evfk-c-spin 40s linear infinite}
+.evfk-c .evfk-c__op-sundisc{position:absolute;inset:0;border-radius:50%;
+  background:radial-gradient(circle at 50% 40%,#FFFDF6 0%,var(--evfk-hakkin) 22%,var(--evfk-kin-light) 46%,var(--evfk-akebono) 76%,var(--evfk-shu) 100%);
+  box-shadow:0 0 40px rgba(233,162,124,.6)}
+.evfk-c .evfk-c__op-front{position:absolute;inset:0}
+.evfk-c .evfk-c__op-horizon{position:absolute;left:8%;right:8%;top:var(--evfk-hz);height:1px;margin-top:-.5px;transform:scaleX(0);
+  background:linear-gradient(90deg,rgba(200,160,74,0) 0%,var(--evfk-kin) 20%,var(--evfk-kin-light) 50%,var(--evfk-kin) 80%,rgba(200,160,74,0) 100%)}
+.evfk-c .evfk-c__op-kasumi{position:absolute;left:5%;width:90%;top:calc(var(--evfk-hz) - 26px);height:auto;opacity:0}
+.evfk-c .evfk-c__op-flash{position:absolute;left:50%;bottom:calc(100% - var(--evfk-hz) + var(--evfk-opfs) * .25 + var(--evfk-opfs) * .6);width:calc(var(--evfk-opfs) * 3.4);height:calc(var(--evfk-opfs) * 3.4);
+  margin:0 0 calc(var(--evfk-opfs) * -1.7) calc(var(--evfk-opfs) * -1.7);border-radius:50%;opacity:0;transform:scale(.6);
+  background:radial-gradient(circle,rgba(255,246,218,.9) 0%,rgba(236,214,160,.45) 25%,rgba(200,160,74,0) 62%)}
+.evfk-c .evfk-c__op-year{position:absolute;left:50%;bottom:calc(100% - var(--evfk-hz) + var(--evfk-opfs) * .25);transform:translateX(-50%);
+  font-family:var(--evfk-f-old);font-weight:900;font-size:var(--evfk-opfs);line-height:1;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.evfk-c .evfk-c__op-yearin{position:relative;padding:.14em .18em}
+.evfk-c .evfk-c__op-row{display:flex;gap:.04em}
+.evfk-c .evfk-c__op-win{position:relative;width:.68em;height:1.2em;overflow:hidden}
+.evfk-c .evfk-c__op-strip{position:absolute;left:0;top:0;width:100%}
+.evfk-c .evfk-c__op-cell{display:flex;align-items:center;justify-content:center;height:1.2em;color:var(--evfk-kin);
+  text-shadow:0 1px 0 #7A5A22,0 0 .25em rgba(17,13,11,.6)}
+.evfk-c .evfk-c__op-strip--blur{opacity:0}
+.evfk-c .evfk-c__op-strip--blur .evfk-c__op-cell{color:rgba(236,214,160,.55);text-shadow:0 -.12em 0 rgba(236,214,160,.35),0 .12em 0 rgba(236,214,160,.35),0 -.26em 0 rgba(200,160,74,.18),0 .26em 0 rgba(200,160,74,.18)}
+.evfk-c .evfk-c__op-band{position:absolute;left:0;right:0;height:.2em;z-index:1;
+  background:linear-gradient(180deg,#3A1A17,var(--evfk-tamenuri));border-top:1px solid rgba(200,160,74,.75);border-bottom:1px solid rgba(200,160,74,.75)}
+.evfk-c .evfk-c__op-band--t{top:0}
+.evfk-c .evfk-c__op-band--b{bottom:0}
+.evfk-c .evfk-c__op-band::after{content:"";position:absolute;left:0;right:0;height:.22em;pointer-events:none}
+.evfk-c .evfk-c__op-band--t::after{top:100%;background:linear-gradient(180deg,rgba(17,13,11,.85),rgba(17,13,11,0))}
+.evfk-c .evfk-c__op-band--b::after{bottom:100%;background:linear-gradient(0deg,rgba(17,13,11,.85),rgba(17,13,11,0))}
+.evfk-c .evfk-c__op-glint{position:absolute;left:.18em;right:.18em;top:.14em;bottom:.14em;overflow:hidden;pointer-events:none}
+.evfk-c .evfk-c__op-glint-band{position:absolute;top:0;bottom:0;left:0;width:60%;overflow:hidden;transform:translateX(-100%);
+  -webkit-mask-image:linear-gradient(100deg,transparent 15%,#000 45%,#000 55%,transparent 85%);mask-image:linear-gradient(100deg,transparent 15%,#000 45%,#000 55%,transparent 85%)}
+.evfk-c .evfk-c__op-glint-copy{position:absolute;top:0;left:0;display:flex;gap:.04em}
+.evfk-c .evfk-c__op-glint-copy span{display:flex;align-items:center;justify-content:center;width:.68em;height:1.2em;color:#FFF6DA;text-shadow:0 0 .2em rgba(255,240,200,.8)}
+.evfk-c .evfk-c__skip{position:absolute;top:12px;right:12px;z-index:5;min-width:44px;min-height:44px;padding:0 16px;display:flex;align-items:center;gap:8px;
+  font-family:var(--evfk-f-goth);font-weight:500;font-size:13px;letter-spacing:.14em;color:var(--evfk-kin-light);border:1px solid rgba(200,160,74,.6);background:rgba(17,13,11,.6);transition:opacity .3s linear}
+.evfk-c .evfk-c__skip::after{content:"";width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+
+/* ---------- 出現演出（JS有効かつ動きOKのときだけ初期非表示） ---------- */
+.evfk-c.evfk-c--anim .evfk-c__lead-in{transform:translate3d(0,108%,0);transition:transform 1.1s cubic-bezier(.2,.75,.2,1)}
+.evfk-c.evfk-c--anim .evfk-c__lead-line:nth-child(2) .evfk-c__lead-in{transition-delay:.28s}
+.evfk-c.evfk-c--anim .evfk-c__intro.is-in .evfk-c__lead-in{transform:none}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__veil{display:block;position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,#2A1311 0%,#190A08 100%);transition:transform .9s cubic-bezier(.6,0,.2,1)}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__veil::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--evfk-gold)}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__body{opacity:0;transition:opacity .8s linear}
+.evfk-c.evfk-c--anim .evfk-c__ju--1.is-open .evfk-c__veil{transform:translate3d(0,-101%,0)}
+.evfk-c.evfk-c--anim .evfk-c__ju--1.is-open .evfk-c__body{opacity:1}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__card:nth-child(1) .evfk-c__veil{transition-delay:.45s}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__card:nth-child(1) .evfk-c__body{transition-delay:.85s}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__card:nth-child(2) .evfk-c__veil{transition-delay:.65s}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__card:nth-child(2) .evfk-c__body{transition-delay:1.05s}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__card:nth-child(3) .evfk-c__veil{transition-delay:.85s}
+.evfk-c.evfk-c--anim .evfk-c__ju--1 .evfk-c__card:nth-child(3) .evfk-c__body{transition-delay:1.25s}
+.evfk-c.evfk-c--anim .evfk-c__ju--2 .evfk-c__card{opacity:0;transform:translate3d(0,14px,0);transition:opacity .6s linear,transform .7s cubic-bezier(.2,.7,.2,1)}
+.evfk-c.evfk-c--anim .evfk-c__ju--2.is-open .evfk-c__card{opacity:1;transform:none}
+.evfk-c.evfk-c--anim .evfk-c__ju--2 .evfk-c__card:nth-child(1){transition-delay:.25s}
+.evfk-c.evfk-c--anim .evfk-c__ju--2 .evfk-c__card:nth-child(2){transition-delay:.4s}
+.evfk-c.evfk-c--anim .evfk-c__ju--2 .evfk-c__card:nth-child(3){transition-delay:.55s}
+
+@media (hover:hover) and (pointer:fine){
+  .evfk-c .evfk-c__card--ni:hover::after,.evfk-c .evfk-c__card--low:hover::after,
+  .evfk-c .evfk-c__card--ni:focus-within::after,.evfk-c .evfk-c__card--low:focus-within::after{opacity:.9}
+  .evfk-c .evfk-c__card--ichi:hover .evfk-c__sheen{opacity:1}
+  .evfk-c .evfk-c__tilt.is-tilting{transition:none}
+  .evfk-c .evfk-c__card--ichi .evfk-c__tilt{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+}
+
+@media (max-width:400px){
+  .evfk-c .evfk-c__card--low .evfk-c__tilt{grid-template-columns:34% minmax(0,1fr)}
+  .evfk-c .evfk-c__card--low .evfk-c__price{font-size:18px}
+  .evfk-c .evfk-c__card--low .evfk-c__body{padding:12px 10px 4px 12px}
+  .evfk-c .evfk-c__card--low .evfk-c__btn{font-size:14px;letter-spacing:.06em;white-space:nowrap}
+}
+/* ---------- PC ---------- */
+@media (min-width:768px){
+  .evfk-c{font-size:16px;--evfk-sun:96px;--evfk-sun-top:12vh;--evfk-sun-right:max(24px,calc((100% - 1200px) / 2 - 20px))}
+  .evfk-c .evfk-c__wrap{padding:0 40px}
+  .evfk-c .evfk-c__fv{padding:0 0 72px}
+  .evfk-c .evfk-c__corner{width:44px;height:44px}
+  .evfk-c .evfk-c__fvcloud{bottom:-50px;height:160px;--evfk-tw:2000px}
+  .evfk-c .evfk-c__intro{padding:96px 0 120px}
+  .evfk-c .evfk-c__intro-in{display:grid;grid-template-columns:auto 1fr;align-items:start;gap:0 64px;padding:0 40px}
+  .evfk-c .evfk-c__lead{writing-mode:vertical-rl;font-size:32px;text-align:start;height:12.5em;display:flex;flex-direction:column;gap:.5em}
+  .evfk-c .evfk-c__lead-line{padding:0 .05em}
+  .evfk-c.evfk-c--anim .evfk-c__lead-in{transform:translate3d(0,-104%,0)}
+  .evfk-c .evfk-c__intro-rule{display:none}
+  .evfk-c .evfk-c__intro-body{font-size:16px;padding-top:.6em;border-left:1px solid rgba(200,160,74,.4);padding-left:40px}
+  .evfk-c .evfk-c__period{grid-column:1 / -1;margin-top:56px;justify-content:center}
+  .evfk-c .evfk-c__period-v{font-size:22px}
+  .evfk-c .evfk-c__courses{padding-bottom:140px}
+  .evfk-c .evfk-c__courses-title{font-size:36px;margin-bottom:52px}
+  .evfk-c .evfk-c__courses-sub{font-size:14px}
+  .evfk-c .evfk-c__ju{padding:0 32px 48px}
+  .evfk-c .evfk-c__juhead{margin:0 -32px 40px;height:96px;padding:0 36px}
+  .evfk-c .evfk-c__juno{font-size:36px}
+  .evfk-c .evfk-c__jusep{height:32px}
+  .evfk-c .evfk-c__jusub{font-size:20px}
+  .evfk-c .evfk-c__lid-knot{width:80px;height:16px;margin:-8px 0 0 -40px;border-radius:8px}
+  .evfk-c .evfk-c__grid{gap:32px}
+  .evfk-c .evfk-c__grid--1{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .evfk-c .evfk-c__grid--2{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .evfk-c .evfk-c__grid--3{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  .evfk-c .evfk-c__card--hero{grid-column:1 / -1}
+  .evfk-c .evfk-c__card--hero .evfk-c__media{width:100%;max-width:440px;margin:0 auto}
+  .evfk-c .evfk-c__card--hero .evfk-c__body{padding:32px 36px 36px}
+  .evfk-c .evfk-c__card--hero .evfk-c__name{font-size:34px}
+  .evfk-c .evfk-c__card--hero .evfk-c__price{font-size:38px;padding-top:24px}
+  .evfk-c .evfk-c__card--hero .evfk-c__btn{max-width:360px}
+  .evfk-c .evfk-c__card--ichi .evfk-c__name{font-size:34px}
+  .evfk-c .evfk-c__card--ichi:not(.evfk-c__card--hero) .evfk-c__name{font-size:24px}
+  .evfk-c .evfk-c__card--ichi .evfk-c__price{font-size:38px}
+  .evfk-c .evfk-c__card--ichi:not(.evfk-c__card--hero) .evfk-c__price{font-size:30px}
+  .evfk-c .evfk-c__card--ichi .evfk-c__corner{width:46px;height:46px}
+  .evfk-c .evfk-c__body{padding:24px 24px 26px}
+  .evfk-c .evfk-c__name{font-size:22px}
+  .evfk-c .evfk-c__price{font-size:28px}
+  .evfk-c .evfk-c__dd{font-size:16px}
+  .evfk-c .evfk-c__dt,.evfk-c .evfk-c__tag{font-size:14px}
+  .evfk-c .evfk-c__btn{font-size:16px;min-height:56px}
+  .evfk-c .evfk-c__card--ni .evfk-c__spec{margin-bottom:4px}
+  .evfk-c .evfk-c__card--low .evfk-c__tilt{grid-template-columns:44% minmax(0,1fr)}
+  .evfk-c .evfk-c__card--low .evfk-c__body{padding:20px 20px 6px 22px}
+  .evfk-c .evfk-c__card--low .evfk-c__foot{padding:0 20px 20px}
+  .evfk-c .evfk-c__card--low .evfk-c__name{font-size:22px}
+  .evfk-c .evfk-c__card--low .evfk-c__name--gel{font-size:clamp(17px,1.9vw,22px)}
+  .evfk-c .evfk-c__card--low .evfk-c__dd{font-size:15px}
+  .evfk-c .evfk-c__ph-top{font-size:15px}
+  .evfk-c .evfk-c__seal{font-size:clamp(14px,1.6vw,22px)}
+  .evfk-c .evfk-c__ph-note{font-size:14px}
+  .evfk-c .evfk-c__ph-note small{font-size:12px}
+  .evfk-c .evfk-c__notice{padding:40px 0 160px}
+  .evfk-c .evfk-c__summary{padding:20px 32px}
+  .evfk-c .evfk-c__notice-title{font-size:24px}
+  .evfk-c .evfk-c__notes{padding:4px 32px 32px}
+  .evfk-c .evfk-c__note{font-size:14px}
+  .evfk-c.evfk-c--js .evfk-c__cta{left:auto;right:24px;bottom:calc(24px + var(--evfk-cta-bottom));width:280px;flex-direction:column;align-items:stretch;gap:10px;padding:16px 18px 18px;border:1px solid var(--evfk-kin);
+    transform:translate3d(0,24px,0)}
+  .evfk-c .evfk-c__cta-period{font-size:12px}
+  .evfk-c .evfk-c__cta-btn{min-height:50px;font-size:16px}
+  .evfk-c .evfk-c__op{--evfk-opfs:min(172px,13.5vw,20vh);--evfk-opsun:min(240px,28vh);--evfk-hz:66%}
+  .evfk-c .evfk-c__skip{top:24px;right:24px}
+}
+@media (min-width:768px) and (max-width:1023px){
+  .evfk-c .evfk-c__card--ni .evfk-c__body{padding:18px 16px 20px}
+  .evfk-c .evfk-c__card--ni .evfk-c__name{font-size:18px}
+  .evfk-c .evfk-c__card--ni .evfk-c__row{grid-template-columns:1fr;gap:0;padding:6px 0}
+  .evfk-c .evfk-c__card--ni .evfk-c__dd{font-size:14px}
+  .evfk-c .evfk-c__card--ni .evfk-c__price{font-size:22px}
+  .evfk-c .evfk-c__card--ni .evfk-c__btn,.evfk-c .evfk-c__card--low .evfk-c__btn{font-size:14px;letter-spacing:.04em;padding:10px 8px}
+  .evfk-c .evfk-c__card--low .evfk-c__name--gel{font-size:clamp(15px,2.1vw,18px)}
+  .evfk-c .evfk-c__card--low .evfk-c__tilt{grid-template-columns:36% minmax(0,1fr)}
+  .evfk-c .evfk-c__grid--gel{grid-template-columns:minmax(0,1fr)}
+}
+@media (min-width:1024px){
+  .evfk-c .evfk-c__card--hero .evfk-c__tilt{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr)}
+  .evfk-c .evfk-c__card--hero .evfk-c__media{max-width:none}
+  .evfk-c .evfk-c__card--hero .evfk-c__body{padding:44px 48px 40px;justify-content:center}
+  .evfk-c .evfk-c__card--hero .evfk-c__price{margin-top:0!important}
+  .evfk-c .evfk-c__card--ichi:not(.evfk-c__card--hero) .evfk-c__name{font-size:28px}
+  .evfk-c .evfk-c__card--ichi:not(.evfk-c__card--hero) .evfk-c__price{font-size:32px}
+}
+
+
+/* ---------- 福引き（JS有効時のみ表示） ---------- */
+.evfk-c:not(.evfk-c--js) .evfk-c__lot{display:none}
+.evfk-c .evfk-c__lot{position:relative;padding:8px 0 72px}
+.evfk-c .evfk-c__lot-box{position:relative;padding:30px 18px 24px;border:1px solid var(--evfk-kin);
+  background:radial-gradient(90% 50% at 50% 0%,rgba(236,214,160,.08) 0%,rgba(236,214,160,0) 60%),linear-gradient(170deg,#381815 0%,var(--evfk-tamenuri) 42%,#160907 100%)}
+.evfk-c .evfk-c__lot-box::before{content:"";position:absolute;inset:4px;border:1px solid rgba(200,160,74,.45);pointer-events:none}
+.evfk-c .evfk-c__lot-box .evfk-c__corner{width:34px;height:34px;color:var(--evfk-kin)}
+.evfk-c .evfk-c__lot-box .evfk-c__corner--tl{top:-1px;left:-1px}
+.evfk-c .evfk-c__lot-box .evfk-c__corner--tr{top:-1px;right:-1px}
+.evfk-c .evfk-c__lot-box .evfk-c__corner--bl{bottom:-1px;left:-1px}
+.evfk-c .evfk-c__lot-box .evfk-c__corner--br{bottom:-1px;right:-1px}
+.evfk-c .evfk-c__lot-title{font-family:var(--evfk-f-old);font-weight:900;font-size:22px;line-height:1.45;letter-spacing:.12em;color:var(--evfk-kin-light);text-align:center}
+.evfk-c .evfk-c__lot-lead{margin-top:6px;font-size:14px;line-height:1.8;text-align:center;color:var(--evfk-hakkin)}
+.evfk-c .evfk-c__lot-grid{display:grid;gap:18px;align-items:center;margin-top:18px}
+.evfk-c .evfk-c__machine{position:relative;width:260px;height:230px;margin:0 auto}
+.evfk-c .evfk-c__machine-stand{position:absolute;inset:0;width:100%;height:100%}
+.evfk-c .evfk-c__wheel{position:absolute;left:38px;top:4px;width:164px;height:164px;transform-origin:50% 50%}
+.evfk-c .evfk-c__wheel svg{width:100%;height:100%}
+.evfk-c .evfk-c__ball{position:absolute;left:111px;top:166px;width:18px;height:18px;border-radius:50%;opacity:0;
+  background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 42%),var(--evfk-ball,var(--evfk-kin));
+  box-shadow:inset 0 -2px 3px rgba(0,0,0,.3),0 0 0 1px rgba(236,214,160,.7)}
+.evfk-c .evfk-c__ball.is-shown{opacity:1;transform:translate(86px,30px)}
+.evfk-c .evfk-c__spin{display:flex;align-items:center;justify-content:center;width:100%;max-width:280px;min-height:52px;margin:14px auto 0;position:relative;
+  background:var(--evfk-shu);color:var(--evfk-hakkin);font-family:var(--evfk-f-old);font-weight:900;font-size:18px;letter-spacing:.2em;transition:transform .12s ease-out}
+.evfk-c .evfk-c__spin::before{content:"";position:absolute;inset:3px;border:1px solid rgba(236,214,160,.4);pointer-events:none}
+.evfk-c .evfk-c__spin:active{transform:scale(.97)}
+.evfk-c .evfk-c__spin[aria-busy="true"]{pointer-events:none;opacity:.75}
+.evfk-c .evfk-c__legend{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-top:10px;font-family:var(--evfk-f-goth);font-weight:500;font-size:12px;line-height:1.6;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__legend-i{display:inline-flex;align-items:center;gap:6px}
+.evfk-c .evfk-c__legend-i::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--evfk-c);box-shadow:0 0 0 1px rgba(236,214,160,.7)}
+.evfk-c .evfk-c__result{min-height:150px;display:flex;align-items:center;justify-content:center}
+.evfk-c .evfk-c__result-empty{width:100%;padding:24px 16px;border:1px dashed rgba(200,160,74,.6);text-align:center;font-family:var(--evfk-f-goth);font-weight:500;font-size:13px;line-height:1.7;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__rc{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;width:100%;align-items:center;padding:12px;
+  background:linear-gradient(165deg,#3A1A17,#1E0C0A);border:1px solid rgba(200,160,74,.5);border-left:4px solid var(--evfk-rc,var(--evfk-kin))}
+.evfk-c .evfk-c__rc-thumb{aspect-ratio:4/5;overflow:hidden;background:#190A08}
+.evfk-c .evfk-c__rc-thumb img{width:100%;height:100%;object-fit:cover}
+.evfk-c .evfk-c__rc-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(170deg,#381815,#140807)}
+.evfk-c .evfk-c__rc-ph span{display:flex;flex-direction:column;align-items:center;padding:6px 5px;background:var(--evfk-shu);border:1px solid rgba(246,238,221,.8);font-family:var(--evfk-f-old);font-weight:900;font-size:12px;line-height:1.15;color:var(--evfk-hakkin)}
+.evfk-c .evfk-c__rc-tier{font-family:var(--evfk-f-goth);font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--evfk-kin)}
+.evfk-c .evfk-c__rc-name{margin-top:2px;font-family:var(--evfk-f-old);font-weight:700;font-size:17px;line-height:1.4;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__rc-price{margin-top:2px;font-family:var(--evfk-f-old);font-weight:900;font-size:17px;line-height:1.35;color:var(--evfk-hakkin)}
+.evfk-c .evfk-c__rc-go{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;padding:0 16px;border:1px solid var(--evfk-kin);
+  font-family:var(--evfk-f-goth);font-weight:700;font-size:14px;letter-spacing:.06em;color:var(--evfk-kin-light)}
+.evfk-c .evfk-c__lot-note{margin-top:16px;font-family:var(--evfk-f-goth);font-weight:500;font-size:12px;line-height:1.7;text-align:center;color:rgba(236,214,160,.85)}
+@media (hover:hover) and (pointer:fine){ .evfk-c .evfk-c__rc-go:hover{background:rgba(200,160,74,.15)} }
+@media (min-width:768px){
+  .evfk-c .evfk-c__lot{padding:16px 0 100px}
+  .evfk-c .evfk-c__lot-box{padding:44px 48px 34px}
+  .evfk-c .evfk-c__lot-title{font-size:30px}
+  .evfk-c .evfk-c__lot-lead{font-size:15px}
+  .evfk-c .evfk-c__lot-grid{grid-template-columns:320px minmax(0,1fr);gap:40px;margin-top:26px}
+  .evfk-c .evfk-c__rc{grid-template-columns:120px minmax(0,1fr);gap:20px;padding:16px}
+  .evfk-c .evfk-c__rc-name{font-size:21px}
+  .evfk-c .evfk-c__rc-price{font-size:20px}
+}
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  .evfk-c .evfk-c__track,.evfk-c .evfk-c__sun-rays,.evfk-c .evfk-c__op-sunrays{animation:none!important}
+  .evfk-c .evfk-c__skywrap .evfk-c__layer:not(.evfk-c__layer--night){display:none}
+  .evfk-c .evfk-c__sun-move{transform:translate3d(0,calc(var(--evfk-sun) * .2),0) scale(.9)}
+  .evfk-c .evfk-c__ju--1,.evfk-c .evfk-c__ju--2{background:var(--evfk-ai)}
+  .evfk-c .evfk-c__ju--3,.evfk-c .evfk-c__ju--4{background:linear-gradient(180deg,#5A3530,var(--evfk-akebono))}
+  .evfk-c .evfk-c__notice{background:var(--evfk-hakkin)}
+  .evfk-c .evfk-c__btn,.evfk-c .evfk-c__cta-btn{transition:none}
+  .evfk-c.evfk-c--js .evfk-c__cta{transform:none!important}
+  .evfk-c .evfk-c__sheen{display:none}
+}
+/* サムネのリンク（ボタンと同じ商品URLを入れる。data-evfk-slot="url-c01"〜で検索） */
+.evfk-c .evfk-c__thumb-link{position:absolute;inset:0;z-index:3;display:block;margin:0;padding:0;border:0;background:transparent;text-decoration:none;cursor:pointer}
+.evfk-c [data-evfk-status="soldout"] .evfk-c__thumb-link{pointer-events:none;cursor:default}
+</style>
+
+<div class="evfk-c" id="evfk-c-root" data-evfk-asset-base="assets/">
+
+  
+  <svg class="evfk-c__defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <linearGradient id="evfk-c-gk" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#A9853A"/><stop offset=".22" stop-color="#ECD6A0"/><stop offset=".45" stop-color="#C8A04A"/>
+        <stop offset=".7" stop-color="#F3E4BC"/><stop offset="1" stop-color="#B08A3C"/>
+      </linearGradient>
+      <linearGradient id="evfk-c-gkv" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F3E4BC"/><stop offset=".5" stop-color="#C8A04A"/><stop offset="1" stop-color="#8E6C2C"/>
+      </linearGradient>
+      <linearGradient id="evfk-c-lq" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2C1714"/><stop offset=".18" stop-color="#140B09"/><stop offset=".8" stop-color="#0A0605"/><stop offset="1" stop-color="#1B0E0C"/>
+      </linearGradient>
+      <linearGradient id="evfk-c-lqh" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset=".22" stop-color="#fff" stop-opacity=".07"/><stop offset=".3" stop-color="#fff" stop-opacity=".13"/>
+        <stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#000" stop-opacity=".2"/><stop offset="1" stop-color="#000" stop-opacity=".6"/>
+      </linearGradient>
+      <linearGradient id="evfk-c-lid" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3A1C18"/><stop offset=".3" stop-color="#1B0D0B"/><stop offset="1" stop-color="#0C0706"/>
+      </linearGradient>
+      
+      <symbol id="evfk-c-kasumiA" viewBox="0 0 1600 240">
+        <rect x="60" y="70" width="430" height="26" rx="13"/><rect x="140" y="96" width="560" height="26" rx="13"/><rect x="40" y="122" width="300" height="26" rx="13"/>
+        <rect x="860" y="40" width="380" height="22" rx="11"/><rect x="780" y="62" width="520" height="22" rx="11"/><rect x="900" y="84" width="240" height="22" rx="11"/>
+        <rect x="1180" y="150" width="360" height="24" rx="12"/><rect x="1260" y="174" width="250" height="24" rx="12"/><rect x="1100" y="174" width="120" height="24" rx="12"/>
+        <rect x="520" y="178" width="300" height="20" rx="10"/><rect x="600" y="198" width="180" height="20" rx="10"/>
+      </symbol>
+      
+      <symbol id="evfk-c-kasumiB" viewBox="0 0 1600 240">
+        <rect x="90" y="120" width="520" height="30" rx="15"/><rect x="200" y="150" width="620" height="30" rx="15"/><rect x="120" y="180" width="260" height="30" rx="15"/>
+        <circle cx="300" cy="110" r="34"/><circle cx="352" cy="92" r="44"/><circle cx="408" cy="112" r="30"/>
+        <rect x="1000" y="60" width="460" height="28" rx="14"/><rect x="920" y="88" width="560" height="28" rx="14"/><rect x="1080" y="116" width="300" height="28" rx="14"/>
+        <circle cx="1180" cy="54" r="30"/><circle cx="1226" cy="40" r="38"/>
+        <rect x="640" y="30" width="200" height="18" rx="9"/><rect x="700" y="48" width="160" height="18" rx="9"/>
+      </symbol>
+      
+      <symbol id="evfk-c-curl" viewBox="0 0 1600 240">
+        <path d="M352 92 m-6 0 a6 6 0 1 1 12 0 a12 12 0 1 1 -24 0 a20 20 0 1 1 40 0 a28 28 0 1 1 -56 0" fill="none" stroke-width="3"/>
+        <path d="M1226 40 m-5 0 a5 5 0 1 1 10 0 a11 11 0 1 1 -22 0 a18 18 0 1 1 36 0 a25 25 0 1 1 -50 0" fill="none" stroke-width="3"/>
+      </symbol>
+      
+      <symbol id="evfk-c-corner" viewBox="0 0 40 40">
+        <path d="M1 39 V1 H39" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M6 30 V6 H30" fill="none" stroke="currentColor" stroke-width=".8" opacity=".7"/>
+        <circle cx="11" cy="11" r="4.2" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M11 11 m-1.4 0 a1.4 1.4 0 1 1 2.8 0" fill="none" stroke="currentColor" stroke-width="1"/>
+        <rect x="16" y="9.4" width="12" height="3.2" rx="1.6" fill="currentColor" opacity=".85"/>
+        <rect x="9.4" y="16" width="3.2" height="12" rx="1.6" fill="currentColor" opacity=".85"/>
+      </symbol>
+      <pattern id="evfk-c-dustp" width="220" height="180" patternUnits="userSpaceOnUse">
+        <circle cx="20" cy="30" r="1" fill="#ECD6A0" opacity=".55"/><circle cx="96" cy="12" r=".7" fill="#ECD6A0" opacity=".4"/>
+        <circle cx="160" cy="64" r="1.2" fill="#C8A04A" opacity=".5"/><circle cx="58" cy="118" r=".8" fill="#ECD6A0" opacity=".35"/>
+        <circle cx="200" cy="150" r=".9" fill="#ECD6A0" opacity=".45"/><circle cx="128" cy="160" r=".6" fill="#C8A04A" opacity=".4"/>
+        <circle cx="12" cy="168" r=".7" fill="#ECD6A0" opacity=".3"/><circle cx="110" cy="88" r=".5" fill="#F6EEDD" opacity=".5"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  
+  <div class="evfk-c evfk-c--portal" id="evfk-c-op-portal">
+  <div class="evfk-c__op" id="evfk-c-op" hidden>
+    <p class="evfk-c__vh">EVEN 冬の福BOX 2026</p>
+    <div class="evfk-c__op-stage" aria-hidden="true">
+      <div class="evfk-c__op-bg">
+        <svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#evfk-c-dustp)"/></svg>
+      </div>
+      <div class="evfk-c__op-glow"></div>
+      <div class="evfk-c__op-flood"></div>
+      <div class="evfk-c__op-white"></div>
+      <div class="evfk-c__op-sunclip">
+        <div class="evfk-c__op-sunfly">
+          <div class="evfk-c__op-sunrise">
+            <span class="evfk-c__op-sunhalo"></span>
+            <span class="evfk-c__op-sunrays"></span>
+            <span class="evfk-c__op-sundisc"></span>
+          </div>
+        </div>
+      </div>
+      <div class="evfk-c__op-front">
+        <div class="evfk-c__op-flash"></div>
+        <svg class="evfk-c__op-kasumi" viewBox="0 0 1600 240" preserveAspectRatio="xMidYMid meet"><use href="#evfk-c-kasumiA" fill="#E2B758" opacity=".6"/></svg>
+        <div class="evfk-c__op-horizon"></div>
+        <div class="evfk-c__op-year">
+          <div class="evfk-c__op-yearin">
+            <span class="evfk-c__op-band evfk-c__op-band--t"></span>
+            <div class="evfk-c__op-row">
+              <span class="evfk-c__op-win"><span class="evfk-c__op-strip" data-evfk-from="2" data-evfk-to="2" data-evfk-loops="1"><span class="evfk-c__op-cell">2</span></span><span class="evfk-c__op-strip evfk-c__op-strip--blur"></span></span>
+              <span class="evfk-c__op-win"><span class="evfk-c__op-strip" data-evfk-from="0" data-evfk-to="0" data-evfk-loops="1"><span class="evfk-c__op-cell">0</span></span><span class="evfk-c__op-strip evfk-c__op-strip--blur"></span></span>
+              <span class="evfk-c__op-win"><span class="evfk-c__op-strip" data-evfk-from="2" data-evfk-to="2" data-evfk-loops="1"><span class="evfk-c__op-cell">2</span></span><span class="evfk-c__op-strip evfk-c__op-strip--blur"></span></span>
+              <span class="evfk-c__op-win"><span class="evfk-c__op-strip" data-evfk-from="6" data-evfk-to="7" data-evfk-loops="2"><span class="evfk-c__op-cell">6</span></span><span class="evfk-c__op-strip evfk-c__op-strip--blur"></span></span>
+            </div>
+            <span class="evfk-c__op-band evfk-c__op-band--b"></span>
+            <div class="evfk-c__op-glint"><div class="evfk-c__op-glint-band"><div class="evfk-c__op-glint-copy"><span>2</span><span>0</span><span>2</span><span>6</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="evfk-c__skip" id="evfk-c-skip">スキップ</button>
+  </div>
+  </div>
+  <script>
+  (function(){'use strict';
+    /* 再生判定だけ先に行い、FVのチラ見せを防ぐ。安全弁もここに置く（本体JSが落ちても6秒で必ず解除） */
+    var root=document.getElementById('evfk-c-root'); if(!root) return;
+    try{root.style.setProperty('--evfk-vw',document.documentElement.clientWidth+'px');}catch(e){}
+    var op=document.getElementById('evfk-c-op'), portal=document.getElementById('evfk-c-op-portal'); if(!op||!portal) return;
+    var reduce=false; try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
+    var force=false; try{force=/[?&]evfk-opening=1(?:&|$)/.test(window.location.search);}catch(e){}
+    /* オープニングの再生設定：true＝ページを開くたびに毎回再生／false＝同じタブで初回のみ */
+    var EVFK_OPENING_EVERY_TIME=true;
+    var seen=false; if(!EVFK_OPENING_EVERY_TIME){ try{seen=window.sessionStorage.getItem('evfk-opening-seen')==='1';}catch(e){} }
+    var hash=''; try{hash=window.location.hash||'';}catch(e){}
+    /* ページ内リンク（#…）付きの来訪は目的の場所を優先してオープニングを省略 */
+    if(reduce || (seen && !force) || (hash.length>1 && !force)) return;
+    try{window.sessionStorage.setItem('evfk-opening-seen','1');}catch(e){}
+    /* テーマ側の祖先に transform や stickyヘッダーがあっても全画面の最前面になるよう body 直下へ */
+    try{document.body.appendChild(portal);}catch(e){}
+    var html=document.documentElement; root.setAttribute('data-evfk-ov',html.style.overflow||'');
+    op.hidden=false; root.classList.add('is-opening'); root.setAttribute('data-evfk-op','play');
+    html.style.overflow='hidden';
+    setTimeout(function(){
+      if(root.getAttribute('data-evfk-op')!=='play') return;
+      op.hidden=true; root.classList.remove('is-opening'); root.setAttribute('data-evfk-op','done');
+      html.style.overflow=root.getAttribute('data-evfk-ov')||'';
+    },6000);
+  })();
+  </script>
+
+  
+  <div class="evfk-c__skywrap" aria-hidden="true">
+    <div class="evfk-c__sky" id="evfk-c-sky">
+      <div class="evfk-c__layer evfk-c__layer--night"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#evfk-c-dustp)"/></svg></div>
+      <div class="evfk-c__layer evfk-c__layer--ai"></div>
+      <div class="evfk-c__layer evfk-c__layer--ake"></div>
+      <div class="evfk-c__layer evfk-c__layer--hak"></div>
+      
+      <div class="evfk-c__clouds evfk-c__clouds--back"><div class="evfk-c__cset evfk-c__cset--g"><div class="evfk-c__track"><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg></div></div><div class="evfk-c__cset evfk-c__cset--w"><div class="evfk-c__track"><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#FFF8EA"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#FFF8EA"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#FFF8EA"/></svg></div></div></div>
+
+      <div class="evfk-c__sun" id="evfk-c-sun">
+        <div class="evfk-c__sun-move">
+          <span class="evfk-c__sun-halo"></span>
+          <span class="evfk-c__sun-rays"></span>
+          <span class="evfk-c__sun-disc"></span>
+          <span class="evfk-c__sun-disc evfk-c__sun-disc--day"></span>
+        </div>
+        <svg class="evfk-c__sun-bank" viewBox="300 20 1000 120"><use href="#evfk-c-kasumiA" fill="#E2B758" opacity=".85"/></svg>
+      </div>
+
+      <div class="evfk-c__clouds evfk-c__clouds--mid"><div class="evfk-c__cset evfk-c__cset--g"><div class="evfk-c__track"><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#E2B758"/><use href="#evfk-c-curl" stroke="#110D0B" opacity=".5"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#E2B758"/><use href="#evfk-c-curl" stroke="#110D0B" opacity=".5"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#E2B758"/><use href="#evfk-c-curl" stroke="#110D0B" opacity=".5"/></svg></div></div><div class="evfk-c__cset evfk-c__cset--w"><div class="evfk-c__track"><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#FFF8EA"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#FFF8EA"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#FFF8EA"/></svg></div></div></div>
+
+      <div class="evfk-c__clouds evfk-c__clouds--front"><div class="evfk-c__cset evfk-c__cset--g"><div class="evfk-c__track"><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg></div></div><div class="evfk-c__cset evfk-c__cset--w"><div class="evfk-c__track"><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#FFF8EA"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#FFF8EA"/></svg><svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiA" fill="#FFF8EA"/></svg></div></div></div>
+    </div>
+  </div>
+
+  <div class="evfk-c__main">
+
+    
+    <section class="evfk-c__fv" id="evfk-c-fv" data-evfk-sky="0" aria-label="EVEN 冬の福BOX 2026">
+      <div class="evfk-c__fvimg">
+        <picture>
+          <source media="(min-width:768px)" srcset="assets/fv-pc.jpg" width="1920" height="780">
+          <img class="evfk-c__fv-img" src="assets/fv-sp.jpg" width="1080" height="1350" alt="今年もやります！EVEN 冬の福BOX 2026。50万円コースから3万円コース、オールインワンジェルセットまで全10コース" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="evfk-c__fvcloud" aria-hidden="true"><div class="evfk-c__track">
+        <svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#E2B758"/><use href="#evfk-c-curl" stroke="#110D0B" opacity=".5"/></svg>
+        <svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#E2B758"/><use href="#evfk-c-curl" stroke="#110D0B" opacity=".5"/></svg>
+        <svg class="evfk-c__tile" viewBox="0 0 1600 240"><use href="#evfk-c-kasumiB" fill="#E2B758"/><use href="#evfk-c-curl" stroke="#110D0B" opacity=".5"/></svg>
+      </div></div>
+    </section>
+
+    
+    <section class="evfk-c__intro" data-evfk-sky="0.15" aria-labelledby="evfk-c-lead">
+      <div class="evfk-c__intro-in">
+        <h2 class="evfk-c__lead" id="evfk-c-lead">
+          <span class="evfk-c__lead-line"><span class="evfk-c__lead-in">夜明けとともに、</span></span>
+          <span class="evfk-c__lead-line"><span class="evfk-c__lead-in">福をひらく。</span></span>
+        </h2>
+        <div class="evfk-c__intro-rule" aria-hidden="true"></div>
+        <div class="evfk-c__intro-body">
+          <p>一年のはじまりに、とっておきをひと箱。</p>
+          <p>EVENの冬の福BOXは、名門コースでのラウンド体験が付いた特別なコースから、日々の身だしなみに寄り添うオールインワンジェルのセットまで、全10コースをご用意しました。</p>
+          <p>数に限りのあるコースもございます。ゆっくりとご覧ください。</p>
+        </div>
+        <p class="evfk-c__period"><span>販売期間</span><span class="evfk-c__period-v" data-evfk-slot="period">12/◯(◯) ◯:00〜</span></p>
+      </div>
+    </section>
+
+    
+    <section class="evfk-c__courses" id="evfk-c-courses" aria-labelledby="evfk-c-courses-title">
+      <div class="evfk-c__wrap">
+        <h2 class="evfk-c__courses-title" id="evfk-c-courses-title">
+          <span>福のおしながき</span>
+          <span class="evfk-c__courses-sub">全10コース</span>
+          <svg viewBox="0 0 120 14" aria-hidden="true"><rect x="0" y="6" width="44" height="2" rx="1" fill="url(#evfk-c-gk)"/><circle cx="60" cy="7" r="5" fill="none" stroke="#C8A04A"/><circle cx="60" cy="7" r="2" fill="#C8A04A"/><rect x="76" y="6" width="44" height="2" rx="1" fill="url(#evfk-c-gk)"/></svg>
+        </h2>
+
+        
+        <div class="evfk-c__ju evfk-c__ju--1" role="group" aria-labelledby="evfk-c-ju1" data-evfk-sky="1">
+          <div class="evfk-c__juhead">
+            <svg class="evfk-c__juhead-art" viewBox="700 20 900 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><use href="#evfk-c-kasumiB" fill="#E2B758"/></svg>
+            <p class="evfk-c__jutitle" id="evfk-c-ju1"><span class="evfk-c__juno">一の福</span><span class="evfk-c__jusep" aria-hidden="true"></span><span class="evfk-c__jusub">特別な体験を</span></p>
+            <div class="evfk-c__lid" aria-hidden="true"><svg viewBox="0 0 1600 240" preserveAspectRatio="xMidYMid slice"><use href="#evfk-c-kasumiA" fill="url(#evfk-c-gk)" opacity=".55"/></svg><span class="evfk-c__lid-knot"></span></div>
+          </div>
+          <div class="evfk-c__grid evfk-c__grid--1">
+
+            <article class="evfk-c__card evfk-c__card--ichi evfk-c__card--hero" id="evfk-c-c01" data-evfk-status="open" aria-labelledby="evfk-c-c01-t">
+              <svg class="evfk-c__corner evfk-c__corner--tl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--tr" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--bl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--br" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media">
+                  
+                  <div class="evfk-c__ph evfk-c__ph--3" style="--evfk-seal-y:30%">
+                    <svg class="evfk-c__ph-bg" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><rect width="400" height="500" fill="url(#evfk-c-dustp)"/></svg>
+                    <p class="evfk-c__ph-top">冬の福BOX 2026<b>五十万円</b></p>
+                    <div class="evfk-c__ph-art">
+                      <svg viewBox="0 0 240 250" aria-hidden="true">
+                        <ellipse cx="120" cy="246" rx="112" ry="5" fill="#000" opacity=".5"/>
+                        <g>
+                          <rect x="22" y="70" width="196" height="56" fill="url(#evfk-c-lq)"/><rect x="22" y="70" width="196" height="56" fill="url(#evfk-c-lqh)"/>
+                          <rect x="22" y="128" width="196" height="56" fill="url(#evfk-c-lq)"/><rect x="22" y="128" width="196" height="56" fill="url(#evfk-c-lqh)"/>
+                          <rect x="22" y="186" width="196" height="56" fill="url(#evfk-c-lq)"/><rect x="22" y="186" width="196" height="56" fill="url(#evfk-c-lqh)"/>
+                          <rect x="20" y="125.5" width="200" height="3" fill="url(#evfk-c-gk)"/><rect x="20" y="183.5" width="200" height="3" fill="url(#evfk-c-gk)"/><rect x="20" y="240" width="200" height="3" fill="url(#evfk-c-gk)"/>
+                          <rect x="12" y="24" width="216" height="46" rx="3" fill="url(#evfk-c-lid)"/><rect x="12" y="24" width="216" height="46" rx="3" fill="url(#evfk-c-lqh)"/>
+                          <rect x="12" y="66" width="216" height="4" fill="url(#evfk-c-gk)"/><rect x="12" y="24" width="216" height="1.5" fill="#ECD6A0" opacity=".6"/>
+                          <g fill="url(#evfk-c-gk)" opacity=".9">
+                            <rect x="30" y="36" width="64" height="6" rx="3"/><rect x="44" y="42" width="80" height="6" rx="3"/><rect x="36" y="48" width="36" height="6" rx="3"/>
+                            <rect x="150" y="98" width="58" height="6" rx="3"/><rect x="130" y="104" width="70" height="6" rx="3"/><rect x="160" y="110" width="30" height="6" rx="3"/>
+                            <rect x="34" y="150" width="70" height="6" rx="3"/><rect x="52" y="156" width="88" height="6" rx="3"/>
+                            <rect x="120" y="204" width="84" height="6" rx="3"/><rect x="100" y="210" width="60" height="6" rx="3"/><rect x="140" y="216" width="40" height="6" rx="3"/>
+                            <circle cx="186" cy="150" r="13"/>
+                          </g>
+                          <circle cx="186" cy="150" r="13" fill="none" stroke="#F3E4BC" stroke-width=".8"/>
+                        </g>
+                      </svg>
+                      <p class="evfk-c__seal"><span>近日</span><span>公開</span></p>
+                    </div>
+                    <p class="evfk-c__ph-note">名門コースでのラウンド体験<small>（詳細は後日公開）</small></p>
+                  </div>
+                  <span class="evfk-c__veil" aria-hidden="true"></span>
+                <a class="evfk-c__thumb-link" data-evfk-slot="url-c01" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag"><span class="evfk-c__tag-on">限定1セット</span><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c01-t">50万円コース</h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd"><span class="evfk-c__dd-item">名門コースでのラウンド体験（詳細は後日公開）</span><span class="evfk-c__dd-item">ナチュロック（新作）</span></dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">13〜15点</dd></div>
+                    <div class="evfk-c__row evfk-c__row--total"><dt class="evfk-c__dt">合計</dt><dd class="evfk-c__dd">1体験＋14〜16商品</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">500,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                  <a class="evfk-c__btn" data-evfk-slot="url-c01" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span><svg class="evfk-c__btn-arrow" viewBox="0 0 14 8" aria-hidden="true"><path d="M0 4h12M9 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+                </div>
+                <span class="evfk-c__sheen" aria-hidden="true"></span>
+              </div>
+            </article>
+
+            <article class="evfk-c__card evfk-c__card--ichi" id="evfk-c-c02" data-evfk-status="open" aria-labelledby="evfk-c-c02-t">
+              <svg class="evfk-c__corner evfk-c__corner--tl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--tr" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--bl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--br" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media">
+                  <div class="evfk-c__ph evfk-c__ph--2" style="--evfk-seal-y:38%">
+                    <svg class="evfk-c__ph-bg" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><rect width="400" height="500" fill="url(#evfk-c-dustp)"/></svg>
+                    <p class="evfk-c__ph-top">冬の福BOX 2026<b>三十万円</b></p>
+                    <div class="evfk-c__ph-art">
+                      <svg viewBox="0 0 240 192" aria-hidden="true">
+                        <ellipse cx="120" cy="188" rx="112" ry="5" fill="#000" opacity=".5"/>
+                        <rect x="22" y="70" width="196" height="56" fill="url(#evfk-c-lq)"/><rect x="22" y="70" width="196" height="56" fill="url(#evfk-c-lqh)"/>
+                        <rect x="22" y="128" width="196" height="56" fill="url(#evfk-c-lq)"/><rect x="22" y="128" width="196" height="56" fill="url(#evfk-c-lqh)"/>
+                        <rect x="20" y="125.5" width="200" height="3" fill="url(#evfk-c-gk)"/><rect x="20" y="182" width="200" height="3" fill="url(#evfk-c-gk)"/>
+                        <rect x="12" y="24" width="216" height="46" rx="3" fill="url(#evfk-c-lid)"/><rect x="12" y="24" width="216" height="46" rx="3" fill="url(#evfk-c-lqh)"/>
+                        <rect x="12" y="66" width="216" height="4" fill="url(#evfk-c-gk)"/><rect x="12" y="24" width="216" height="1.5" fill="#ECD6A0" opacity=".6"/>
+                        <g fill="url(#evfk-c-gk)" opacity=".9">
+                          <rect x="140" y="34" width="64" height="6" rx="3"/><rect x="118" y="40" width="80" height="6" rx="3"/><rect x="150" y="46" width="36" height="6" rx="3"/>
+                          <rect x="36" y="96" width="62" height="6" rx="3"/><rect x="50" y="102" width="80" height="6" rx="3"/>
+                          <rect x="120" y="150" width="78" height="6" rx="3"/><rect x="104" y="156" width="56" height="6" rx="3"/>
+                          <circle cx="54" cy="152" r="12"/>
+                        </g>
+                        <circle cx="54" cy="152" r="12" fill="none" stroke="#F3E4BC" stroke-width=".8"/>
+                      </svg>
+                      <p class="evfk-c__seal"><span>近日</span><span>公開</span></p>
+                    </div>
+                    <p class="evfk-c__ph-note">名門コースでのラウンド体験<small>（詳細は後日公開）</small></p>
+                  </div>
+                  <span class="evfk-c__veil" aria-hidden="true"></span>
+                <a class="evfk-c__thumb-link" data-evfk-slot="url-c02" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag"><span class="evfk-c__tag-on">限定1セット</span><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c02-t">30万円コース<span class="evfk-c__nw">（名門）</span></h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd">名門コースでのラウンド体験（詳細は後日公開）</dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">8点</dd></div>
+                    
+                    <div class="evfk-c__row evfk-c__row--total"><dt class="evfk-c__dt">合計</dt><dd class="evfk-c__dd">1体験＋8〜10商品</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">300,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                  <a class="evfk-c__btn" data-evfk-slot="url-c02" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span><svg class="evfk-c__btn-arrow" viewBox="0 0 14 8" aria-hidden="true"><path d="M0 4h12M9 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+                </div>
+                <span class="evfk-c__sheen" aria-hidden="true"></span>
+              </div>
+            </article>
+
+            <article class="evfk-c__card evfk-c__card--ichi" id="evfk-c-c03" data-evfk-status="open" aria-labelledby="evfk-c-c03-t">
+              <svg class="evfk-c__corner evfk-c__corner--tl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--tr" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--bl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <svg class="evfk-c__corner evfk-c__corner--br" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media">
+                  <img class="evfk-c__img" src="assets/c-30muta.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="30万円コース（muta）のイメージ：mutaキャディバッグ（ベージュ）とナチュロックブレス">
+                  <span class="evfk-c__veil" aria-hidden="true"></span>
+                <a class="evfk-c__thumb-link" data-evfk-slot="url-c03" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag"><span class="evfk-c__tag-on">限定2セット</span><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c03-t">30万円コース<span class="evfk-c__nw">（muta）</span></h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd"><span class="evfk-c__dd-item">mutaキャディバッグ（ベージュ）</span><span class="evfk-c__dd-item">ナチュロックブレス</span></dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">13〜15点</dd></div>
+                    <div class="evfk-c__row evfk-c__row--total"><dt class="evfk-c__dt">合計</dt><dd class="evfk-c__dd">15〜17点</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">300,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                  <a class="evfk-c__btn" data-evfk-slot="url-c03" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span><svg class="evfk-c__btn-arrow" viewBox="0 0 14 8" aria-hidden="true"><path d="M0 4h12M9 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+                </div>
+                <span class="evfk-c__sheen" aria-hidden="true"></span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        
+        <div class="evfk-c__ju evfk-c__ju--2" role="group" aria-labelledby="evfk-c-ju2" data-evfk-sky="1.15">
+          <div class="evfk-c__juhead">
+            <svg class="evfk-c__juhead-art" viewBox="700 20 900 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg>
+            
+            <p class="evfk-c__jutitle" id="evfk-c-ju2"><span class="evfk-c__juno">二の福</span><span class="evfk-c__jusep" aria-hidden="true"></span><span class="evfk-c__jusub">名品のバッグを</span></p>
+            <div class="evfk-c__lid" aria-hidden="true"><svg viewBox="0 0 1600 240" preserveAspectRatio="xMidYMid slice"><use href="#evfk-c-kasumiB" fill="url(#evfk-c-gk)" opacity=".45"/></svg><span class="evfk-c__lid-knot"></span></div>
+          </div>
+          <div class="evfk-c__grid evfk-c__grid--2">
+            <article class="evfk-c__card evfk-c__card--ni" id="evfk-c-c04" data-evfk-status="open" aria-labelledby="evfk-c-c04-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-20man.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="20万円コースのイメージ：ペッレ キャディバッグ"><a class="evfk-c__thumb-link" data-evfk-slot="url-c04" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag evfk-c__tag--none"><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c04-t">20万円コース</h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd">ペッレ キャディバッグ</dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">12点</dd></div>
+                    <div class="evfk-c__row evfk-c__row--total"><dt class="evfk-c__dt">合計</dt><dd class="evfk-c__dd">13点</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">200,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                  <a class="evfk-c__btn" data-evfk-slot="url-c04" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="evfk-c__card evfk-c__card--ni" id="evfk-c-c05" data-evfk-status="open" aria-labelledby="evfk-c-c05-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-15green.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="15万円コース（グリーン）のイメージ：mutamarine グリーンのキャディバッグとナチュロックブレス"><a class="evfk-c__thumb-link" data-evfk-slot="url-c05" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag evfk-c__tag--none"><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c05-t">15万円コース<span class="evfk-c__nw">（グリーン）</span></h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd"><span class="evfk-c__dd-item">mutamarine グリーン</span><span class="evfk-c__dd-item">ナチュロックブレス</span></dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">8点</dd></div>
+                    <div class="evfk-c__row evfk-c__row--total"><dt class="evfk-c__dt">合計</dt><dd class="evfk-c__dd">10点</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">150,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                  <a class="evfk-c__btn" data-evfk-slot="url-c05" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="evfk-c__card evfk-c__card--ni" id="evfk-c-c06" data-evfk-status="open" aria-labelledby="evfk-c-c06-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-15brown.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="15万円コース（ブラウン）のイメージ：mutamarine ブラウンのキャディバッグとナチュロックブレス"><a class="evfk-c__thumb-link" data-evfk-slot="url-c06" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag evfk-c__tag--none"><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c06-t">15万円コース<span class="evfk-c__nw">（ブラウン）</span></h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd"><span class="evfk-c__dd-item">mutamarine ブラウン</span><span class="evfk-c__dd-item">ナチュロックブレス</span></dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">8点</dd></div>
+                    <div class="evfk-c__row evfk-c__row--total"><dt class="evfk-c__dt">合計</dt><dd class="evfk-c__dd">10点</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">150,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                  <a class="evfk-c__btn" data-evfk-slot="url-c06" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        
+        <div class="evfk-c__ju evfk-c__ju--3" role="group" aria-labelledby="evfk-c-ju3" data-evfk-sky="2">
+          <div class="evfk-c__juhead">
+            <svg class="evfk-c__juhead-art" viewBox="700 20 900 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><use href="#evfk-c-kasumiB" fill="#E2B758"/></svg>
+            <p class="evfk-c__jutitle" id="evfk-c-ju3"><span class="evfk-c__juno">三の福</span><span class="evfk-c__jusep" aria-hidden="true"></span><span class="evfk-c__jusub">冬の装いを</span></p>
+            <div class="evfk-c__lid" aria-hidden="true"><svg viewBox="0 0 1600 240" preserveAspectRatio="xMidYMid slice"><use href="#evfk-c-kasumiA" fill="url(#evfk-c-gk)" opacity=".4"/></svg><span class="evfk-c__lid-knot"></span></div>
+          </div>
+          <div class="evfk-c__grid evfk-c__grid--3">
+            <article class="evfk-c__card evfk-c__card--low" id="evfk-c-c07" data-evfk-status="open" aria-labelledby="evfk-c-c07-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-5man.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="5万円コースのイメージ：アウターとウェア・雑貨"><a class="evfk-c__thumb-link" data-evfk-slot="url-c07" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag evfk-c__tag--none"><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c07-t">5万円コース</h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">目玉</dt><dd class="evfk-c__dd">アウター</dd></div>
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">ウェア＋雑貨 合計7点</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">50,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                </div>
+                <div class="evfk-c__foot">
+                  <a class="evfk-c__btn" data-evfk-slot="url-c07" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="evfk-c__card evfk-c__card--low" id="evfk-c-c08" data-evfk-status="open" aria-labelledby="evfk-c-c08-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-3man.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="3万円コースのイメージ：ウェアと雑貨"><a class="evfk-c__thumb-link" data-evfk-slot="url-c08" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag evfk-c__tag--none"><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name" id="evfk-c-c08-t">3万円コース</h3>
+                  <dl class="evfk-c__spec">
+                    <div class="evfk-c__row"><dt class="evfk-c__dt">ウェア・雑貨</dt><dd class="evfk-c__dd">ウェア＋雑貨 4点</dd></div>
+                  </dl>
+                  
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">30,000</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                </div>
+                <div class="evfk-c__foot">
+                  <a class="evfk-c__btn" data-evfk-slot="url-c08" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        
+        <div class="evfk-c__ju evfk-c__ju--4" role="group" aria-labelledby="evfk-c-ju4" data-evfk-sky="2.3">
+          <div class="evfk-c__juhead">
+            <svg class="evfk-c__juhead-art" viewBox="700 20 900 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><use href="#evfk-c-kasumiA" fill="#E2B758"/></svg>
+            <p class="evfk-c__jutitle" id="evfk-c-ju4"><span class="evfk-c__juno">別誂え</span><span class="evfk-c__jusep" aria-hidden="true"></span><span class="evfk-c__jusub">身だしなみを</span></p>
+            <div class="evfk-c__lid" aria-hidden="true"><svg viewBox="0 0 1600 240" preserveAspectRatio="xMidYMid slice"><use href="#evfk-c-kasumiB" fill="url(#evfk-c-gk)" opacity=".4"/></svg><span class="evfk-c__lid-knot"></span></div>
+          </div>
+          <div class="evfk-c__grid evfk-c__grid--3 evfk-c__grid--gel">
+            <article class="evfk-c__card evfk-c__card--low" id="evfk-c-c09" data-evfk-status="open" aria-labelledby="evfk-c-c09-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-gel50.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="オールインワンジェル50本セットのイメージ：オールインワンジェル50本"><a class="evfk-c__thumb-link" data-evfk-slot="url-c09" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag"><span class="evfk-c__tag-on">限定2セット</span><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name evfk-c__name--gel" id="evfk-c-c09-t"><span class="evfk-c__nw">オールインワンジェル</span><wbr><span class="evfk-c__nw">50本セット</span></h3>
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">◯◯,◯◯◯</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                </div>
+                <div class="evfk-c__foot">
+                  <a class="evfk-c__btn" data-evfk-slot="url-c09" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="evfk-c__card evfk-c__card--low" id="evfk-c-c10" data-evfk-status="open" aria-labelledby="evfk-c-c10-t">
+              <div class="evfk-c__tilt">
+                <div class="evfk-c__media"><img class="evfk-c__img" src="assets/c-gel100.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="オールインワンジェル100本セットのイメージ：オールインワンジェル100本"><a class="evfk-c__thumb-link" data-evfk-slot="url-c10" href="#" tabindex="-1" aria-hidden="true"></a></div>
+                <div class="evfk-c__body">
+                  <p class="evfk-c__tag"><span class="evfk-c__tag-on">限定1セット</span><span class="evfk-c__tag-off">完売</span></p>
+                  <h3 class="evfk-c__name evfk-c__name--gel" id="evfk-c-c10-t"><span class="evfk-c__nw">オールインワンジェル</span><wbr><span class="evfk-c__nw">100本セット</span></h3>
+                  <p class="evfk-c__price"><span data-evfk-slot="price"><span class="evfk-c__num">◯◯,◯◯◯</span><span class="evfk-c__yen">円（税込）</span></span></p>
+                </div>
+                <div class="evfk-c__foot">
+                  <a class="evfk-c__btn" data-evfk-slot="url-c10" href="#"><span class="evfk-c__btn-on">このコースを購入する</span><span class="evfk-c__btn-off">完売しました</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="evfk-c__lot" id="evfk-c-lot" data-evfk-sky="2.6" aria-labelledby="evfk-c-lot-t">
+      <div class="evfk-c__wrap">
+        <div class="evfk-c__lot-box">
+          <svg class="evfk-c__corner evfk-c__corner--tl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+          <svg class="evfk-c__corner evfk-c__corner--tr" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+          <svg class="evfk-c__corner evfk-c__corner--bl" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+          <svg class="evfk-c__corner evfk-c__corner--br" aria-hidden="true"><use href="#evfk-c-corner"/></svg>
+          <h2 class="evfk-c__lot-title" id="evfk-c-lot-t">迷ったら、福引きで選ぶ</h2>
+          <p class="evfk-c__lot-lead">蒔絵の福引きをまわすと、10コースの中からひとつをご紹介します。</p>
+          <div class="evfk-c__lot-grid">
+            <div class="evfk-c__lot-machine">
+              <div class="evfk-c__machine" aria-hidden="true">
+                <svg class="evfk-c__machine-stand" viewBox="0 0 260 230">
+                  <path d="M120 88 L72 202 M120 88 L168 202" stroke="#0C0706" stroke-width="8" stroke-linecap="round" fill="none"/>
+                  <path d="M120 88 L72 202 M120 88 L168 202" stroke="#C8A04A" stroke-width="1.2" stroke-linecap="round" fill="none" opacity=".7"/>
+                  <rect x="40" y="200" width="180" height="13" rx="2" fill="url(#evfk-c-lid)"/>
+                  <rect x="40" y="200" width="180" height="1.6" fill="#ECD6A0" opacity=".7"/>
+                  <rect x="40" y="211.5" width="180" height="1.5" fill="#C8A04A"/>
+                  <path d="M160 182 L238 182 L242 208 L156 208 Z" fill="url(#evfk-c-gkv)"/>
+                  <path d="M164 186 L234 186 L236 202 L162 202 Z" fill="#3A1A17"/>
+                  <path d="M120 170 L120 184 L166 190" stroke="#C8A04A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                </svg>
+                <div class="evfk-c__wheel">
+                  <svg viewBox="0 0 164 164">
+                    <polygon points="116,8 156,48 156,116 116,156 48,156 8,116 8,48 48,8" fill="url(#evfk-c-lq)" stroke="url(#evfk-c-gk)" stroke-width="6" stroke-linejoin="round"/>
+                    <polygon points="116,8 156,48 156,116 116,156 48,156 8,116 8,48 48,8" fill="url(#evfk-c-lqh)" opacity=".8"/>
+                    <polygon points="107,22 142,57 142,107 107,142 57,142 22,107 22,57 57,22" fill="none" stroke="#C8A04A" stroke-width="1" opacity=".7"/>
+                    <g fill="url(#evfk-c-gk)" opacity=".9">
+                      <rect x="30" y="44" width="46" height="5" rx="2.5"/><rect x="40" y="49" width="56" height="5" rx="2.5"/><rect x="34" y="54" width="26" height="5" rx="2.5"/>
+                      <rect x="92" y="112" width="44" height="5" rx="2.5"/><rect x="80" y="117" width="50" height="5" rx="2.5"/><rect x="100" y="122" width="22" height="5" rx="2.5"/>
+                    </g>
+                    <circle cx="82" cy="82" r="21" fill="url(#evfk-c-gkv)"/>
+                    <circle cx="82" cy="82" r="17" fill="#2A1311" stroke="#ECD6A0" stroke-width=".8"/>
+                    <text x="82" y="89" text-anchor="middle" font-size="19" font-weight="900" fill="#ECD6A0" style="font-family:'Zen Old Mincho','Noto Serif JP',serif">福</text>
+                    <path d="M82 82 L82 34 L62 34" stroke="#C8A04A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0"/>
+                    <path d="M140 46 L156 30 L168 30" stroke="url(#evfk-c-gk)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="166" cy="30" r="5" fill="#2A1311" stroke="#ECD6A0" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <span class="evfk-c__ball"></span>
+              </div>
+              <button class="evfk-c__spin" id="evfk-c-spin" type="button">まわす</button>
+              <p class="evfk-c__legend" aria-hidden="true">
+                <span class="evfk-c__legend-i" style="--evfk-c:#C8A04A">金＝一の福</span>
+                <span class="evfk-c__legend-i" style="--evfk-c:#B8241B">朱＝二の福</span>
+                <span class="evfk-c__legend-i" style="--evfk-c:#F6EEDD">白金＝三の福</span>
+                <span class="evfk-c__legend-i" style="--evfk-c:#1B2238">藍＝別誂え</span>
+              </p>
+            </div>
+            <div class="evfk-c__result" id="evfk-c-result" aria-live="polite">
+              <p class="evfk-c__result-empty">まわすと、ここにコースが出ます。</p>
+            </div>
+          </div>
+          <p class="evfk-c__lot-note">コースをランダムにご紹介します。購入内容が抽選で決まるものではありません。</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="evfk-c__notice" id="evfk-c-notice" data-evfk-sky="3" aria-labelledby="evfk-c-notice-t">
+      <div class="evfk-c__wrap">
+        <details class="evfk-c__details" open>
+          <summary class="evfk-c__summary"><h2 class="evfk-c__notice-title" id="evfk-c-notice-t">ご注意事項（仮）</h2><span class="evfk-c__plus" aria-hidden="true"></span></summary>
+          
+          <ul class="evfk-c__notes">
+            <li class="evfk-c__note">販売期間：<span data-evfk-slot="period">12/◯(◯) ◯:00〜</span>　各コースとも、限定数に達し次第終了となります。</li>
+            <li class="evfk-c__note">お届け：<span data-evfk-slot="ship">◯月◯日（◯）以降、順次発送予定</span>です。</li>
+            <li class="evfk-c__note">福袋の性質上、お客様都合による返品・交換・キャンセルはお受けしておりません（初期不良の場合を除く）。</li>
+            <li class="evfk-c__note">掲載画像はイメージです。内容・カラーは変更になる場合がございます。</li>
+            <li class="evfk-c__note">サイズ・内容の詳細は、各コースの購入ページにてご確認ください。</li>
+            <li class="evfk-c__note">名門コースでのラウンド体験の詳細（ゴルフ場・日程・ご利用人数など）は、後日公開いたします。</li>
+            <li class="evfk-c__note">オールインワンジェルは、お肌に合わない場合はご使用をおやめください。</li>
+            <li class="evfk-c__note">お一人様のご購入数の上限：<span data-evfk-slot="limit">◯点まで</span>（予定）</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  
+  <div class="evfk-c evfk-c--portal" id="evfk-c-cta-portal">
+  <div class="evfk-c__cta" id="evfk-c-cta">
+    <p class="evfk-c__cta-period">販売期間<b data-evfk-slot="period">12/◯(◯)〜</b></p>
+    <a class="evfk-c__cta-btn" href="#evfk-c-courses">コースを選ぶ</a>
+  </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var root=document.getElementById('evfk-c-root'); if(!root) return;
+  var doc=document.documentElement;
+  root.setAttribute('data-evfk-ready','1');
+  var mq=function(q){try{return window.matchMedia(q).matches;}catch(e){return false;}};
+  var reduce=mq('(prefers-reduced-motion: reduce)');
+  root.classList.add('evfk-c--js');
+  if(!reduce) root.classList.add('evfk-c--anim');
+  var $=function(s,c){return (c||root).querySelector(s);};
+  var $$=function(s,c){return Array.prototype.slice.call((c||root).querySelectorAll(s));};
+  var clamp=function(v,a,b){return v<a?a:(v>b?b:v);};
+  var hasIO='IntersectionObserver' in window;
+
+  /* スクロールバー幅を除いた実幅で全幅化（100vw だと横スクロールが出るため） */
+  function setSbw(){ root.style.setProperty('--evfk-vw',doc.clientWidth+'px'); }
+  setSbw();
+
+  /* 画像の置き場所を1か所で差し替え（data-evfk-asset-base） */
+  var assetBase=root.getAttribute('data-evfk-asset-base');
+  if(assetBase && assetBase!=='assets/'){
+    $$('img[src^="assets/"],source[srcset^="assets/"]').forEach(function(el){
+      if(el.hasAttribute('src')) el.setAttribute('src',assetBase+el.getAttribute('src').slice(7));
+      if(el.hasAttribute('srcset')) el.setAttribute('srcset',assetBase+el.getAttribute('srcset').slice(7));
+    });
+  }
+
+  /* 完売カードのボタンを無効化（表示はCSSのみで切替済み） */
+  $$('[data-evfk-status="soldout"] .evfk-c__btn').forEach(function(a){a.setAttribute('aria-disabled','true');a.setAttribute('tabindex','-1');});
+
+  /* SPでは注意事項を閉じた状態から */
+  if(mq('(max-width:767px)')){var d=$('.evfk-c__details'); if(d) d.removeAttribute('open');}
+
+  /* ===== 夜明け（スクロール連動） ===== */
+  var sky=$('#evfk-c-sky'), L={ai:$('.evfk-c__layer--ai'),ake:$('.evfk-c__layer--ake'),hak:$('.evfk-c__layer--hak')};
+  var cg=$$('.evfk-c__sky .evfk-c__cset--g'), cw=$$('.evfk-c__sky .evfk-c__cset--w'), last={};
+  /* opacity 0 のレイヤーは描画対象から外す（合成コストを抑える） */
+  function setOp(key,els,v){ v=Math.round(v*200)/200; if(last[key]===v) return; last[key]=v; (els.length?els:[els]).forEach(function(e){e.style.opacity=v; e.style.display=v<=0?'none':'';}); }
+  var sunMove=$('.evfk-c__sun-move'), sunDay=$('.evfk-c__sun-disc--day'), sunRays=$('.evfk-c__sun-rays'), sunHalo=$('.evfk-c__sun-halo');
+  var sunEl=$('.evfk-c__sun'), fvEl=$('#evfk-c-fv'), fvH=1, sunTop=0;
+  var stops=[], rootH=0, skyH=0, ticking=false, sunPx=56, skyJS=false;
+  /* 位置はすべて getBoundingClientRect 基準（window.scrollY に依存しない＝スクロールする祖先がテーマ側でも動く） */
+  function measure(){
+    var r=root.getBoundingClientRect(); rootH=root.offsetHeight; skyH=sky.offsetHeight||window.innerHeight;
+    stops=$$('[data-evfk-sky]').map(function(el){return {y:el.getBoundingClientRect().top-r.top, l:parseFloat(el.getAttribute('data-evfk-sky'))||0};});
+    var s=$('.evfk-c__sun'); sunPx=s?s.offsetWidth:48; last={};
+    var fvImg=$('.evfk-c__fvimg'); fvH=fvImg?Math.max(1,fvImg.offsetHeight):(fvEl?fvEl.offsetHeight:1); sunTop=s?s.offsetTop:0;
+  }
+  function levelAt(y){
+    if(!stops.length) return 0;
+    if(y<=stops[0].y) return stops[0].l;
+    for(var i=1;i<stops.length;i++){ if(y<stops[i].y){var a=stops[i-1],b=stops[i];return a.l+(b.l-a.l)*((y-a.y)/Math.max(1,b.y-a.y));} }
+    return stops[stops.length-1].l;
+  }
+  function paint(){
+    ticking=false;
+    var vh=window.innerHeight, rr=root.getBoundingClientRect(), rel=-rr.top;
+    /* sticky が効いているかを実測し、効いていなければ JS で空を画面に留める方式へ切り替える */
+    if(!skyJS && rel>4 && rr.bottom>skyH+4){
+      var st=sky.getBoundingClientRect().top;
+      if(Math.abs(st)>2){ skyJS=true; root.classList.add('evfk-c--skyjs'); }
+    }
+    if(skyJS){ var ty=Math.round(clamp(rel,0,Math.max(0,rootH-skyH))); if(last.ty!==ty){ last.ty=ty; sky.style.transform='translate3d(0,'+ty+'px,0)'; } }
+    var lv=levelAt(rel+vh*0.55);
+    var p=clamp(rel/Math.max(1,rootH-vh),0,1);
+    setOp('ai',L.ai,clamp(lv,0,1)); setOp('ake',L.ake,clamp(lv-1,0,1)); setOp('hak',L.hak,clamp(lv-2,0,1));
+    var dawn=clamp(lv-2,0,1); setOp('cg',cg,1-dawn); setOp('cw',cw,dawn);
+    /* 日の出：FVを読み進める間に、画面の下（FVの下）から定位置まで昇る。t=0 では画面外かつ透明 */
+    /* 夜明けの昇り・明るさは、FVの下端が太陽を通り過ぎてから始める（それまでは位置固定＝FVに覆われているだけ） */
+    var pass=Math.max(0,fvH-sunTop), q=clamp((rel-pass)/Math.max(1,rootH-vh-pass),0,1);
+    var e=Math.round(q*q*(3-2*q)*400)/400;
+    if(last.e===e) return; last.e=e;
+    sunMove.style.transform='translate3d(0,'+(sunPx*.45*(1-e)).toFixed(2)+'px,0) scale('+(0.8+0.2*e).toFixed(3)+')';
+    sunDay.style.opacity=clamp(e*1.3-.15,0,1); sunRays.style.opacity=(.25+.65*e).toFixed(3); sunHalo.style.opacity=(.6+.4*e).toFixed(3);
+  }
+  function onScroll(){ if(!ticking){ticking=true; window.requestAnimationFrame(paint);} }
+  if(!reduce && sky){
+    measure(); paint();
+    window.addEventListener('scroll',onScroll,{passive:true});
+    /* テーマ側の要素がスクロールしている場合も拾う（scroll はバブリングしないので capture で） */
+    document.addEventListener('scroll',onScroll,{capture:true,passive:true});
+    window.addEventListener('resize',function(){setSbw();measure();last={};onScroll();},{passive:true});
+    window.addEventListener('load',function(){measure();onScroll();});
+    if('ResizeObserver' in window){ new ResizeObserver(function(){measure();last.ty=null;onScroll();}).observe(root); }
+  } else { window.addEventListener('resize',setSbw,{passive:true}); }
+
+  /* 画面外の雲は停止 */
+  if(hasIO){
+    new IntersectionObserver(function(es){es.forEach(function(e){root.classList.toggle('is-paused',!e.isIntersecting);});}).observe(root);
+    var fvc=$('.evfk-c__fvcloud');
+    if(fvc) new IntersectionObserver(function(es){es.forEach(function(e){fvc.classList.toggle('is-paused',!e.isIntersecting);});}).observe(fvc);
+  }
+
+  /* ===== 出現：導入の文字・重箱の蓋 ===== */
+  var intro=$('.evfk-c__intro'), jus=$$('.evfk-c__ju');
+  if(reduce || !hasIO){ if(intro) intro.classList.add('is-in'); jus.forEach(function(j){j.classList.add('is-open');}); }
+  else{
+    var io1=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add(e.target===intro?'is-in':'is-open'); io1.unobserve(e.target);} });},{rootMargin:'0px 0px -18% 0px'});
+    if(intro) io1.observe(intro); jus.forEach(function(j){io1.observe(j);});
+  }
+
+  /* ===== 一の重：PCのみポインタ追従の傾き＋金の映り込み ===== */
+  if(!reduce && mq('(hover:hover) and (pointer:fine)')){
+    $$('.evfk-c__card--ichi').forEach(function(card){
+      var t=$('.evfk-c__tilt',card), sh=$('.evfk-c__sheen',card), raf=0, px=0, py=0;
+      function apply(){raf=0; t.style.transform='perspective(1100px) rotateX('+(-py*3).toFixed(2)+'deg) rotateY('+(px*3).toFixed(2)+'deg)';
+        if(sh){sh.style.setProperty('--evfk-sx',(px*18).toFixed(1)+'%');sh.style.setProperty('--evfk-sy',(py*18).toFixed(1)+'%');}}
+      card.addEventListener('pointermove',function(ev){var r=card.getBoundingClientRect(); px=clamp((ev.clientX-r.left)/r.width*2-1,-1,1); py=clamp((ev.clientY-r.top)/r.height*2-1,-1,1); t.classList.add('is-tilting'); if(!raf) raf=requestAnimationFrame(apply);});
+      card.addEventListener('pointerleave',function(){t.classList.remove('is-tilting'); px=0;py=0; t.style.transform='';});
+    });
+  }
+
+  /* ===== 固定CTA（body直下へ移す） ===== */
+  var ctaPortal=document.getElementById('evfk-c-cta-portal');
+  if(ctaPortal){ ctaPortal.classList.add('evfk-c--js'); try{document.body.appendChild(ctaPortal);}catch(e){} }
+  var cta=document.getElementById('evfk-c-cta'), fv=$('#evfk-c-fv'), notice=$('#evfk-c-notice'), courses=$('#evfk-c-courses');
+  if(cta){
+    var pastFv=false, atNotice=false, inCourses=false, isPC=mq('(min-width:768px)');
+    var setCta=function(){
+      /* PC：コース一覧が見えている間はカードのボタンを隠さないよう退場。注意事項に入った／過ぎた後は出さない */
+      var show=pastFv && !atNotice && !(isPC && inCourses) && !root.classList.contains('is-opening');
+      cta.classList.toggle('is-show',show);
+      if(show){cta.removeAttribute('inert');cta.removeAttribute('aria-hidden');}else{cta.setAttribute('inert','');cta.setAttribute('aria-hidden','true');}
+    };
+    setCta();
+    window.addEventListener('resize',function(){var n=mq('(min-width:768px)'); if(n!==isPC){isPC=n;setCta();}},{passive:true});
+    if(hasIO){
+      if(fv) new IntersectionObserver(function(es){es.forEach(function(e){pastFv=e.intersectionRatio<0.5 && e.boundingClientRect.top<0;});setCta();},{threshold:[0,.25,.5,.75,1]}).observe(fv);
+      if(notice) new IntersectionObserver(function(es){es.forEach(function(e){atNotice=e.isIntersecting || e.boundingClientRect.top<window.innerHeight;});setCta();}).observe(notice);
+      if(courses) new IntersectionObserver(function(es){es.forEach(function(e){inCourses=e.isIntersecting;});setCta();}).observe(courses);
+    }
+    var btn=$('.evfk-c__cta-btn',cta);
+    btn.addEventListener('click',function(ev){var tg=$('#evfk-c-courses'); if(!tg) return; ev.preventDefault();
+      tg.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});});
+    root.addEventListener('evfk-c-opening-end',setCta);
+    /* Tab で移ったボタンが下部バーの裏に隠れないよう、見える位置までずらす */
+    root.addEventListener('focusin',function(ev){
+      if(!cta.classList.contains('is-show')) return;
+      var t=ev.target, r=t.getBoundingClientRect(), c=cta.getBoundingClientRect();
+      var overlapX=r.right>c.left && r.left<c.right;
+      if(overlapX && r.bottom>c.top-8) window.scrollBy(0,r.bottom-c.top+16);
+    });
+  }
+
+
+  /* ===== 福引き（候補から完売を除き、玉の色で段を示し、結果カードから該当コースへ） ===== */
+  (function(){
+    var spinBtn=document.getElementById('evfk-c-spin'), result=document.getElementById('evfk-c-result');
+    var wheel=$('.evfk-c__wheel'), ball=$('.evfk-c__ball'); if(!spinBtn||!result||!wheel||!ball) return;
+    var colors=['#C8A04A','#B8241B','#F6EEDD','#1B2238'];
+    var cards=$$('.evfk-c__card');
+    function tierOf(card){ var ju=card.closest('.evfk-c__ju'); var all=$$('.evfk-c__ju'); var i=Math.max(0,all.indexOf(ju));
+      var t=ju?(($('.evfk-c__juno',ju)||{}).textContent||''):''; return {i:i,label:t,color:colors[i]||colors[0]}; }
+    var lastPick=null, deg=0, spinning=false, spunOnce=false;
+    function pick(){ var c=cards.filter(function(k){return k.getAttribute('data-evfk-status')!=='soldout';}); if(!c.length) return null;
+      if(c.length>1&&lastPick) c=c.filter(function(k){return k!==lastPick;}); return c[Math.floor(Math.random()*c.length)]; }
+    function goTo(card){ var h=$('.evfk-c__name',card); card.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+      if(h){ h.setAttribute('tabindex','-1'); try{h.focus({preventScroll:true});}catch(e){} } }
+    function show(card){
+      var tr=tierOf(card), name=(($('.evfk-c__name',card)||{}).textContent||'').replace(/\s+/g,''), price=$('[data-evfk-slot="price"]',card);
+      result.innerHTML='';
+      var rc=document.createElement('div'); rc.className='evfk-c__rc'; rc.style.setProperty('--evfk-rc',tr.i===2?'#ECD6A0':(tr.i===3?'#4A5A86':tr.color));
+      var th=document.createElement('div'); th.className='evfk-c__rc-thumb'; th.setAttribute('aria-hidden','true');
+      var img=$('.evfk-c__img',card);
+      if(img){ var im=document.createElement('img'); im.src=img.currentSrc||img.getAttribute('src'); im.alt=''; th.appendChild(im); }
+      else { var ph=document.createElement('div'); ph.className='evfk-c__rc-ph'; ph.innerHTML='<span>近日<br>公開</span>'; th.appendChild(ph); }
+      var tx=document.createElement('div');
+      var p1=document.createElement('p'); p1.className='evfk-c__rc-tier'; p1.textContent=tr.label;
+      var p2=document.createElement('p'); p2.className='evfk-c__rc-name'; p2.textContent=name;
+      var p3=document.createElement('p'); p3.className='evfk-c__rc-price'; if(price) p3.innerHTML=price.innerHTML;
+      var go=document.createElement('a'); go.className='evfk-c__rc-go'; go.href='#'+card.id; go.textContent='このコースを見る';
+      go.addEventListener('click',function(e){e.preventDefault(); goTo(card);});
+      tx.appendChild(p1); tx.appendChild(p2); tx.appendChild(p3); tx.appendChild(go); rc.appendChild(th); rc.appendChild(tx); result.appendChild(rc);
+      if(!reduce && rc.animate) rc.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'none'}],{duration:320,easing:'cubic-bezier(.2,.8,.2,1)'});
+    }
+    function spin(){
+      if(spinning) return; var card=pick(); if(!card) return;
+      lastPick=card; spinning=true; spinBtn.setAttribute('aria-busy','true');
+      ball.style.setProperty('--evfk-ball',tierOf(card).color); ball.classList.remove('is-shown');
+      var fin=function(){ spinning=false; spinBtn.removeAttribute('aria-busy'); if(!spunOnce){spunOnce=true; spinBtn.textContent='もう一回まわす';} show(card); };
+      if(reduce || !wheel.animate){ ball.classList.add('is-shown'); fin(); return; }
+      var from=deg; deg+=720;
+      var wa=wheel.animate([{transform:'rotate('+from+'deg)'},{transform:'rotate('+deg+'deg)'}],{duration:1500,easing:'cubic-bezier(.45,.05,.3,1)',fill:'forwards'});
+      wa.onfinish=function(){
+        wheel.style.transform='rotate('+deg+'deg)'; wa.cancel();
+        var ba=ball.animate([{transform:'translate(0,-6px) rotate(0deg)',opacity:0},{transform:'translate(0,4px) rotate(40deg)',opacity:1,offset:.2},
+          {transform:'translate(46px,22px) rotate(260deg)',opacity:1,offset:.6},{transform:'translate(78px,30px) rotate(420deg)',opacity:1,offset:.85},{transform:'translate(86px,30px) rotate(450deg)',opacity:1}],
+          {duration:620,easing:'cubic-bezier(.3,.1,.4,1)'});
+        ball.classList.add('is-shown'); ba.onfinish=fin;
+      };
+    }
+    spinBtn.addEventListener('click',spin);
+  })();
+
+  /* ===== オープニング ===== */
+  var op=document.getElementById('evfk-c-op');
+  if(!op || op.hidden || root.getAttribute('data-evfk-op')!=='play') return;
+  var skipBtn=document.getElementById('evfk-c-skip'), white=$('.evfk-c__op-white',op), bg=$('.evfk-c__op-bg',op), glow=$('.evfk-c__op-glow',op), front=$('.evfk-c__op-front',op),
+      year=$('.evfk-c__op-year',op), flash=$('.evfk-c__op-flash',op), hz=$('.evfk-c__op-horizon',op), kas=$('.evfk-c__op-kasumi',op),
+      clip=$('.evfk-c__op-sunclip',op), fly=$('.evfk-c__op-sunfly',op), rise=$('.evfk-c__op-sunrise',op), oHalo=$('.evfk-c__op-sunhalo',op), oRays=$('.evfk-c__op-sunrays',op),
+      skySun=$('.evfk-c__sun');
+  var timers=[], anims=[], done=false, skipped=false, ov=root.getAttribute('data-evfk-ov')||'';
+  var hasWA=typeof Element.prototype.animate==='function';
+  function at(ms,fn){timers.push(setTimeout(fn,ms));}
+  function A(el,kf,o){ if(!el||!hasWA) return null; var a=el.animate(kf,o); anims.push(a); return a; }
+  function show(el,o){ if(el) el.style.opacity=o; }
+
+  /* リールの帯を組み立て */
+  var strips=$$('.evfk-c__op-strip:not(.evfk-c__op-strip--blur)',op), reels=[];
+  strips.forEach(function(s){
+    var from=+s.getAttribute('data-evfk-from'), to=+s.getAttribute('data-evfk-to'), loops=+s.getAttribute('data-evfk-loops')||1, seq=[from], d=from;
+    var steps=loops*10+((to-from+10)%10);
+    for(var i=0;i<steps;i++){d=(d+1)%10; seq.push(d);}
+    var html=seq.map(function(n){return '<span class="evfk-c__op-cell">'+n+'</span>';}).join('');
+    s.innerHTML=html; var b=s.nextElementSibling; if(b) b.innerHTML=html;
+    reels.push({s:s,b:b,n:seq.length});
+  });
+
+  if(skipBtn){ try{skipBtn.focus({preventScroll:true});}catch(e){skipBtn.focus();} }
+
+  function finish(){
+    if(done) return; done=true;
+    timers.forEach(clearTimeout); timers=[];
+    document.removeEventListener('keydown',onKey);
+    op.hidden=true; root.classList.remove('is-opening'); root.setAttribute('data-evfk-op','done');
+    doc.style.overflow=ov;
+    anims.forEach(function(a){try{a.cancel();}catch(e){}}); anims=[];
+    try{root.dispatchEvent(new Event('evfk-c-opening-end'));}catch(e){}
+    if(document.activeElement===skipBtn){ try{skipBtn.blur();}catch(e){} }
+  }
+  function skip(){
+    if(done) return; skipped=true;
+    timers.forEach(clearTimeout); timers=[];
+    anims.forEach(function(a){try{a.cancel();}catch(e){}}); anims=[];
+    /* 3400ms の状態へ：白で覆い、そのまま FV へ */
+    [bg,glow,front,clip].forEach(function(el){if(el) el.style.opacity='0';});
+    white.style.transition='none'; white.style.opacity='1';
+    if(skipBtn) skipBtn.style.opacity='0';
+    root.classList.remove('is-opening');
+    if(hasWA){ var a=white.animate([{transform:'translate3d(0,0,0)'},{transform:'translate3d(0,-100%,0)'}],{duration:300,easing:'cubic-bezier(.65,0,.3,1)',fill:'forwards'}); a.onfinish=finish; }
+    else finish();
+    timers.push(setTimeout(finish,600));
+  }
+  function onKey(e){ if(e.key==='Escape'||e.key==='Esc') skip(); }
+  document.addEventListener('keydown',onKey);
+  if(skipBtn) skipBtn.addEventListener('click',skip);
+  setTimeout(finish,6000); /* 安全弁 */
+
+  if(!hasWA){ at(1200,skip); return; }
+
+  /* 0–400 金の光が一度走る */
+  (function(){
+    var g=$('.evfk-c__op-glint',op), band=$('.evfk-c__op-glint-band',op), copy=$('.evfk-c__op-glint-copy',op);
+    if(!g||!band||!copy) return; var W=g.offsetWidth, bw=band.offsetWidth;
+    var o={duration:420,delay:20,easing:'cubic-bezier(.4,0,.3,1)',fill:'both'};
+    A(band,[{transform:'translateX('+(-bw)+'px)'},{transform:'translateX('+W+'px)'}],o);
+    A(copy,[{transform:'translateX('+bw+'px)'},{transform:'translateX('+(-W)+'px)'}],o);
+  })();
+
+  /* 400–1800 リール回転 */
+  var stopAt=[1000,1150,1300,1800];
+  reels.forEach(function(r,i){
+    var dur=stopAt[i]-400, end=-(r.n-1)/r.n*100, kf, o={duration:dur,delay:400,fill:'both'};
+    if(i===3){
+      var over=-(r.n-1+0.06)/r.n*100;
+      kf=[{transform:'translateY(0%)',easing:'cubic-bezier(.45,0,.25,1)'},{transform:'translateY('+over+'%)',offset:.86,easing:'cubic-bezier(.3,0,.3,1)'},{transform:'translateY('+end+'%)'}];
+    } else {
+      kf=[{transform:'translateY(0%)'},{transform:'translateY('+end+'%)'}]; o.easing='cubic-bezier(.5,0,.15,1)';
+    }
+    A(r.s,kf,o); if(r.b) A(r.b,kf,o);
+    A(r.s,[{opacity:1},{opacity:.3,offset:.2},{opacity:.3,offset:.72},{opacity:1}],{duration:dur,delay:400,fill:'both'});
+    if(r.b) A(r.b,[{opacity:0},{opacity:.95,offset:.2},{opacity:.95,offset:.68},{opacity:0,offset:.9},{opacity:0}],{duration:dur,delay:400,fill:'both'});
+  });
+
+  /* 1800–2100 2027確定・閃光、地平線が中央から伸びる */
+  A(flash,[{opacity:1,transform:'scale(.6)'},{opacity:0,transform:'scale(1.2)'}],{duration:420,delay:1800,easing:'ease-out',fill:'forwards'});
+  A(hz,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:600,delay:1800,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+  A(kas,[{opacity:0,transform:'translateX(30px)'},{opacity:.7,transform:'translateX(-20px)'}],{duration:2000,delay:1900,easing:'ease-out',fill:'both'});
+
+  /* 2000–3000 初日の出 */
+  /* 2000ms まで太陽一式は不透明度0（円の外側の光が地平線の上へ漏れないように） */
+  A(rise,[{transform:'translate3d(0,140%,0)',opacity:0},{transform:'translate3d(0,100%,0)',opacity:1,offset:.08},{transform:'translate3d(0,0,0)',opacity:1}],{duration:1000,delay:2000,easing:'cubic-bezier(.25,.6,.2,1)',fill:'both'});
+  A(glow,[{opacity:0},{opacity:1}],{duration:1000,delay:2000,easing:'ease-out',fill:'both'});
+  A(oHalo,[{opacity:0},{opacity:1}],{duration:700,delay:2100,easing:'ease-out',fill:'both'});
+  A(oRays,[{opacity:0},{opacity:.55}],{duration:900,delay:2200,easing:'ease-out',fill:'both'});
+  /* 太陽が地平線の金線から昇る分だけ、リール窓を帯ごと上へ退避（数字が光に溶けないように） */
+  at(1990,function(){
+    var yr=year.getBoundingClientRect(), hr=hz.getBoundingClientRect(), D=fly.offsetWidth, fs=parseFloat(getComputedStyle(year).fontSize)||76;
+    var dy=Math.min(-12,(hr.top-D-fs*.12)-yr.bottom); dy=Math.max(dy,12-yr.top);
+    A(year,[{transform:'translateX(-50%) translateY(0)'},{transform:'translateX(-50%) translateY('+dy.toFixed(1)+'px)'}],{duration:1000,easing:'cubic-bezier(.25,.6,.2,1)',fill:'forwards'});
+  });
+
+  /* 2800–3000 太陽の光輪が広がり、曙色で画面を満たす（黒地に白を線形に重ねる時間を作らない） */
+  var flood=$('.evfk-c__op-flood',op);
+  (function(){ var D=fly.offsetWidth||150, k=Math.ceil(2.3*Math.hypot(window.innerWidth,window.innerHeight)/D);
+    A(flood,[{opacity:0,transform:'scale(1)'},{opacity:1,transform:'scale(1.4)',offset:.2},{opacity:1,transform:'scale('+k+')'}],{duration:220,delay:2800,easing:'cubic-bezier(.55,0,.85,.35)',fill:'forwards'}); })();
+  at(2790,function(){ clip.classList.add('is-free'); });
+  A(front,[{opacity:1},{opacity:0}],{duration:220,delay:2800,easing:'ease-in',fill:'forwards'});
+  /* 3000–3250 白金を ease-out で乗せる。以降の処理はすべてこの完了から連鎖させる（setTimeout と時計を分けない） */
+  var wIn=A(white,[{opacity:0},{opacity:1}],{duration:250,delay:3000,easing:'ease-out',fill:'forwards'});
+  function afterWhite(){
+    if(done||skipped) return;
+    /* ① 白が完全に乗ってから背景を消し、太陽を右上へ（画面上端沿いの弧） */
+    /* WAAPI の fill は inline style より強いので、先にアニメーションを外してから消す */
+    [bg,glow,front,flood].forEach(function(el){ if(!el) return; try{el.getAnimations().forEach(function(x){x.cancel();});}catch(e){} el.style.opacity='0'; });
+    /* 太陽はその場で光の中へ溶ける（右上へは移動しない） */
+    A(oRays,[{opacity:.55},{opacity:0}],{duration:250,fill:'forwards'});
+    var sunOut=A(clip,[{opacity:1,transform:'scale(1)'},{opacity:0,transform:'scale(1.08)'}],{duration:280,easing:'ease-in',fill:'forwards'});
+    /* ② 白の抜きは太陽が溶けてから（FVは画面幅いっぱいで現れる）。半透明の白を重ねず、上へ引き上げる */
+    var startOut=function(){
+      if(done||skipped) return;
+      root.classList.remove('is-opening');
+      var wOut=A(white,[{transform:'translate3d(0,0,0)'},{transform:'translate3d(0,-100%,0)'}],{duration:450,delay:60,easing:'cubic-bezier(.65,0,.3,1)',fill:'forwards'});
+      if(wOut) wOut.onfinish=finish; else finish();
+    };
+    if(sunOut) sunOut.onfinish=startOut; else startOut();
+  }
+  if(wIn) wIn.onfinish=afterWhite; else afterWhite();
+})();
+</script>
+</body>
+</html>
