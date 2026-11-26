@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>山小屋泊を楽しむ山旅に おすすめしたいアイテム特集</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <!--
+====================================================================
+ かわり芽 LP（Shopifyブログ記事 埋め込み用HTML）
+ 作成日: 2026-07-02
+
+ 【使い方】
+ 1. Shopify管理画面 > オンラインストア > ブログ記事 を開く
+ 2. 記事編集エディタ右上のツールバーにある「</>（HTML表示）」ボタンをクリック
+ 3. このファイルの中身をすべてコピーして貼り付け、保存
+ 4. 本文中に [REPLACE] とコメントが付いている箇所（テキスト・画像・リンク）を
+    実際の内容に差し替えてください
+
+ 【置き換えが必要な箇所】
+ - キャッチコピー、記事タイトル（仮テキスト）
+ - ヒーロー画像・山小屋イラスト・商品写真（現在はプレースホルダー画像）
+ - 商品名・価格・商品リンク（01/02/03セクション各カード）
+ - ロゴ／芽アイコン（現在は近似で再現したSVGです。正式ロゴ画像が用意でき次第、
+   .kwm-sprout 内の <svg> を <img src="ロゴのURL"> に差し替えてください）
+ - 03（useful）セクションの紹介文（未支給のため仮文を入れています）
+
+ スタイルはすべて .kwm-lp 配下にスコープしているため、既存テーマのCSSと
+ 衝突しにくい構成になっています。
+====================================================================
+-->
+
+<div class="kwm-lp">
+  <style>
+    .kwm-lp {
+      --kwm-green: #4f8f5e;
+      --kwm-green-dark: #33613e;
+      --kwm-green-pale: #eaf3ea;
+      --kwm-brown: #a9603c;
+      --kwm-cream: #faf6ef;
+      --kwm-text: #333333;
+      --kwm-sub: #767267;
+      --kwm-line: #e3ddd0;
+
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif;
+      color: var(--kwm-text);
+      line-height: 1.9;
+      box-sizing: border-box;
+    }
+    .kwm-lp * { box-sizing: border-box; }
+    .kwm-lp img { max-width: 100%; display: block; }
+
+    /* ---------- フェードアップ 共通 ---------- */
+    @keyframes kwmFadeUp {
+      0% { opacity: 0; transform: translateY(24px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .kwm-fade-up { opacity: 0; }
+    .kwm-fade-up.is-in-view {
+      animation: kwmFadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) both;
+    }
+
+    /* ---------- タイトル ---------- */
+    .kwm-title-wrap { text-align: center; padding: 32px 0 24px; }
+    .kwm-title-wave {
+      display: inline-block;
+      width: 90px;
+      height: 14px;
+      margin-bottom: 10px;
+      background: repeating-linear-gradient(
+        135deg, var(--kwm-green) 0 2px, transparent 2px 8px
+      );
+      -webkit-mask: radial-gradient(circle at 4px 4px, black 3px, transparent 4px) repeat-x;
+      mask: radial-gradient(circle at 4px 4px, black 3px, transparent 4px) repeat-x;
+    }
+    .kwm-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin: 0;
+    }
+
+    /* ---------- ヒーロー ---------- */
+    .kwm-hero {
+      position: relative;
+      background: var(--kwm-cream);
+      margin-bottom: 28px;
+    }
+    .kwm-hero img { width: 100%; height: auto; aspect-ratio: 1200 / 800; object-fit: cover; }
+    .kwm-hero-copy {
+      position: absolute;
+      left: 0; bottom: 0;
+      padding: 20px;
+      color: #fff;
+      background: linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 70%);
+      width: 100%;
+    }
+    .kwm-hero-copy p {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.7;
+      text-shadow: 0 1px 3px rgba(0,0,0,.4);
+    }
+
+    /* ---------- アンカーナビ（01 hike / 02 rest / 03 useful）---------- */
+    .kwm-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 64px;
+    }
+    .kwm-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: var(--kwm-text);
+      line-height: 1.5;
+      transition: transform .2s ease;
+    }
+    .kwm-nav a:hover,
+    .kwm-nav a:active { transform: translateY(-5px); }
+    .kwm-nav a .kwm-nav-num {
+      display: block;
+      font-size: 21.6px !important;
+      font-weight: 700 !important;
+      color: var(--kwm-green-dark) !important;
+      line-height: 1.5 !important;
+    }
+    .kwm-nav a .kwm-nav-word {
+      display: block;
+      font-size: 21.6px !important;
+      font-weight: 400 !important;
+      color: var(--kwm-text) !important;
+      line-height: 1.5 !important;
+    }
+    .kwm-nav-sep {
+      align-self: flex-end;
+      font-size: 16px !important;
+      color: var(--kwm-sub) !important;
+    }
+    .kwm-nav a,
+    .kwm-nav-sep {
+      opacity: 0;
+    }
+    .kwm-nav.is-in-view a,
+    .kwm-nav.is-in-view .kwm-nav-sep {
+      animation: kwmFadeUp .6s cubic-bezier(0.25, 1, 0.5, 1) both;
+    }
+    .kwm-nav.is-in-view a:nth-of-type(1) { animation-delay: 0s; }
+    .kwm-nav.is-in-view .kwm-nav-sep:nth-of-type(1) { animation-delay: .06s; }
+    .kwm-nav.is-in-view a:nth-of-type(2) { animation-delay: .12s; }
+    .kwm-nav.is-in-view .kwm-nav-sep:nth-of-type(2) { animation-delay: .18s; }
+    .kwm-nav.is-in-view a:nth-of-type(3) { animation-delay: .24s; }
+
+    /* ---------- 導入（イラスト＋リード文）---------- */
+    .kwm-intro {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .kwm-intro-illust {
+      width: 42%;
+      flex: none;
+      background: #fff;
+      border-radius: 10px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+    .kwm-intro p {
+      font-size: 14px;
+      color: var(--kwm-sub);
+      margin: 0;
+    }
+    @media (max-width: 480px) {
+      .kwm-intro { flex-direction: column; }
+      .kwm-intro-illust { width: 100%; }
+    }
+
+    /* ---------- ロゴ（区切り）---------- */
+    .kwm-sprout { margin: 0 0 8px; }
+
+    .kwm-logo-wrap {
+      width: 250px;
+      margin: -20px auto -20px;
+      display: block;
+      opacity: 0;
+    }
+    @media screen and (max-width: 768px) {
+      .kwm-logo-wrap { width: 160px; }
+    }
+    .kwm-sprout.is-in-view .kwm-logo-wrap {
+      animation: kwmSlideInX 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    @keyframes kwmSlideInX {
+      0% { opacity: 0; transform: translateX(150px); }
+      20% { opacity: 1; }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .kwm-logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transform-origin: bottom center;
+    }
+    .kwm-sprout.is-in-view .kwm-logo-wrap img {
+      animation: kwmBounceYAndShake 2s forwards;
+    }
+    @keyframes kwmBounceYAndShake {
+      0% { transform: translateY(-120px) rotate(30deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+      25% { transform: translateY(0) rotate(10deg); animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      45% { transform: translateY(-50px) rotate(20deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+      60% { transform: translateY(0) rotate(0deg); animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      70% { transform: translateY(-20px) rotate(5deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+      80% { transform: translateY(0) rotate(0deg); animation-timing-function: linear; }
+      85% { transform: translateY(0) rotate(-4deg); }
+      90% { transform: translateY(0) rotate(4deg); }
+      95% { transform: translateY(0) rotate(-2deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .kwm-logo-wrap { opacity: 1; }
+      .kwm-sprout.is-in-view .kwm-logo-wrap,
+      .kwm-sprout.is-in-view .kwm-logo-wrap img { animation: none; }
+    }
+
+    /* ---------- カテゴリセクション共通 ---------- */
+    .kwm-section { margin-bottom: 64px; }
+    .kwm-section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "media head"
+        "media text"
+        "media circles";
+      align-items: start;
+      column-gap: 40px;
+      margin-bottom: 28px;
+    }
+    .kwm-section-media { grid-area: media; }
+    .kwm-section-media img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+      opacity: 0;
+    }
+    .kwm-section.is-in-view .kwm-section-media img {
+      animation: kwmFadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) .1s both;
+    }
+    .kwm-section-head {
+      grid-area: head;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      position: relative;
+      opacity: 0;
+    }
+    .kwm-section-head::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--kwm-line);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    .kwm-section.is-in-view .kwm-section-head {
+      animation: kwmFadeUp .9s cubic-bezier(0.25, 1, 0.5, 1) both;
+    }
+    .kwm-section.is-in-view .kwm-section-head::after {
+      animation: kwmLineGrow .9s cubic-bezier(0.25, 1, 0.5, 1) both;
+    }
+    @keyframes kwmLineGrow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+    .kwm-section-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--kwm-green);
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+    .kwm-section-tag {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: var(--kwm-text);
+      text-transform: lowercase;
+    }
+    .kwm-section-text {
+      grid-area: text;
+      font-size: 14px;
+      color: var(--kwm-sub);
+      margin: 0;
+      opacity: 0;
+    }
+    .kwm-section.is-in-view .kwm-section-text {
+      animation: kwmFadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) .2s both;
+    }
+
+    /* ---------- 円形フレーム（ふわふわアクセント）---------- */
+    .kwm-circles {
+      grid-area: circles;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      width: 100%;
+    }
+    .kwm-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex: none;
+      display: block;
+      position: relative;
+      background: var(--kwm-green-pale);
+    }
+    .kwm-circle-b { margin-top: 32px; }
+    .kwm-circle-c { margin-top: 0; }
+    @keyframes kwmFloating {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+    .kwm-section.is-in-view .kwm-circle-a {
+      animation: kwmFloating 3s ease-in-out infinite 1.2s;
+    }
+    .kwm-section.is-in-view .kwm-circle-b {
+      animation: kwmFloating 3s ease-in-out infinite 1.6s;
+    }
+    .kwm-section.is-in-view .kwm-circle-c {
+      animation: kwmFloating 3s ease-in-out infinite 2s;
+    }
+    .kwm-circle-img {
+      display: block !important;
+      position: absolute;
+      left: 0;
+      top: -40px;
+      width: 100%;
+      height: calc(100% + 80px);
+      transform: translateY(-10px);
+      box-sizing: border-box;
+      object-fit: cover;
+    }
+    #kwm-hike .kwm-circle-a .kwm-circle-img {
+      transform: translateY(10px);
+    }
+    #kwm-hike .kwm-circle-b .kwm-circle-img {
+      transform: translateY(3px) scale(0.93);
+    }
+    #kwm-rest .kwm-circle-a .kwm-circle-img {
+      transform: translateX(-10px) translateY(50px) scale(2.5);
+    }
+    #kwm-rest .kwm-circle-b .kwm-circle-img {
+      transform: translateX(-5px) translateY(50px) scale(2.25);
+    }
+    #kwm-useful .kwm-circle-a .kwm-circle-img {
+      transform: translateX(-2px) translateY(55px) scale(1.7);
+    }
+    #kwm-useful .kwm-circle-b .kwm-circle-img {
+      transform: translateY(8px) scale(1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .kwm-section.is-in-view .kwm-circle-a,
+      .kwm-section.is-in-view .kwm-circle-b,
+      .kwm-section.is-in-view .kwm-circle-c { animation: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .kwm-fade-up,
+      .kwm-section-head,
+      .kwm-section-head::after,
+      .kwm-section-media img,
+      .kwm-section-text,
+      .kwm-products,
+      .kwm-nav a,
+      .kwm-nav-sep {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .kwm-section.reverse .kwm-section-inner {
+        grid-template-areas:
+          "head media"
+          "text media"
+          "circles media";
+      }
+    }
+
+    @media (max-width: 768px) {
+      .kwm-section-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .kwm-section-head { order: 1; margin-bottom: 0; width: 100%; }
+      .kwm-section-media { order: 2; }
+      .kwm-section-text { order: 3; }
+      .kwm-circles { order: 4; margin-top: 4px; }
+    }
+
+    /* ---------- 商品グリッド（PC: 3列 / SP: 2列、各12点）---------- */
+    .kwm-products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px 14px;
+      opacity: 0;
+    }
+    .kwm-section.is-in-view .kwm-products {
+      animation: kwmFadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) .3s both;
+    }
+    @media (max-width: 768px) {
+      .kwm-products { grid-template-columns: repeat(2, 1fr); }
+    }
+    .kwm-card { text-decoration: none; color: inherit; }
+    .kwm-card-thumb {
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .kwm-card-img {
+      display: block !important;
+      width: 100%;
+      aspect-ratio: 1080 / 1320;
+      object-fit: cover;
+      background: var(--kwm-cream);
+      transition: transform .35s ease;
+    }
+    .kwm-card:hover .kwm-card-img {
+      transform: scale(1.08);
+    }
+    .kwm-card-name { font-size: 13px; font-weight: 600; margin: 0 0 2px; }
+    .kwm-card-price { font-size: 13px; color: var(--kwm-brown); font-weight: 700; margin: 0; }
+
+    /* ---------- CTA ---------- */
+    .kwm-cta { text-align: center; padding: 40px 0 24px; }
+    .kwm-cta-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      max-width: 630px !important;
+      padding: 18px !important;
+      background-color: #FFE0C5 !important;
+      color: #333 !important;
+      text-decoration: none !important;
+      font-weight: bold !important;
+      font-size: 15px !important;
+      letter-spacing: 0.05em !important;
+      border: none !important;
+      border-radius: 2px !important;
+      text-align: center !important;
+      transition: opacity 0.3s !important;
+      box-sizing: border-box !important;
+      position: relative;
+    }
+    .kwm-cta-btn:hover {
+      opacity: 0.9 !important;
+      animation: kwmRippleOrange 1.5s infinite !important;
+    }
+    @keyframes kwmRippleOrange {
+      0% { box-shadow: 0 0 0 0 #FFE0C5; }
+      70% { box-shadow: 0 0 0 15px rgba(255,224,197,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,224,197,0); }
+    }
+  </style>
+
+  <!-- ========== タイトル ========== -->
+  <div class="kwm-title-wrap kwm-fade-up">
+    <!-- <span class="kwm-title-wave" aria-hidden="true"></span> -->
+    <!-- <h1 class="kwm-title">山小屋泊を心地よく。かわり芽のおすすめアイテム</h1> -->
+  </div>
+
+  <!-- ========== ヒーロー ========== -->
+  <div class="kwm-hero kwm-fade-up">
+    <img src="assets/1200_800_PC_0706.webp" width="1200" height="800" alt="山小屋のイメージ画像">
+    <!--
+    <div class="kwm-hero-copy">
+      <p>山との距離が、ぐっと近くなる。<br>山小屋泊をもっと心地よくするアイテム特集</p>
+    </div>
+    -->
+  </div>
+
+  <!-- ========== アンカーナビ ========== -->
+  <nav class="kwm-nav">
+    <a href="#kwm-hike"><span class="kwm-nav-num">01</span><span class="kwm-nav-word">hike</span></a>
+    <span class="kwm-nav-sep" aria-hidden="true">/</span>
+    <a href="#kwm-rest"><span class="kwm-nav-num">02</span><span class="kwm-nav-word">rest</span></a>
+    <span class="kwm-nav-sep" aria-hidden="true">/</span>
+    <a href="#kwm-useful"><span class="kwm-nav-num">03</span><span class="kwm-nav-word">useful</span></a>
+  </nav>
+
+  <!-- ========== 導入（イラスト＋リード文）========== -->
+  <div class="kwm-intro kwm-fade-up">
+    <img class="kwm-intro-illust" src="assets/sasikae_1.jpg" alt="山小屋のイラスト">
+    <p>
+      朝焼けに染まる山並みや、静かな夕暮れの稜線。山のなかに長く身を置くことで"特別"な景色に出会えるのが、山小屋泊の魅力のひとつです。<br><br>
+      山のなかでゆっくりとすごす時間は、歩くことだけが目的ではない山旅の楽しさを教えてくれます。あたたかい夕食を囲みながら登山者同士で語らったり、天気がいい日には満天の星空を眺めたり、早朝の澄んだ空気のなかで一日をスタートしたり。山小屋に泊まることで、山との距離がぐっと近く感じられるはずです。<br><br>
+      そんな山小屋泊を快適に楽しむためには、自分に合ったアイテム選びが大切になります。今回は、山小屋での時間をより心地よくしてくれるおすすめアイテムをご紹介します。
+    </p>
+  </div>
+
+  <!-- ========== 芽アイコン（区切り） ========== -->
+  <div class="kwm-sprout">
+    <div class="kwm-logo-wrap">
+      <img src="assets/kawarime_logo.png" alt="かわり芽">
+    </div>
+  </div>
+
+  <!-- ========== 01 hike ========== -->
+  <section class="kwm-section" id="kwm-hike">
+    <div class="kwm-section-inner">
+      <div class="kwm-section-media">
+        <img src="assets/yamagoya_20.webp" alt="山小屋の写真">
+      </div>
+      <div class="kwm-section-head">
+        <span class="kwm-section-num">01</span>
+        <span class="kwm-section-tag">hike / 山のなかを歩く</span>
+      </div>
+      <p class="kwm-section-text">
+        山小屋へ向かう道中も、山旅の楽しみのひとつ。高山植物や山の風景をモチーフにしたアイテムを身につけて、歩く時間そのものをもっと楽しんでみませんか。
+      </p>
+    <div class="kwm-circles" aria-hidden="true">
+      <div class="kwm-circle kwm-circle-a">
+        <img class="kwm-circle-img" src="assets/yamagoya_14.webp" alt="">
+      </div>
+      <div class="kwm-circle kwm-circle-b">
+        <img class="kwm-circle-img" src="assets/yamagoya_13.webp" alt="">
+      </div>
+    </div>
+    </div>
+
+    <div class="kwm-products">
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%81%8B%E3%82%8F%E3%82%8A%E8%8A%BD/products/r26d0367k">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_4.webp" alt="［かわり芽］リトルマウンテンプルオーバー"></span>
+        <p class="kwm-card-name">［かわり芽］リトルマウンテンプルオーバー</p>
+        <p class="kwm-card-price">¥12,980</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%81%8B%E3%82%8F%E3%82%8A%E8%8A%BD/products/r24f0004k">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_5.webp" alt="［かわり芽］リトルマウンテンパンツ"></span>
+        <p class="kwm-card-name">［かわり芽］リトルマウンテンパンツ</p>
+        <p class="kwm-card-price">¥15,400</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D%E6%96%B0%E7%9D%80/products/r26k0378k">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_7.webp" alt="［ランドネ×ハロ コモディティ］山小屋キャップ　金峰山小屋のシャクナゲ"></span>
+        <p class="kwm-card-name">［ランドネ×ハロ コモディティ］山小屋キャップ　金峰山小屋のシャクナゲ</p>
+        <p class="kwm-card-price">¥6,600</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D%E6%96%B0%E7%9D%80/products/ra24me0337k">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_1.webp" alt="［ランドネ×高山植物図鑑×KINTO］mountainflower vase 花図鑑のウォーターボトル"></span>
+        <p class="kwm-card-name">［ランドネ×高山植物図鑑×KINTO］mountainflower vase 花図鑑のウォーターボトル</p>
+        <p class="kwm-card-price">¥2,750</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D%E6%96%B0%E7%9D%80/products/r25k0134k?_pos=39&amp;_fid=dd8ad4960&amp;_ss=c">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_6.webp" alt="［ランドネ×ひがしちか］100楽山てぬぐい　私の心の風景～雲仙～"></span>
+        <p class="kwm-card-name">［ランドネ×ひがしちか］100楽山てぬぐい　私の心の風景～雲仙～</p>
+        <p class="kwm-card-price">¥2,860</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D%E6%96%B0%E7%9D%80/products/r25k0130k?_pos=40&amp;_fid=dd8ad4960&amp;_ss=c&amp;variant=46295919493338">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_12.webp" alt="［かわり芽×Re Loop］毎日が山歩きソックス S"></span>
+        <p class="kwm-card-name">［かわり芽×Re Loop］毎日が山歩きソックス S</p>
+        <p class="kwm-card-price">¥2,200</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== 02 rest ========== -->
+  <section class="kwm-section reverse" id="kwm-rest">
+    <div class="kwm-section-inner">
+      <div class="kwm-section-media">
+        <img src="assets/yamagoya_21.webp" alt="山小屋の写真">
+      </div>
+      <div class="kwm-section-head">
+        <span class="kwm-section-num">02</span>
+        <span class="kwm-section-tag">rest / 山小屋で休む</span>
+      </div>
+      <p class="kwm-section-text">
+        山小屋での時間をもっと快適に、もっと楽しく。くつろぎの時間や、仲間との語らいのひとときを充実させてくれる、山小屋泊におすすめのアイテムをピックアップしました。
+      </p>
+    <div class="kwm-circles" aria-hidden="true">
+      <div class="kwm-circle kwm-circle-a">
+        <img class="kwm-circle-img" src="assets/yamagoya_15.webp" alt="">
+      </div>
+      <div class="kwm-circle kwm-circle-b">
+        <img class="kwm-circle-img" src="assets/yamagoya_16.webp" alt="">
+      </div>
+    </div>
+    </div>
+
+    <div class="kwm-products">
+      <a class="kwm-card" href="https://shop.funq.jp/products/ra24co0294k?srsltid=AfmBOorkxeGgu1JyioaP_xPL0eO83uRG9N2Kwo-a1gD6AJOc_jFEgqWc">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_8.webp" alt="［かわり芽］アウトドア旅のフレーバーバーム"></span>
+        <p class="kwm-card-name">［かわり芽］アウトドア旅のフレーバーバーム</p>
+        <p class="kwm-card-price">¥3,850</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/products/ra24co0293k?pr_prod_strat=e5_desc&amp;pr_rec_id=58edbaf1d&amp;pr_rec_pid=8240534552794&amp;pr_ref_pid=8240548544730&amp;pr_seq=uniform">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_9.jpg" alt="［かわり芽］アウトドア旅のクレンジングウォーター"></span>
+        <p class="kwm-card-name">［かわり芽］アウトドア旅のクレンジングウォーター</p>
+        <p class="kwm-card-price">¥2,750</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D/products/r24f0025k">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_3.jpg" alt="［かわり芽］ウールでのびやかレギンス"></span>
+        <p class="kwm-card-name">［かわり芽］ウールでのびやかレギンス</p>
+        <p class="kwm-card-price">¥11,000</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== 03 useful ========== -->
+  <section class="kwm-section" id="kwm-useful">
+    <div class="kwm-section-inner">
+      <div class="kwm-section-media">
+        <img src="assets/yamagoya_22.jpg" alt="山小屋の写真">
+      </div>
+      <div class="kwm-section-head">
+        <span class="kwm-section-num">03</span>
+        <span class="kwm-section-tag">useful / あると便利なもの</span>
+      </div>
+      <p class="kwm-section-text">
+        山小屋ですごす時間をより快適にしてくれるのは、ちょっとした便利アイテムたち。
+        持っていくと重宝するような、山小屋泊におすすめのアイテムをご紹介します。
+      </p>
+    <div class="kwm-circles" aria-hidden="true">
+      <div class="kwm-circle kwm-circle-a">
+        <img class="kwm-circle-img" src="assets/yamagoya_17.webp" alt="">
+      </div>
+      <div class="kwm-circle kwm-circle-b">
+        <img class="kwm-circle-img" src="assets/yamagoya_18.webp" alt="">
+      </div>
+      <div class="kwm-circle kwm-circle-c">
+        <img class="kwm-circle-img" src="assets/yamagoya_19.webp" alt="">
+      </div>
+    </div>
+    </div>
+
+    <div class="kwm-products">
+      <a class="kwm-card" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D/products/r25h0191k">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_2.webp" alt="［かわり芽×永福食堂］ちょこっとサコッシュ"></span>
+        <p class="kwm-card-name">［かわり芽×永福食堂］ちょこっとサコッシュ</p>
+        <p class="kwm-card-price">¥8,800</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/products/r25k0166k?srsltid=AfmBOoqBnm4u-9u8p8iJyW5BJbXct35qJ00b7iWF4nQyNkgh6ZoxWZCo">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_11.jpg" alt="［かわり芽×YURI MIYATA」POUCH S／ Deep Forest"></span>
+        <p class="kwm-card-name">［かわり芽×YURI MIYATA」POUCH S／ Deep Forest</p>
+        <p class="kwm-card-price">¥2,200</p>
+      </a>
+      <a class="kwm-card" href="https://shop.funq.jp/products/ra23me0175k?srsltid=AfmBOoqoNr2XPZ636lzalmSRkAz3whk5-WR3M7vTN_NecZl5DUYisX5F">
+        <span class="kwm-card-thumb"><img class="kwm-card-img" src="assets/yamagoya_10.jpg" alt="［MISOKA］Bamboo アルプスのおやじムッシュ"></span>
+        <p class="kwm-card-name">［MISOKA］Bamboo アルプスのおやじムッシュ</p>
+        <p class="kwm-card-price">¥1,100</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <div class="kwm-cta kwm-fade-up">
+    <a class="kwm-cta-btn" href="https://shop.funq.jp/collections/%E3%83%A9%E3%83%B3%E3%83%89%E3%83%8D%E6%96%B0%E7%9D%80">ランドネの商品一覧はコチラ</a>
+  </div>
+
+  <script>
+    // 01/02/03ナビをタップした際、なめらかにスクロールさせる
+    (function () {
+      var nav = document.querySelectorAll('.kwm-lp .kwm-nav a');
+      nav.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var id = link.getAttribute('href');
+          var target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+
+    // ロゴ・各カテゴリセクションが画面内に入ったらアニメーションを再生
+    (function () {
+      var targets = document.querySelectorAll('.kwm-lp .kwm-sprout, .kwm-lp .kwm-section, .kwm-lp .kwm-fade-up, .kwm-lp .kwm-nav');
+      if (!targets.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(function (el) { el.classList.add('is-in-view'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -15% 0px', threshold: 0 });
+
+      targets.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</div>
+          
+</div>
+</body>
+</html>
