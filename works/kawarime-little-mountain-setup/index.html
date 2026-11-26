@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>リトルマウンテンシリーズを、セットアップで楽しもう！</title>
+<style>html,body{margin:0;padding:0;background:#fff;color:#222;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}img,video{max-width:100%;height:auto}.article-wrap{max-width:1200px;margin:0 auto}a{color:inherit}</style>
+</head>
+<body>
+<div class="article-wrap rte">
+
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+  /* --- ベース設定 --- */
+  /* iOS Safariのブラウザバックバグを防ぐため scroll-behavior: smooth; を削除しJSで制御します */
+  .custom-setup-blog {
+    max-width: 1000px; margin: 0 auto; position: relative;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333; line-height: 1.8;
+    overflow-x: hidden; 
+  }
+  .custom-setup-blog img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+
+  /* =========================================
+     アニメーション用 共通CSS
+     ========================================= */
+  .fade-up {
+    opacity: 0;
+  }
+  
+  .is-in-view .fade-up,
+  .is-in-view.fade-up {
+    animation: fadeUpAnim 1.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+  }
+
+  @keyframes fadeUpAnim {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .delay-1 { animation-delay: 0.2s !important; }
+  .delay-2 { animation-delay: 0.4s !important; }
+  .delay-3 { animation-delay: 0.6s !important; }
+  .delay-4 { animation-delay: 0.8s !important; }
+
+  /* --- アーチ部分専用 --- */
+  .setup-swiper-arch.is-in-view .fade-up {
+    animation-duration: 2.5s !important;
+  }
+  .setup-swiper-arch .delay-1 { animation-delay: 0.6s !important; }
+  .setup-swiper-arch .delay-2 { animation-delay: 1.2s !important; }
+
+  /* 波紋ホバーアニメーション */
+  .color-btn, .full-width-buy-btn { position: relative; }
+  .color-btn:hover, .full-width-buy-btn:hover {
+    animation: ripple 1.5s infinite;
+  }
+  @keyframes ripple {
+    0% { box-shadow: 0 0 0 0 #FFE0C5; }
+    70% { box-shadow: 0 0 0 15px rgba(255,224,197,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,224,197,0); }
+  }
+
+  /* フワフワアニメーション */
+  @keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  .anim-float-1, .anim-float-2, .anim-float-3, .anim-float-4 { display: block; width: 100%; height: 100%; }
+  
+  @media (min-width: 769px) {
+    .color-section.is-in-view .anim-float-1 { animation: floating 3s ease-in-out infinite 1.2s; }
+    .color-section.is-in-view .anim-float-2 { animation: floating 3s ease-in-out infinite 1.6s; }
+    .color-section.is-in-view .anim-float-3 { animation: floating 3s ease-in-out infinite 2.0s; }
+    .color-section.is-in-view .anim-float-4 { animation: floating 3s ease-in-out infinite 2.4s; }
+  }
+
+  /* --- 【ベスト版】かわり芽ロゴ 滑らかなバウンド＆プルプル --- */
+  .kawarime-logo { 
+    width: 250px !important; 
+    margin: 0 auto 5px !important; 
+    display: block !important; 
+    opacity: 0; 
+  }
+  @media screen and (max-width: 768px) {
+    .kawarime-logo { width: 160px !important; }
+  }
+  .pants-intro.is-in-view .kawarime-logo {
+    animation: slideInX 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  @keyframes slideInX {
+    0% { opacity: 0; transform: translateX(150px); }
+    20% { opacity: 1; }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  .kawarime-logo img { 
+    width: 100% !important; 
+    height: auto !important; 
+    display: block;
+    transform-origin: bottom center; 
+  }
+  .pants-intro.is-in-view .kawarime-logo img {
+    animation: bounceYAndShake 2s forwards;
+  }
+  @keyframes bounceYAndShake {
+    0% { transform: translateY(-120px) rotate(30deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    25% { transform: translateY(0) rotate(10deg); animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    45% { transform: translateY(-50px) rotate(20deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    60% { transform: translateY(0) rotate(0deg); animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    70% { transform: translateY(-20px) rotate(5deg); animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    80% { transform: translateY(0) rotate(0deg); animation-timing-function: linear; }
+    85% { transform: translateY(0) rotate(-4deg); }
+    90% { transform: translateY(0) rotate(4deg); }
+    95% { transform: translateY(0) rotate(-2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+
+  /* --- ヒーローセクション --- */
+  .setup-hero { margin-bottom: 40px; }
+  .setup-hero-image { width: 100%; }
+
+  /* --- ディティール紹介セクション --- */
+  .new-intro-section { padding: 0 20px; margin-bottom: 80px; }
+  
+  @media (min-width: 769px) {
+    .new-intro-section { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 30px; align-items: start; }
+    .ni-img-1 { grid-column: 1; grid-row: 1; }
+    .ni-img-3 { grid-column: 1; grid-row: 2; margin-top: -20px; }
+    .ni-img-5 { grid-column: 1 / 3; grid-row: 3; margin-top: -40px; width: 60%; }
+    .ni-title { grid-column: 2; grid-row: 1; text-align: center; font-size: 24px; font-weight: bold; line-height: 1.6; margin-top: 0; white-space: nowrap; }
+    .ni-text-a { grid-column: 2; grid-row: 1; margin-top: 140px; font-size: 14px; text-align: justify; }
+    .ni-text-a p { margin-bottom: 1em; }
+    .ni-text-b { grid-column: 2; grid-row: 2; margin-top: 80px; font-size: 14px; text-align: justify; }
+    .ni-img-2 { grid-column: 3; grid-row: 1; margin-top: 80px; }
+    .ni-img-4 { grid-column: 3; grid-row: 2; margin-top: 80px; }
+    .ni-img-1 img, .ni-img-2 img, .ni-img-3 img, .ni-img-4 img { width: 100%; aspect-ratio: 9 / 11; object-fit: cover; }
+    .ni-img-5 img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  }
+
+  @media (max-width: 768px) {
+    .new-intro-section { display: flex; flex-direction: column; gap: 30px; padding: 0 15px; }
+    .ni-title { order: 1; font-size: 20px; text-align: center; font-weight: bold; line-height: 1.5; }
+    .ni-text-a { order: 2; font-size: 14px; }
+    .ni-img-1 { order: 3; }
+    .ni-img-3 { order: 4; }
+    .ni-img-5 { order: 5; }
+    .ni-text-b { order: 6; font-size: 14px; }
+    .ni-img-2 { order: 7; }
+    .ni-img-4 { order: 8; }
+    .ni-text-a p { margin-bottom: 1em; }
+    .new-intro-section img { width: 100%; aspect-ratio: 9 / 11 !important; object-fit: cover; }
+  }
+
+  /* --- アーチナビゲーション --- */
+  .arch-section-title { text-align: center; font-size: 24px; font-weight: bold; line-height: 1.5; margin-top: 60px; margin-bottom: 10px; }
+  
+  .setup-swiper-arch { max-width: 1200px; margin: 40px auto 100px !important; padding: 0 20px; overflow: visible !important; }
+  .setup-swiper-arch .swiper-wrapper { display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; box-sizing: border-box; }
+  
+  .arch-item { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 350px; margin: 0 auto; text-decoration: none; }
+  .arch-color-name { font-family: 'Gotham', sans-serif; font-size: 20px; letter-spacing: 0.1em; color: #333; margin: 0 0 15px 0; text-align: center; font-weight: bold; }
+  .arch-window { position: relative; width: 100%; aspect-ratio: 2 / 3; overflow: hidden; border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border: 1px solid #e5e5e5; }
+  .zoomed-image { width: 100%; height: 100%; object-fit: cover; transform: scale(2.2) translateY(-15%); transform-origin: top center; transition: transform 0.4s ease-out; }
+  .arch-item:hover .zoomed-image { transform: scale(2.4) translateY(-15%); }
+
+  /* 【完全修正】SP用スライダー（巨大化を防ぎ、中央配置） */
+  @media screen and (max-width: 768px) {
+    .setup-swiper-arch {
+      display: block !important; 
+      padding: 0 !important; 
+      margin-bottom: 60px !important;
+      overflow: hidden !important; 
+    }
+    .setup-swiper-arch .swiper-wrapper {
+      display: flex !important;
+      gap: 0 !important; 
+    }
+    .arch-item.swiper-slide {
+      /* 【重要】巨大化の原因だった width: auto !important; を削除しました */
+      /* これにより、JSの slidesPerView: 1.4 が正しく作動し、適正なサイズで中央に揃います */
+      max-width: none !important; 
+      margin-left: 0 !important; 
+      opacity: 0.4; 
+      transition: opacity 0.3s;
+    }
+    .arch-item.swiper-slide-active {
+      opacity: 1;
+    }
+    .arch-color-name {
+      font-size: 16px !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
+  /* --- カラー別セクション --- */
+  .color-section { margin-bottom: 60px !important; padding: 20px 20px 0 !important; }
+  
+  .color-main-block { 
+    display: flex; 
+    gap: 40px; 
+    align-items: center; 
+    margin-bottom: 40px; 
+    padding: 30px; 
+    border-radius: 12px; 
+    background-color: transparent; 
+    box-sizing: border-box; 
+  }
+  
+  .color-main-img { flex: 1.2; position: relative; }
+  .color-main-img img { width: 100%; aspect-ratio: 9 / 11; object-fit: cover; }
+  .color-section-title { position: absolute; top: -25px; left: 0; font-size: 48px; font-family: 'Gotham', sans-serif; font-weight: 900; line-height: 1; color: #111; z-index: 10; letter-spacing: 0.05em; }
+  .color-section.reverse .color-section-title { left: auto; right: 0; text-align: right; }
+  .color-main-info { flex: 1; padding-top: 0; }
+  .color-main-text { font-size: 15px; margin-bottom: 25px; line-height: 1.8; text-align: justify; }
+  .color-btn-wrapper { text-align: center; margin-top: 30px; margin-bottom: 20px; }
+  .color-btn { display: inline-block !important; padding: 10px 80px !important; background: #FFE0C5 !important; color: #000000 !important; border: none !important; text-decoration: none !important; font-weight: bold !important; font-size: 15px !important; letter-spacing: 0.05em !important; border-radius: 2px !important; transition: opacity 0.3s, box-shadow 0.3s !important; }
+  .color-btn:hover { opacity: 0.9 !important; }
+  @media (min-width: 769px) { .color-section.reverse .color-main-block { flex-direction: row-reverse; } }
+
+  /* --- Swiper設定 --- */
+  .setup-swiper { width: 100%; overflow: hidden; position: relative; }
+  .setup-swiper .swiper-wrapper { display: flex !important; flex-direction: row !important; width: 100% !important; box-sizing: content-box !important; }
+  .setup-swiper .swiper-slide { flex-shrink: 0 !important; width: 100% !important; height: auto !important; position: relative !important; display: block !important; }
+  .slide-img { width: 100% !important; aspect-ratio: 3/4; object-fit: cover; border-radius: 2px; display: block; }
+  
+  @media (min-width: 769px) {
+    .setup-swiper .swiper-wrapper { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 20px; padding-bottom: 25%; transform: none !important; }
+    .setup-swiper .swiper-slide { height: auto !important; margin: 0 !important; }
+    .setup-swiper .swiper-slide:nth-child(even) { transform: translateY(50%) !important; }
+    .setup-swiper .swiper-pagination { display: none !important; }
+  }
+  @media (max-width: 768px) {
+    .color-main-block { flex-direction: column !important; gap: 30px; padding: 25px 15px; align-items: stretch; }
+    .color-section-title { font-size: 36px; top: -15px; }
+    .color-btn { display: block !important; width: 100% !important; padding: 18px !important; box-sizing: border-box !important; text-align: center !important; }
+    .setup-swiper { padding: 0 0 30px; }
+    .setup-swiper .swiper-pagination { height: 30px; bottom: 0 !important; display: flex; justify-content: center; align-items: center; z-index: 10; }
+    .setup-swiper .swiper-pagination-bullet { width: 7px; height: 7px; background: #9C9C9C; border-radius: 50%; margin: 0 6px; cursor: pointer; opacity: 1; }
+    .setup-swiper .swiper-pagination-bullet-active { background: #333 !important; }
+  }
+
+  /* =========================================
+     パンツコレクションセクション
+     ========================================= */
+  #color-iceblue { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+  .pants-collection-section { margin-top: -60px !important; padding: 0 20px !important; text-align: center; } 
+  .pants-intro { margin-bottom: 40px !important; }
+  
+  .pants-collection-title { font-family: 'Gotham', sans-serif; font-size: 24px; font-weight: bold; line-height: 1.4; color: #111; letter-spacing: 0.05em; margin: 0 auto 20px !important; text-align: center; white-space: nowrap; }
+  .pants-collection-text { font-size: 14px; line-height: 1.8; color: #333; text-align: justify; max-width: 600px; margin: 0 auto; }
+
+  .pants-existing-colors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 960px; margin: 0 auto; align-items: start; }
+  .pants-image-item { display: block !important; text-align: center !important; text-decoration: none; color: inherit; transition: opacity 0.3s; }
+  .pants-image-item:hover { opacity: 0.7; }
+  
+  .color-label { 
+    display: block !important; font-family: 'Gotham', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; 
+    color: #333 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; 
+    margin: 0 !important; padding: 0 !important; line-height: 1 !important; position: relative !important; z-index: 10 !important;
+  }
+
+  .pants-existing-colors .color-label { margin-bottom: -40px !important; }
+  .pants-new-colors .color-label { margin-top: 15px !important; }
+
+  .pants-image-item .img-wrapper { display: block !important; width: 100%; text-align: center; overflow: visible; margin: 0 !important; }
+  .pants-image-item img { width: 100%; height: auto; display: block; border-radius: 4px; margin: 0 auto !important; position: relative; z-index: 1; }
+  .pants-image-item.zoom-img img { transform: scale(1.15); }
+
+  @media (min-width: 769px) {
+    .pants-image-item.offset { margin-top: 100px !important; }
+    .pants-existing-colors { margin-bottom: 20px !important; }
+  }
+
+  .pants-new-colors-title { font-family: 'Gotham', sans-serif; font-size: 24px; font-weight: bold; color: #111; margin-top: 60px !important; margin-bottom: 15px !important; }
+  .pants-new-colors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 960px; margin: 0 auto 60px; align-items: end; }
+
+  .full-width-btn-wrapper { margin-top: 40px; margin-bottom: 60px; padding: 0 20px; }
+  .full-width-buy-btn { display: block !important; width: 100% !important; padding: 18px !important; background-color: #FFE0C5 !important; color: #000000 !important; text-decoration: none !important; font-weight: bold !important; font-size: 15px !important; letter-spacing: 0.05em !important; border-radius: 2px !important; text-align: center; transition: opacity 0.3s, box-shadow 0.3s !important; }
+  .full-width-buy-btn:hover { opacity: 0.9 !important; }
+
+  @media screen and (max-width: 768px) {
+    .pants-collection-section { padding: 30px 15px 0 !important; margin-top: -20px !important; }
+    .pants-intro { margin-bottom: 30px !important; }
+    .pants-collection-title { font-size: clamp(14px, 5.5vw, 24px) !important; }
+    .pants-collection-text { max-width: 100%; }
+    .pants-existing-colors, .pants-new-colors { grid-template-columns: 1fr; gap: 30px; margin-bottom: 30px; }
+    .pants-image-item.offset { margin-top: 0 !important; }
+    .pants-new-colors-title { margin-top: 50px !important; }
+    .full-width-btn-wrapper { margin-top: 30px; margin-bottom: 40px; padding: 0; }
+  }
+
+  /* =========================================
+     着合わせを楽しもう！ セクション
+     ========================================= */
+  .mix-match-section { padding: 0 20px 60px; position: relative; }
+
+  .mix-match-wrapper {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto 160px !important; 
+    padding-right: 150px; 
+  }
+  
+  .mix-match-images { position: relative; width: 100%; max-width: 600px; padding-bottom: 90%; margin: 0 auto; }
+  .mix-img-1, .mix-img-2 { position: absolute; width: 70%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  
+  .mix-img-1 { top: 0; right: -165px; z-index: 1; }
+  .mix-img-2 { bottom: -100px; left: 0; z-index: 2; margin-top: 20%; }
+
+  .pc-text {
+    position: absolute;
+    right: 0;
+    top: -10px; 
+    width: 150px;
+    height: 500px; 
+    z-index: 10;
+  }
+  
+  .pc-text .line1, .pc-text .line2 {
+    position: absolute;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    color: #111;
+    margin: 0; padding: 0;
+    white-space: nowrap !important; 
+  }
+  
+  .pc-text .line1 { right: 0; top: 0; }
+  .pc-text .line2 { right: 65px; top: 110px; }
+
+  .sp-text { display: none; }
+
+  /* --- ギャラリー部分のCSS --- */
+  .mix-match-gallery {
+    max-width: 600px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .mix-gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
+  .mix-gallery-caption {
+    font-size: 13px;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mix-gallery-caption .spec-height {
+    white-space: nowrap; 
+  }
+  .mix-gallery-caption .spec-items {
+    text-align: left; 
+  }
+
+  @media screen and (max-width: 768px) {
+    .mix-match-section { padding: 0 15px 40px; }
+    .mix-match-wrapper { padding-right: 0; margin-bottom: 30px !important; }
+    .pc-text { display: none !important; }
+    .sp-text { display: block; width: 100%; text-align: center !important; font-size: 26px; font-weight: bold; margin-bottom: 20px; letter-spacing: 0.05em; color: #111; }
+    .mix-match-images { padding-bottom: 0; display: flex; flex-direction: column; gap: 20px; max-width: 100%; }
+    .mix-img-1, .mix-img-2 { position: static; width: 100%; aspect-ratio: 4 / 5 !important; box-shadow: none; margin-top: 0; }
+    
+    .mix-match-gallery { gap: 40px; margin-bottom: 40px; padding: 0 15px; }
+    .mix-gallery-caption { font-size: 12px; }
+  }
+</style>
+
+<div id="page-top"></div>
+
+<div class="custom-setup-blog">
+
+  <div class="setup-hero">
+    <div class="setup-hero-image">
+      <img src="assets/mountain-setup_KV_pc_1200_800.webp" alt="Mountain Setup Key Visual">
+    </div>
+  </div>
+
+  <div class="new-intro-section">
+    <div class="ni-title obs-target fade-up">組み合わせることで、<br>より自然になじむスタイルに。</div>
+    <div class="ni-text-a obs-target fade-up delay-1">
+      <p>ランドネが手がけるオリジナルブランド「かわり芽」のアイテムのなかでも、一番人気の高い「リトルマウンテンパンツ」と、そのセットアップとして着用するのにぴったりな「リトルマウンテンプルオーバー」。</p>
+      <p>これら２つを組み合わせてコーディネートすることで、土や岩、空の色にすっと溶け込んで、まるで自分までもが自然の一部になったかのような気分になれるはず。</p>
+    </div>
+    
+    <div class="ni-img-1 obs-target fade-up"><img src="assets/202604ec_tate_1.webp" alt="Detail 1"></div>
+    <div class="ni-img-3 obs-target fade-up js-sync-detail3"><img src="assets/202604ec_tate_3.webp" alt="Detail 3"></div>
+    <div class="ni-img-5 obs-target fade-up"><img src="assets/202604ec_yoko_1.webp" alt="Detail 5"></div>
+    
+    <div class="ni-text-b obs-target fade-up">セットアップを纏ったら、キャップやバンダナなどの小物をつけ加えて、アクセントにしてみるのもおすすめです。<br>自分の好きな色や、そのときの気分に合わせて。「かわり芽」が提案するコーディネートで、これからのベストシーズンを楽しんでみませんか？</div>
+    
+    <div class="ni-img-2 obs-target fade-up"><img src="assets/202604ec_tate_2.webp" alt="Detail 2"></div>
+    <div class="ni-img-4 obs-target fade-up"><img src="assets/0220kwr0701_21f19b51-a26c-4222-9bb2-d09b8acf4df3.webp" alt="Detail 4"></div>
+  </div>
+
+  <div class="arch-section-title obs-target fade-up">あなたは<br>どのカラーを選ぶ？</div>
+  <div class="arch-grid-wrapper obs-target swiper setup-swiper-arch">
+    <div class="swiper-wrapper">
+      <a href="#color-ivory" class="arch-item fade-up swiper-slide">
+        <div class="arch-color-name">IVORY</div>
+        <div class="arch-window"><img src="assets/0220kwr1021_f0d257ac-3c34-4488-907c-5b5582331525.webp" alt="IVORY" class="zoomed-image"></div>
+      </a>
+      <a href="#color-brown" class="arch-item fade-up delay-1 swiper-slide">
+        <div class="arch-color-name">BROWN</div>
+        <div class="arch-window"><img src="assets/0220kwr1011.webp" alt="BROWN" class="zoomed-image"></div>
+      </a>
+      <a href="#color-iceblue" class="arch-item fade-up delay-2 swiper-slide">
+        <div class="arch-color-name">ICE BLUE</div>
+        <div class="arch-window"><img src="assets/0220kwr1017_80192024-dfa9-4a1e-8195-bda9cb4b4c04.webp" alt="ICE BLUE" class="zoomed-image"></div>
+      </a>
+    </div>
+  </div>
+
+  <div id="color-ivory" class="color-section obs-target">
+    <div class="color-main-block">
+      <div class="color-main-img fade-up">
+        <div class="color-section-title">IVORY</div>
+        <img src="assets/202604ec_tate_7.webp" alt="IVORY">
+      </div>
+      <div class="color-main-info fade-up">
+        <div class="color-main-text">優しい色合いのアイボリーは、ふんわりとした印象を持たせたい人や、小物で色遊びを楽しみたい人にぴったり。リボンの淡いグリーンが愛らしいカラーリングです。</div>
+        <div class="color-btn-wrapper"><a href="https://shop.funq.jp/products/r24f0004k?variant=46832560931034" class="color-btn">購入はコチラ</a></div>
+      </div>
+    </div>
+    <div class="setup-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="fade-up delay-1"><div class="anim-float-1"><img src="assets/202604ec_tate_11.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-2"><div class="anim-float-2"><img src="assets/202604ec_tate_9.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-3"><div class="anim-float-3"><img src="assets/202604ec_tate_8.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-4"><div class="anim-float-4"><img src="assets/202604ec_tate_10.webp" class="slide-img"></div></div></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div id="color-brown" class="color-section reverse obs-target">
+    <div class="color-main-block">
+      <div class="color-main-img fade-up">
+        <div class="color-section-title">BROWN</div>
+        <img src="assets/202604ec_tate_12.webp" alt="BROWN">
+      </div>
+      <div class="color-main-info fade-up">
+        <div class="color-main-text">暗めの色でコーディネートを引き締めたい人には、フォレストブラウンがおすすめ。差し色に明るめのベージュを入れてみたり、ブラックの小物でシックな印象にしてみても。</div>
+        <div class="color-btn-wrapper"><a href="https://shop.funq.jp/products/r24f0004k?variant=46832573841626" class="color-btn">購入はコチラ</a></div>
+      </div>
+    </div>
+    <div class="setup-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="fade-up delay-1"><div class="anim-float-1"><img src="assets/202604ec_tate_13.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-2"><div class="anim-float-2"><img src="assets/202604ec_tate_14.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-3"><div class="anim-float-3"><img src="assets/202604ec_tate_15.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-4"><div class="anim-float-4"><img src="assets/202604ec_tate_1_8ff8bd38-8226-48f5-929e-ed0c95afa408.webp" class="slide-img"></div></div></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div id="color-iceblue" class="color-section obs-target">
+    <div class="color-main-block">
+      <div class="color-main-img fade-up">
+        <div class="color-section-title">ICE BLUE</div>
+        <img src="assets/202604ec_tate_19.webp" alt="ICE BLUE">
+      </div>
+      <div class="color-main-info fade-up">
+        <div class="color-main-text">雲ひとつない青空のような、澄んだライトブルーに目を惹かれるコーディネート。他にない絶妙な色合いが特徴で、これからの時期でも、どこか涼しげな印象を与えてくれます。</div>
+        <div class="color-btn-wrapper"><a href="https://shop.funq.jp/products/r24f0004k?variant=46832560996570" class="color-btn">購入はコチラ</a></div>
+      </div>
+    </div>
+    <div class="setup-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="fade-up delay-1"><div class="anim-float-1"><img src="assets/202604ec_tate_16.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-2"><div class="anim-float-2"><img src="assets/202604ec_tate_17.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-3"><div class="anim-float-3"><img src="assets/202604ec_tate_18.webp" class="slide-img"></div></div></div>
+        <div class="swiper-slide"><div class="fade-up delay-4"><div class="anim-float-4"><img src="assets/202604ec_tate_19_f280e855-1d78-49bc-85bc-135442606c88.webp" class="slide-img"></div></div></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div class="pants-collection-section">
+    <div class="pants-intro obs-target">
+      
+      <div class="kawarime-logo">
+        <img src="assets/kawarime_logo.png" alt="かわり芽 ロゴ">
+      </div>
+      
+      <div class="pants-collection-title fade-up delay-1">大人気のリトルマウンテンパンツは<br>6カラー展開</div>
+      <div class="pants-collection-text fade-up delay-2">既存カラーのピンク、カーキ、チャコールに加えて、ここまでに紹介した3色が追加となり、全６色から選ぶことが可能に！人気色はすぐに売り切れてしまうことも多いため、気になる方はチェックしてみては。</div>
+    </div>
+
+    <div class="pants-existing-colors obs-target">
+      <a href="https://shop.funq.jp/products/r24f0004k?variant=46832580722906" class="pants-image-item fade-up">
+        <div class="color-label">PINK</div>
+        <div class="img-wrapper"><img src="assets/pants_pnk.webp" alt="PINK"></div>
+      </a>
+      <a href="https://shop.funq.jp/products/r24f0004k?variant=46832580657370" class="pants-image-item offset fade-up delay-1">
+        <div class="color-label">KAHAKI</div>
+        <div class="img-wrapper"><img src="assets/pants_khk.webp" alt="KAHAKI"></div>
+      </a>
+      <a href="https://shop.funq.jp/products/r24f0004k?variant=46832580591834" class="pants-image-item fade-up delay-2">
+        <div class="color-label">CHARCOAL</div>
+        <div class="img-wrapper"><img src="assets/pants_cha.webp" alt="CHARCOAL"></div>
+      </a>
+    </div>
+
+    <div class="pants-new-colors-title obs-target fade-up">＼新色も大人気！／</div>
+    <div class="pants-new-colors obs-target">
+      <a href="#color-ivory" class="pants-image-item zoom-img fade-up">
+        <div class="img-wrapper"><img src="assets/pants_ivr.webp" alt="IVORY"></div>
+        <div class="color-label">IVORY</div>
+      </a>
+      <a href="#color-brown" class="pants-image-item fade-up delay-1">
+        <div class="img-wrapper"><img src="assets/pants_brn.webp" alt="BROWN"></div>
+        <div class="color-label">BROWN</div>
+      </a>
+      <a href="#color-iceblue" class="pants-image-item zoom-img fade-up delay-2">
+        <div class="img-wrapper"><img src="assets/pants_blu.webp" alt="ICE BLUE"></div>
+        <div class="color-label">ICE BLUE</div>
+      </a>
+    </div>
+    
+    <div class="full-width-btn-wrapper obs-target fade-up"><a href="https://shop.funq.jp/products/r24f0004k" class="full-width-buy-btn">購入はコチラ</a></div>
+  </div>
+
+  <div class="mix-match-section obs-target">
+    <div class="sp-text fade-up">
+      <span>着合わせを楽しもう！</span>
+    </div>
+    
+    <div class="mix-match-wrapper">
+      <div class="mix-match-images">
+        <img src="assets/pullover_full_color.webp" class="mix-img-1 fade-up" alt="プルオーバー 全色">
+        <img src="assets/pants_full_color.webp" class="mix-img-2 fade-up delay-2" alt="パンツ 全色">
+      </div>
+      <div class="pc-text fade-up">
+        <div class="line1">着合わせを</div>
+        <div class="line2">楽しもう！</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mix-match-gallery">
+    <div class="mix-gallery-item obs-target fade-up">
+      <img src="assets/setup_style_1.webp" alt="Style 1">
+      <div class="mix-gallery-caption">
+        <span class="spec-height">155cm /</span>
+        <span class="spec-items">プルオーバー：レギュラー(IVORY)<br>パンツ：ショート(CHARCOAL)</span>
+      </div>
+    </div>
+    <div class="mix-gallery-item obs-target fade-up delay-1">
+      <img src="assets/setup_style_2.webp" alt="Style 2">
+      <div class="mix-gallery-caption">
+        <span class="spec-height">157cm /</span>
+        <span class="spec-items">プルオーバー：レギュラー(ICE BLUE)<br>パンツ：ショート(BROWN)</span>
+      </div>
+    </div>
+    <div class="mix-gallery-item obs-target fade-up delay-2">
+      <img src="assets/setup_style_3.webp" alt="Style 3">
+      <div class="mix-gallery-caption">
+        <span class="spec-height">157cm /</span>
+        <span class="spec-items">プルオーバー：レギュラー(IVORY)<br>パンツ：ショート(BROWN)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-width-btn-wrapper obs-target fade-up" style="margin-bottom: 80px;">
+    <a href="#" class="full-width-buy-btn page-top-btn">TOPへ戻る</a>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -25% 0px', 
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in-view');
+          
+          if (window.innerWidth > 768 && entry.target.classList.contains('js-sync-detail3')) {
+            const textB = document.querySelector('.ni-text-b');
+            if (textB) textB.classList.add('is-in-view');
+          }
+          
+          // 画面に入った要素内のSwiperを再起動
+          const swiperEls = entry.target.querySelectorAll('.setup-swiper, .setup-swiper-arch');
+          swiperEls.forEach(el => {
+            if (el.swiper && el.swiper.autoplay) {
+              el.swiper.autoplay.start();
+            }
+          });
+          if (entry.target.classList.contains('setup-swiper') || entry.target.classList.contains('setup-swiper-arch')) {
+            if (entry.target.swiper && entry.target.swiper.autoplay) {
+              entry.target.swiper.autoplay.start();
+            }
+          }
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.obs-target').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ページ内アンカーリンクの処理
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        
+        // TOPへ戻るボタンの場合は別処理
+        if (this.classList.contains('page-top-btn')) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          // ブラウザバック用に履歴を追加（iOS Safariでのトップ戻りバグを回避）
+          history.pushState(null, null, targetId);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ブラウザバックやタブ切り替えで戻ってきた時にスライダーを再起動
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
+        document.querySelectorAll('.setup-swiper, .setup-swiper-arch').forEach(el => {
+          if (el.swiper && el.swiper.autoplay) el.swiper.autoplay.start();
+        });
+      }
+    });
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'visible') {
+        document.querySelectorAll('.setup-swiper, .setup-swiper-arch').forEach(el => {
+          if (el.swiper && el.swiper.autoplay) el.swiper.autoplay.start();
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to("#color-ivory .color-main-block", {
+        backgroundColor: "#fff8dc",
+        scrollTrigger: { trigger: "#color-ivory", scrub: true, start: "top 90%", end: "center center" }
+      });
+
+      gsap.to("#color-brown .color-main-block", {
+        backgroundColor: "#503b39", color: "#ffffff",
+        scrollTrigger: { trigger: "#color-brown", scrub: true, start: "top 90%", end: "center center" }
+      });
+      gsap.to("#color-brown .color-section-title", {
+        color: "#ffffff",
+        scrollTrigger: { trigger: "#color-brown", scrub: true, start: "top 90%", end: "center center" }
+      });
+
+      gsap.to("#color-iceblue .color-main-block", {
+        backgroundColor: "#b0e0e6",
+        scrollTrigger: { trigger: "#color-iceblue", scrub: true, start: "top 90%", end: "center center" }
+      });
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let swiperInstances = [];
+    let archSwiperInstance = null;
+
+    function initOrDestroySwiper() {
+      const isMobile = window.innerWidth <= 768;
+      
+      const swiperEls = document.querySelectorAll('.setup-swiper');
+      const archSwiperEl = document.querySelector('.setup-swiper-arch');
+
+      if (isMobile) {
+        // --- 1. ディティール用スライダー ---
+        if (swiperInstances.length === 0) {
+          swiperEls.forEach(el => {
+            const swiper = new Swiper(el, {
+              loop: true, speed: 800, autoplay: { delay: 3000, disableOnInteraction: false },
+              pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+              observer: true, observeParents: true
+            });
+            // 初期化直後にもスタート指示
+            if(swiper.autoplay) swiper.autoplay.start();
+            swiperInstances.push(swiper);
+          });
+        }
+        
+        // --- 2. アーチ用スライダー (中央揃え＆ループ) ---
+        if (archSwiperEl && !archSwiperInstance) {
+          archSwiperInstance = new Swiper(archSwiperEl, {
+            slidesPerView: 1.4, 
+            centeredSlides: true,
+            spaceBetween: 20,
+            loop: true,
+            observer: true, 
+            observeParents: true,
+            slideToClickedSlide: true 
+          });
+        }
+
+      } else {
+        // PC時はスライダーを破棄してグリッド表示に戻す
+        if (swiperInstances.length > 0) {
+          swiperInstances.forEach(swiper => swiper.destroy(true, true));
+          swiperInstances = [];
+        }
+        if (archSwiperInstance) {
+          archSwiperInstance.destroy(true, true);
+          archSwiperInstance = null;
+        }
+      }
+    }
+    
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>
+          
+</div>
+</body>
+</html>
